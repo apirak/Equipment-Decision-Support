@@ -1,7 +1,0 @@
-<%# title "media_wrap_engine" %>
-
-<% content_for :head do %>
-
-<% end %>
-
-Apirak
