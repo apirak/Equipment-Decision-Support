@@ -21,27 +21,31 @@ var gmap = {
 	tbar : map_tb,
 	border : true,
 	zoomLevel : 10,
-	mapConfOpts : [ 'enableScrollWheelZoom', 'enableDoubleClickZoom',
-			'enableDragging' ],
-	mapControls : [ 'GSmallMapControl', 'GMapTypeControl' ],
+    mapConfOpts: ['enableScrollWheelZoom','enableDoubleClickZoom','enableDragging'],
+    mapControls: [new GSmallMapControl(),'GMapTypeControl','NonExistantControl'],
 	setCenter : {
-		lat : 13.799101,
-		lng : 100.367914,
+		geoCodeAddr : 'พุทธมณฑล, Phutthamonthon Sai 4, Salaya, Phutthamonthon, Nakhon Pathom 73170, 73170, Thailand',
 		marker : {
-			title : 'ศาลาธรรมสพน์'
+			title : 'Fenway Park'
 		}
 	},
 	markers : [ {
-		lat : 42.339641,
-		lng : -71.094224,
+		lat : 13.794848,
+		lng : 100.339494,
 		marker : {
 			title : 'Boston Museum of Fine Arts'
+		},
+		listeners : {
+			click : function(e) {
+				Ext.Msg.alert('Its fine', 'and its art.');
+			}
 		}
 	}, {
-		lat : 42.339419,
-		lng : -71.09077,
+		lat : 13.800432,
+		lng : 100.333228,
 		marker : {
 			title : 'Northeastern University'
 		}
 	} ]
+
 };

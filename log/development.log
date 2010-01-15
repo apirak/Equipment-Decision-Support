@@ -1785,3 +1785,1431 @@ Migrating to CreatePositions (20100115020852)
   [4;36;1mSQL (40.3ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
   [4;35;1mSQL (0.8ms)[0m   [0mdescribe `positions`[0m
   [4;36;1mSQL (25.3ms)[0m   [0;1mSHOW KEYS FROM `positions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:40:42) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 208ms (View: 204, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:40:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (5.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:46:00) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 6) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:46:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:48:39) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 89ms (View: 85, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:48:47) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:48:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:49:51) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:49:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:50:13) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:50:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:50:41) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:50:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:51:19) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:51:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:51:40) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:51:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:57:29) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:57:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 16:58:25) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 16:58:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:06:05) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:06:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:14:00) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:14:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:16:46) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 11, DB: 2) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:16:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:17:10) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:17:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:17:48) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:17:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:18:28) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:19:05) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:19:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (17.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:19:45) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 11, DB: 18) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:19:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:22:34) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:22:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:23:51) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:25:01) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:25:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:25:28) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:25:44) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:25:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:26:30) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:27:00) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:27:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:27:31) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:27:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:28:14) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (16.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:28:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:28:28) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:28:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:29:35) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:29:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:29:56) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:29:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:32:18) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 24ms (View: 20, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:33:42) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:33:42) [GET]
+
+ActionController::RoutingError (No route matches "/ext3/ext-ux-gmappanel/src/Ext.ux.GMapPanel.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:33:43) [GET]
+
+ActionController::RoutingError (No route matches "/ext3/ext-ux-gmappanel/src/Ext.ux.GMapPanel.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:33:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:34:36) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (26.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:39:36) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 37ms (View: 32, DB: 27) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:39:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-15 17:44:35) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 17:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:81:in `call'
+  /usr/lib/ruby/1.8/rack/adapter/rails.rb:69:in `call'
+  /usr/lib/ruby/1.8/thin/connection.rb:76:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `catch'
+  /usr/lib/ruby/1.8/thin/connection.rb:74:in `pre_process'
+  /usr/lib/ruby/1.8/thin/connection.rb:57:in `process'
+  /usr/lib/ruby/1.8/thin/connection.rb:42:in `receive_data'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run_machine'
+  /usr/lib/ruby/1.8/eventmachine.rb:240:in `run'
+  /usr/lib/ruby/1.8/thin/backends/base.rb:57:in `start'
+  /usr/lib/ruby/1.8/thin/server.rb:156:in `start'
+  /usr/lib/ruby/1.8/thin/controllers/controller.rb:80:in `start'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `send'
+  /usr/lib/ruby/1.8/thin/runner.rb:174:in `run_command'
+  /usr/lib/ruby/1.8/thin/runner.rb:140:in `run!'
+  /usr/bin/thin:10
+
+Rendering rescues/layout (not_found)
