@@ -4019,3 +4019,409 @@ ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.
   
 
 Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:29:53) [GET]
+  [4;35;1mPosition Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.8ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (9.2ms)
+  [4;35;1mStation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 71ms (View: 50, DB: 10) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:29:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:31:21) [GET]
+  [4;35;1mPosition Columns (6.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.5ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.5ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (11.9ms)
+  [4;35;1mStation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 56ms (View: 30, DB: 15) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:31:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:31:57) [GET]
+  [4;35;1mPosition Columns (5.6ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.6ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.9ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (78.6ms)
+  [4;35;1mStation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (8.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 126ms (View: 102, DB: 12) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:32:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:34:05) [GET]
+  [4;35;1mPosition Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.6ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.7ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.2ms)
+  [4;35;1mStation Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (10.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 54ms (View: 31, DB: 11) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:34:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:34:37) [GET]
+  [4;35;1mPosition Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.9ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (11.1ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (3.1ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (20.7ms)
+  [4;35;1mStation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 62ms (View: 28, DB: 20) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:34:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:42:18) [GET]
+  [4;35;1mPosition Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (2.8ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (13.4ms)
+  [4;35;1mStation Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 48ms (View: 21, DB: 14) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:42:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:43:52) [GET]
+  [4;35;1mPosition Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.9ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.9ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.1ms)
+  [4;35;1mStation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (5.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 47ms (View: 25, DB: 12) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:43:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:44:33) [GET]
+  [4;35;1mPosition Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.8ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.7ms)
+  [4;35;1mStation Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (8.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 48ms (View: 27, DB: 9) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:46:43) [GET]
+  [4;35;1mPosition Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.7ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.8ms)
+  [4;35;1mStation Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (8.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 54ms (View: 31, DB: 11) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:46:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:46:58) [GET]
+  [4;35;1mPosition Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.3ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (14.2ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (76.7ms)
+  [4;35;1mStation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (5.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 114ms (View: 82, DB: 21) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:47:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:51:02) [GET]
+  [4;35;1mPosition Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.6ms)
+  [4;35;1mStation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 48ms (View: 26, DB: 10) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:51:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:56:22) [GET]
+  [4;35;1mPosition Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (10.8ms)
+  [4;35;1mStation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 44ms (View: 26, DB: 7) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:56:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:57:45) [GET]
+  [4;35;1mPosition Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (2.3ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (13.6ms)
+  [4;35;1mStation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (9.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 59ms (View: 29, DB: 9) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:57:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 21:59:00) [GET]
+  [4;35;1mPosition Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (9.2ms)
+  [4;35;1mStation Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 44ms (View: 24, DB: 9) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:59:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 22:12:06) [GET]
+  [4;35;1mPosition Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.8ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (29.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (47.2ms)
+  [4;35;1mStation Columns (11.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (16.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 116ms (View: 32, DB: 47) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 22:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-16 22:12:36) [GET]
+  [4;35;1mPosition Columns (107.7ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.3ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (2.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (9.2ms)
+  [4;35;1mStation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 146ms (View: 20, DB: 115) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 22:12:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

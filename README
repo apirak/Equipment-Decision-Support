@@ -3,6 +3,8 @@
 == Todo
 
  # [Done] Add Marker and call java script when click
+ # [Done] Switch between map and table
+ # [Done] Load Database to Ext table with column model
  # Add Marker to database
  # Load Marker / Load Marker
  # Edit Marker Detail

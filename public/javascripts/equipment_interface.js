@@ -6,7 +6,8 @@ var stationPanel = new Ext.Panel({
     activeItem: default_view,
     region: 'center',
     margins : '0 0 5 0',
-    deferredRender: false,
+    layoutOnCardChange : true,
+    deferredRender: false, // set this so we have access to the map on the second tab before its been activated
     defaults: {
         border: false
     },
