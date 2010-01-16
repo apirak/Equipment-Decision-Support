@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100115020852) do
+ActiveRecord::Schema.define(:version => 20100116080646) do
 
   create_table "positions", :force => true do |t|
     t.string   "title"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(:version => 20100115020852) do
     t.string   "type"
     t.decimal  "lat",         :precision => 15, :scale => 10
     t.decimal  "lng",         :precision => 15, :scale => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "name",          :limit => 32, :default => "", :null => false
+    t.text     "value"
+    t.text     "default_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

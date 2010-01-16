@@ -2,6 +2,7 @@
 
 == Todo
 
+ # [Done] Add Marker and call java script when click
  # Add Marker to database
  # Load Marker / Load Marker
  # Edit Marker Detail
@@ -9,7 +10,7 @@
  # Design header
  # Log windows / Dynamic Log windows
  # Tab Description for each Marker 
-
+ # Show name when mouse over on marker
  # Marker has N Type
  # Setting.yml
  # Login system
