@@ -1,9 +1,9 @@
 var proxy = new Ext.data.HttpProxy({
     api: {
-        read : '/equipments.ext_json',
-        create : '/equipments',
-        update: '/equipments',
-        destroy: '/equipments'
+        read : '/equipment.ext_json',
+        create : '/equipment',
+        update: '/equipment',
+        destroy: '/equipment'
     }
 });
 

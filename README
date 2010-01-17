@@ -2,18 +2,28 @@
 
 == Todo
 
+Major
+
  # [Done] Add Marker and call java script when click
  # [Done] Switch between map and table
  # [Done] Load Database to Ext table with column model
- # Add Marker to database
- # Load Marker / Load Marker
- # Edit Marker Detail
- # Move Marker
- # Design header
- # Log windows / Dynamic Log windows
- # Tab Description for each Marker 
- # Show name when mouse over on marker
- # Marker has N Type
- # Setting.yml
+ # [Done] Design header
+ # [Done] Setting.yml
+ # [Done] Table sorting
+ # Paginate
+ # Table advance filter
  # Login system
  # Permission system
+ # Load data when select
+ # Add Marker to database
+ # Load Marker
+ # Edit Marker Detail
+ # Move Marker
+ # Log windows / Dynamic Log windows
+ # Tab Description for each Marker
+ # Marker has nultiple Type
+
+Minor
+
+ # Show name when mouse over on marker
+ 

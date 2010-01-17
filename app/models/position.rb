@@ -7,5 +7,13 @@ class Position < ActiveRecord::Base
   column_model "type", :type => "string", :width => 70
   column_model "lat", :type => "float", :width => 70
   column_model "lng", :type => "float", :width => 70
-  
+
+
+  def self.find_by_params(params = {})
+    conditions = {}
+    if params[:sort]
+      conditions[:order] = "#{params[:sort]} #{params[:dir]}"
+    end
+    find(:all, conditions)
+  end
 end

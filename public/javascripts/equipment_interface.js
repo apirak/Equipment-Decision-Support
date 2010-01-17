@@ -3,7 +3,7 @@ var viewport;
 var stationPanel = new Ext.Panel({
     id:'station_panel',
     layout: 'card',
-    activeItem: default_view,
+    activeItem: defaultView,
     region: 'center',
     margins : '0 0 5 0',
     layoutOnCardChange : true,

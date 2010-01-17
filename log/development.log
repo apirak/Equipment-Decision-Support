@@ -4425,3 +4425,658 @@ ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.
   
 
 Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 06:59:16) [GET]
+  [4;35;1mPosition Columns (31.6ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.5ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (227.1ms)
+  [4;35;1mStation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (125.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 1333ms (View: 777, DB: 39) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 06:59:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/default/grid/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 06:59:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:01:14) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263686474828", "sort"=>"icon"}
+
+ActionController::RoutingError (No route matches "/equipments.ext_json" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:01:23) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263686483362", "sort"=>"lng"}
+
+ActionController::RoutingError (No route matches "/equipments.ext_json" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (117.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (178.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:18:52) [GET]
+  [4;35;1mPosition Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (120.9ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (2.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (94.2ms)
+  [4;36;1mStation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (38.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 490ms (View: 223, DB: 130) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:18:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/default/grid/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:18:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:30:59) [GET]
+  [4;36;1mPosition Columns (8.4ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (26.8ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `find_by_params' for #<Class:0x25d86ec>):
+  app/controllers/equipment_controller.rb:4:in `index'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (84.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:32:26) [GET]
+  [4;36;1mPosition Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mSQL (19.3ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `find_by_params' for #<Class:0x24d4c8c>):
+  app/controllers/equipment_controller.rb:4:in `index'
+
+Rendered rescues/_trace (195.8ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:32:46) [GET]
+  [4;36;1mPosition Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.5ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (75.5ms)
+  [4;35;1mStation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (12.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 154ms (View: 96, DB: 10) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:32:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:32:56) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263688376759", "sort"=>"lat"}
+
+ActionController::RoutingError (No route matches "/equipments.ext_json" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:39:51) [GET]
+  [4;35;1mPosition Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+
+NameError (uninitialized constant Mime::EXT_JSON):
+  app/controllers/equipment_controller.rb:9:in `index'
+  app/controllers/equipment_controller.rb:7:in `index'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:42:41) [GET]
+  [4;36;1mPosition Columns (34.1ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (20.1ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (2.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (115.2ms)
+  [4;35;1mStation Columns (21.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (44.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 556ms (View: 406, DB: 84) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (5.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:42:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:42:51) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263688971024", "sort"=>"lat"}
+
+ActionController::RoutingError (No route matches "/equipment.ext_json" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:44:46) [GET]
+  [4;35;1mPosition Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (1.9ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (0.8ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (25.5ms)
+  [4;36;1mStation Columns (11.8ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (18.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 102ms (View: 42, DB: 22) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:44:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:44:51) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263689090954", "sort"=>"lat"}
+  [4;36;1mPosition Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (124.7ms)[0m   [0mSELECT * FROM `positions` ORDER BY lat[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 154ms (View: 2, DB: 132) | 200 OK [http://localhost/equipment.ext_json?_dc=1263689090954&sort=lat&dir=ASC]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:44:56) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263689096209", "sort"=>"lng"}
+  [4;36;1mPosition Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.5ms)[0m   [0mSELECT * FROM `positions` ORDER BY lng[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 31ms (View: 1, DB: 9) | 200 OK [http://localhost/equipment.ext_json?_dc=1263689096209&sort=lng&dir=ASC]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:44:59) [GET]
+  Parameters: {"dir"=>"DESC", "_dc"=>"1263689099313", "sort"=>"lng"}
+  [4;36;1mPosition Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.4ms)[0m   [0mSELECT * FROM `positions` ORDER BY lng[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 22ms (View: 1, DB: 5) | 200 OK [http://localhost/equipment.ext_json?_dc=1263689099313&sort=lng&dir=DESC]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:49:56) [GET]
+  [4;36;1mPosition Columns (13.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (1.3ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (3.3ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (27.7ms)
+  [4;35;1mStation Columns (6.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (10.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 96ms (View: 44, DB: 28) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:49:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:50:00) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263689400734", "sort"=>"lng"}
+  [4;35;1mPosition Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[:sort] params[:dir]' at line 1: SELECT * FROM `positions` ORDER BY params[:sort] params[:dir][0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[:sort] params[:dir]' at line 1: SELECT * FROM `positions`  ORDER BY params[:sort] params[:dir]):
+  app/models/position.rb:17:in `find_by_params'
+  app/controllers/equipment_controller.rb:4:in `index'
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:50:03) [GET]
+  Parameters: {"dir"=>"DESC", "_dc"=>"1263689403058", "sort"=>"lng"}
+  [4;35;1mPosition Columns (22.3ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[:sort] params[:dir]' at line 1: SELECT * FROM `positions` ORDER BY params[:sort] params[:dir][0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[:sort] params[:dir]' at line 1: SELECT * FROM `positions`  ORDER BY params[:sort] params[:dir]):
+  app/models/position.rb:17:in `find_by_params'
+  app/controllers/equipment_controller.rb:4:in `index'
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:50:35) [GET]
+  [4;35;1mPosition Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.5ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (1.9ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (22.6ms)
+  [4;36;1mStation Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (39.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 132ms (View: 66, DB: 11) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:50:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:50:39) [GET]
+  Parameters: {"dir"=>"ASC", "_dc"=>"1263689439877", "sort"=>"lng"}
+  [4;36;1mPosition Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (1.0ms)[0m   [0mSELECT * FROM `positions` ORDER BY lng ASC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (7.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 29ms (View: 1, DB: 12) | 200 OK [http://localhost/equipment.ext_json?_dc=1263689439877&sort=lng&dir=ASC]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 07:50:41) [GET]
+  Parameters: {"dir"=>"DESC", "_dc"=>"1263689441915", "sort"=>"lng"}
+  [4;36;1mPosition Columns (13.4ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (9.9ms)[0m   [0mSELECT * FROM `positions` ORDER BY lng DESC[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 55ms (View: 7, DB: 27) | 200 OK [http://localhost/equipment.ext_json?_dc=1263689441915&sort=lng&dir=DESC]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:54:55) [GET]
+  [4;36;1mPosition Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.4ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.1ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (27.3ms)
+  [4;35;1mStation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (6.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 86ms (View: 41, DB: 8) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:54:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (40.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:55:44) [GET]
+  [4;35;1mPosition Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (25.5ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (1.4ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (20.0ms)
+  [4;36;1mStation Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (6.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 128ms (View: 36, DB: 74) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:55:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:55:53) [GET]
+  [4;36;1mPosition Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.5ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.5ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (8.4ms)
+  [4;35;1mStation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (5.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 46ms (View: 26, DB: 8) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:55:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:55:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:57:32) [GET]
+  [4;35;1mPosition Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.8ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (0.5ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (8.4ms)
+  [4;36;1mStation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (5.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 45ms (View: 26, DB: 8) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (4.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:57:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:57:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:58:21) [GET]
+  [4;36;1mPosition Columns (163.7ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.4ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;35;1mSetting Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (1.3ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (9.6ms)
+  [4;35;1mStation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 211ms (View: 30, DB: 170) | 200 OK [http://localhost/equipment]
+  [4;35;1mSQL (8.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:58:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:58:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-17 07:58:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/slate/shared/glass-bg.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-01-17 07:59:47) [GET]
+  [4;35;1mPosition Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+  [4;36;1mPosition Load (0.4ms)[0m   [0;1mSELECT * FROM `positions` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `positions` [0m
+Rendering template within layouts/application
+Rendering equipment/index
+  [4;36;1mSetting Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSetting Load (1.6ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Rendered equipment/_settings (26.9ms)
+  [4;36;1mStation Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+Rendered equipment/_position_store (7.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+Completed in 86ms (View: 41, DB: 9) | 200 OK [http://localhost/equipment]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 08:00:12) [GET]
+  Parameters: {"start"=>"0", "_dc"=>"1263690012746", "limit"=>"20"}
+  [4;36;1mPosition Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.3ms)[0m   [0mSELECT * FROM `positions` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 48ms (View: 1, DB: 5) | 200 OK [http://localhost/equipment.ext_json?_dc=1263690012746&start=0&limit=20]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 08:00:18) [GET]
+  Parameters: {"dir"=>"ASC", "start"=>"0", "_dc"=>"1263690018543", "sort"=>"lat", "limit"=>"20"}
+  [4;36;1mPosition Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.7ms)[0m   [0mSELECT * FROM `positions` ORDER BY lat ASC[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (13.6ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 38ms (View: 1, DB: 19) | 200 OK [http://localhost/equipment.ext_json?_dc=1263690018543&start=0&limit=20&sort=lat&dir=ASC]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EquipmentController#index to ext_json (for 127.0.0.1 at 2010-01-17 08:00:20) [GET]
+  Parameters: {"dir"=>"ASC", "start"=>"0", "_dc"=>"1263690020909", "sort"=>"lat", "limit"=>"20"}
+  [4;36;1mPosition Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `positions`[0m
+  [4;35;1mPosition Load (0.4ms)[0m   [0mSELECT * FROM `positions` ORDER BY lat ASC[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `positions` [0m
+  [4;35;1mStation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `positions`[0m
+Completed in 22ms (View: 1, DB: 5) | 200 OK [http://localhost/equipment.ext_json?_dc=1263690020909&start=0&limit=20&sort=lat&dir=ASC]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1207.5ms)[0m   [0;1mTRUNCATE settings[0m
+  [4;35;1mSQL (89.0ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('campaign_status', 'BAhbCjoMcGxhbm5lZDoMc3RhcnRlZDoOY29tcGxldGVkOgxvbl9ob2xkOg9j\nYWxsZWRfb2Zm\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('page_size', 'BAhpGQ==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('task_category', 'BAhbDToJY2FsbDoKZW1haWw6DmZvbGxvd191cDoKbHVuY2g6DG1lZXRpbmc6\nCm1vbmV5OhFwcmVzZW50YXRpb246CXRyaXA=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('base_url', 'BAgiAA==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('lead_status_color', 'BAh7CToOY29udGFjdGVkIhJwYWxldHVycXVvaXNlOg5jb252ZXJ0ZWQiC2Jp\nc3F1ZToNcmVqZWN0ZWQiDHRoaXN0bGU6CG5ldyIOcGFsZWdyZWVu\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('admin_tabs', 'BAhbCHsIOgl0ZXh0OhRhZG1pbl90YWJfdXNlcnM6CHVybHsGOg9jb250cm9s\nbGVyIhBhZG1pbi91c2VyczoLYWN0aXZlVHsIOwA6F2FkbWluX3RhYl9zZXR0\naW5nczsHewY7CCITYWRtaW4vc2V0dGluZ3M7CUZ7CDsAOhZhZG1pbl90YWJf\ncGx1Z2luczsHewY7CCISYWRtaW4vcGx1Z2luczsJRg==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('opportunity_stage_color', 'BAh7DToRZmluYWxfcmV2aWV3Ig9hcXVhbWFyaW5lOhBwcm9zcGVjdGluZyIN\nbGF2ZW5kZXI6CHdvbiIPbGlnaHRncmVlbjoNYW5hbHlzaXMiDm1pc3R5cm9z\nZToJbG9zdCIJcGluazoRcHJlc2VudGF0aW9uIgp3aGVhdDoNcHJvcG9zYWwi\nDHRoaXN0bGU6EG5lZ290aWF0aW9uIgxza3libHVl\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('locale', 'BAgiCmVuLVVT\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('task_completed', 'BAhbCjoUY29tcGxldGVkX3RvZGF5Ohhjb21wbGV0ZWRfeWVzdGVyZGF5Ohhj\nb21wbGV0ZWRfbGFzdF93ZWVrOhljb21wbGV0ZWRfdGhpc19tb250aDoZY29t\ncGxldGVkX2xhc3RfbW9udGg=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('tabs', 'BAhbDHsIOgl0ZXh0OhJ0YWJfZGFzaGJvYXJkOgh1cmx7BjoPY29udHJvbGxl\nciIGLzoLYWN0aXZlVHsIOwA6DnRhYl90YXNrczsHewY7CCIKdGFza3M7CUZ7\nCDsAOhJ0YWJfY2FtcGFpZ25zOwd7BjsIIg5jYW1wYWlnbnM7CUZ7CDsAOg50\nYWJfbGVhZHM7B3sGOwgiCmxlYWRzOwlGewg7ADoRdGFiX2FjY291bnRzOwd7\nBjsIIg1hY2NvdW50czsJRnsIOwA6EXRhYl9jb250YWN0czsHewY7CCINY29u\ndGFjdHM7CUZ7CDsAOhZ0YWJfb3Bwb3J0dW5pdGllczsHewY7CCISb3Bwb3J0\ndW5pdGllczsJRg==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('user_signup', 'BAg6DGFsbG93ZWQ=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('opportunity_stage', 'BAhbDjoQcHJvc3BlY3Rpbmc6DWFuYWx5c2lzOhFwcmVzZW50YXRpb246DXBy\nb3Bvc2FsOhBuZWdvdGlhdGlvbjoRZmluYWxfcmV2aWV3Ogh3b246CWxvc3Qi\nC0N1c3RvbQ==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('task_bucket', 'BAhbDDoMb3ZlcmR1ZToNZHVlX2FzYXA6DmR1ZV90b2RheToRZHVlX3RvbW9y\ncm93OhJkdWVfdGhpc193ZWVrOhJkdWVfbmV4dF93ZWVrOg5kdWVfbGF0ZXI=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('lead_source', 'BAhbDjoNY2FtcGFpZ246DmNvbGRfY2FsbDoPY29uZmVyZW5jZToLb25saW5l\nOg1yZWZlcnJhbDoJc2VsZjoId2ViOhJ3b3JkX29mX21vdXRoOgpvdGhlcg==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('campaign_status_color', 'BAh7CjoMb25faG9sZCIJcGluazoPY2FsbGVkX29mZiIMdGhpc3RsZToMcGxh\nbm5lZCIOcGFsZWdyZWVuOgxzdGFydGVkIhJwYWxldHVycXVvaXNlOg5jb21w\nbGV0ZWQiC2Jpc3F1ZQ==\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('task_category_color', 'BAh7DToMbWVldGluZyIMdGhpc3RsZToKZW1haWwiEnBhbGV0dXJxdW9pc2U6\nCm1vbmV5Ig9saWdodGdyZWVuOgljYWxsIg1sYXZlbmRlcjoJdHJpcCIMc2t5\nYmx1ZToRcHJlc2VudGF0aW9uIg9hcXVhbWFyaW5lOg5mb2xsb3dfdXAiDm1p\nc3R5cm9zZToKbHVuY2giCndoZWF0\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('lead_status', 'BAhbCToIbmV3Og5jb250YWN0ZWQ6DmNvbnZlcnRlZDoNcmVqZWN0ZWQ=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO settings (name, default_value, created_at, updated_at) VALUES('default_view', 'BAg6EnN0YXRpb25fdGFibGU=\n', '2010-01-17 08:02:15', '2010-01-17 08:02:15')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT name FROM settings ORDER BY name[0m
+  [4;35;1mSetting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `settings`[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'admin_tabs') LIMIT 1[0m
+  [4;35;1mSetting Load (0.4ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'base_url') LIMIT 1[0m
+  [4;36;1mSetting Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'campaign_status') LIMIT 1[0m
+  [4;35;1mSetting Load (0.5ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'campaign_status_color') LIMIT 1[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'default_view') LIMIT 1[0m
+  [4;35;1mSetting Load (0.9ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'lead_source') LIMIT 1[0m
+  [4;36;1mSetting Load (0.6ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'lead_status') LIMIT 1[0m
+  [4;35;1mSetting Load (0.3ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'lead_status_color') LIMIT 1[0m
+  [4;36;1mSetting Load (0.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'locale') LIMIT 1[0m
+  [4;35;1mSetting Load (0.4ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'opportunity_stage') LIMIT 1[0m
+  [4;36;1mSetting Load (0.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'opportunity_stage_color') LIMIT 1[0m
+  [4;35;1mSetting Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'page_size') LIMIT 1[0m
+  [4;36;1mSetting Load (0.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'tabs') LIMIT 1[0m
+  [4;35;1mSetting Load (0.5ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'task_bucket') LIMIT 1[0m
+  [4;36;1mSetting Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'task_category') LIMIT 1[0m
+  [4;35;1mSetting Load (0.5ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'task_category_color') LIMIT 1[0m
+  [4;36;1mSetting Load (0.4ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`name` = 'task_completed') LIMIT 1[0m
+  [4;35;1mSetting Load (0.4ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`name` = 'user_signup') LIMIT 1[0m

@@ -36,6 +36,10 @@
 #   :station_map    -- show all station in map
 :default_view: :station_table
 
+# Set howmany station in one table page
+#------------------------------------------------------------------------------
+:page_size: 20
+
 # Main and Admin Tabs.
 #------------------------------------------------------------------------------
 :tabs: [
