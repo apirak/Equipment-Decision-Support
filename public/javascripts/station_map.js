@@ -20,11 +20,29 @@ var add_flag = new Ext.Action( {
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
 });
 
+var show_station = new Ext.Action( {
+    text : 'Show all station',
+    handler : function() {
+        map = Ext.getCmp('station_map').getMap()
+
+        var myLatlng = new google.maps.LatLng(13.782903,100.35264);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Hello World!",
+            icon:cone_image
+        });
+    },
+    iconCls : 'flag_plus',
+    tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
+});
+
 var add_station = new Ext.Action( {
     text : 'Add Station',
     handler : function() {
         map = Ext.getCmp('station_map').getMap()
-				
+        
         var contentString = '<div id="content">'+
         '<div id="siteNotice">'+
         '</div>'+
@@ -75,7 +93,7 @@ var add_station = new Ext.Action( {
 		*/
         map.setCenter(myLatlng);
     },
-    iconCls : 'flag_plus',
+    iconCls : 'flag_plus'
 });
 
 
@@ -87,7 +105,7 @@ var show_geocode = new Ext.Action( {
         lng = map.getCenter().lng();
         Ext.Msg.alert('Center Position', "Lat:" +lat + " Lng:" + lng);
     },
-    iconCls : 'flag_plus',
+    iconCls : 'flag_plus'
 });
 
 var map_tb = new Ext.Toolbar();
@@ -107,11 +125,7 @@ var stationMap = {
     mapControls: ['GSmallMapControl','GMapTypeControl'],
     setCenter: {
         lat : 13.794848,
-        lng : 100.339494,
-        marker: {
-            title: 'Fenway Park',
-            icon:cone_image
-        }
+        lng : 100.339494
     },
     markers : [ ]
 };

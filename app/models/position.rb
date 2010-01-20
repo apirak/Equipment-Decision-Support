@@ -14,6 +14,8 @@ class Position < ActiveRecord::Base
     if params[:sort]
       conditions[:order] = "#{params[:sort]} #{params[:dir]}"
     end
-    find(:all, conditions)
+    positions = find(:all, conditions)
+    positions_count = count(:all, conditions)
+    return positions, positions_count
   end
 end

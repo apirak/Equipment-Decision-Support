@@ -1,8 +1,6 @@
 class EquipmentController < ApplicationController
   def index
-    #    @positions = Position.find(:all)
-    @positions = Position.find_by_params(params)
-    @total_count = Position.count(:all)
+    @positions, @total_count = Position.find_by_params(params)
 
     respond_to do |format|
       format.html
