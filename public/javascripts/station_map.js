@@ -109,23 +109,26 @@ var show_geocode = new Ext.Action( {
 });
 
 var map_tb = new Ext.Toolbar();
-map_tb.add('Station', '-', add_flag, '-', {                  
+map_tb.add('Station', '-', add_flag, '-', {
     text: 'Action Menu',
-    menu: [add_station, show_geocode] ,
-}, '->', switchToTable
-);
+    menu: [add_station, show_geocode]
+},
+'->', switchToTable);
 
-var stationMap = {
-    id : 'station_map',
-    xtype : 'gmappanel',
-    gmapType : 'map',
-    tbar : map_tb,
-    zoomLevel : 10,
-    mapConfOpts: ['enableScrollWheelZoom','enableDoubleClickZoom','enableDragging'],
-    mapControls: ['GSmallMapControl','GMapTypeControl'],
-    setCenter: {
-        lat : 13.794848,
-        lng : 100.339494
-    },
-    markers : [ ]
-};
+var stationMap = {}
+if (online) {
+    stationMap = {
+        id : 'station_map',
+        xtype : 'gmappanel',
+        gmapType : 'map',
+        tbar : map_tb,
+        zoomLevel : 10,
+        mapConfOpts: ['enableScrollWheelZoom','enableDoubleClickZoom','enableDragging'],
+        mapControls: ['GSmallMapControl','GMapTypeControl'],
+        setCenter: {
+            lat : 13.794848,
+            lng : 100.339494
+        },
+        markers : [ ]
+    };
+}

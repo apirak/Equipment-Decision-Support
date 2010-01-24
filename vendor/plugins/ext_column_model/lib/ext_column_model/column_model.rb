@@ -1,18 +1,18 @@
-module ColumnModelBuilder
-
+module ColumnModel
   def self.included(base)
-    base.extend(ClassMethods)
-    #    base.class_eval do
-    #      class << self
-    #        include ClassLevelInheritableAttributes
-    #        cattr_inheritable :column_models end
-    #    end
+    base.send :extend, ClassMethods
   end
 
   module ClassMethods
+    # any method placed here will apply to classes, like Hickwall
+
     attr_reader :column_models
     attr_reader :field_options
-
+      
+    def act_as_ext_column_model(option = {})
+      send :include, InstanceMethods
+    end
+    
     def column_model(name, fields = {})
       column_model = {}
       column_model[:name] = name
@@ -45,7 +45,7 @@ module ColumnModelBuilder
       @field_options ||= {}
       @field_options[name.to_sym] = field_option
     end
-    
+
     def column_store
       self.column_models.to_json(:only => [:name, :mapping, :type, :dateFormat])
     end
@@ -53,7 +53,7 @@ module ColumnModelBuilder
     def data_store
       all.map{|m| [m.name_en,m.id]}.to_json
     end
-    
+
     def column_field
       column_string = @column_models.map do |c|
         tpl = c[:tpl] ? ", tpl:'{#{c[:tpl]}}'" : ""
@@ -128,7 +128,7 @@ module ColumnModelBuilder
       end
       return "[#{column_string.compact.join(",")}]"
     end
-    
+
     def column_record
       self.column_models.to_json(:only => [:name, :type, :dateFormat])
     end
@@ -136,9 +136,18 @@ module ColumnModelBuilder
     def column_model_names
       @column_models.map{|a| a[:name]}
     end
+
+    def saw
+      "Yes class, you saw me."
+    end
+  end
+
+  module InstanceMethods
+    # any method placed here will apply to instaces, like @hickwall
+    def saw
+      "Yes instance, you saw me."
+    end
   end
 end
-    
-            
-          
-                
+
+ActiveRecord::Base.send :include, ColumnModel

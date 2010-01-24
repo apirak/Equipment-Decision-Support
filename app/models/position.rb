@@ -1,5 +1,5 @@
 class Position < ActiveRecord::Base
-  include ColumnModelBuilder
+#  act_as_ext_column_model
   
   column_model "id", :type => "int", :hidden => true
   column_model "description", :type => "string", :width => 300
