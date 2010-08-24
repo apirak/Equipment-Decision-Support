@@ -23,16 +23,7 @@ var add_flag = new Ext.Action( {
 var show_station = new Ext.Action( {
     text : 'Show all station',
     handler : function() {
-        map = Ext.getCmp('station_map').getMap()
-
-        var myLatlng = new google.maps.LatLng(13.782903,100.35264);
-
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title:"Hello World!",
-            icon:cone_image
-        });
+        loadingCurrentStation();
     },
     iconCls : 'flag_plus',
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
@@ -111,7 +102,7 @@ var show_geocode = new Ext.Action( {
 var map_tb = new Ext.Toolbar();
 map_tb.add('Station', '-', add_flag, '-', {
     text: 'Action Menu',
-    menu: [add_station, show_geocode]
+    menu: [add_station, show_geocode, show_station]
 },
 '->', switchToTable);
 
@@ -132,3 +123,33 @@ if (online) {
         markers : [ ]
     };
 }
+
+var addMarker = function(title, lat, lng){
+    map = Ext.getCmp('station_map').getMap();
+
+    var myLatlng = new google.maps.LatLng(lat, lng);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: title,
+        icon:cone_image
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        console.log(this)
+        this.setIcon(cone_arrow_image)
+    });
+    
+    map.setCenter(myLatlng);
+};
+
+var loadingCurrentStation = function(){
+    positions = positionDataStore.data.items;
+    count = 0;
+    for(count =0; count < positions.length; count++) {
+        position = positions[count].data;
+        console.log('Center Position', "Lat:" +position.lat + " Lng:" + position.lng);
+        addMarker(position.description, position.lat,position.lng)
+    }
+};
