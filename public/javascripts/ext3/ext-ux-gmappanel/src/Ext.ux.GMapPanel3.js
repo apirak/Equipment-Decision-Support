@@ -193,6 +193,8 @@ markers: [{
     // private
     mapDefinedGMap: false,
     // private
+    markers:[],
+    // private
     initComponent : function(){
         
         this.addEvents(
@@ -228,12 +230,12 @@ markers: [{
 
 		if (!this.mapDefined && this.gmapType){
 			this.gmap = new google.maps.Map(this.body.dom, {zoom:this.zoomLevel,mapTypeId: google.maps.MapTypeId.ROADMAP});
-			//this.gmap.setMapType(this.gmapType);
+			this.gmap.setMapType(this.gmapType);
 			this.mapDefined = true;
 			this.mapDefinedGMap = true;
 		}
         
-        google.maps.event.addListener(this.getMap(), 'load', this.onMapReady, this);
+        google.maps.event.addListenerOnce(this.getMap(), 'tilesloaded', this.onMapReady.createDelegate(this));
         
         if (typeof this.setCenter === 'object') {
             if (typeof this.setCenter.geoCodeAddr === 'string'){
@@ -255,12 +257,11 @@ markers: [{
     },
     // private
     onMapReady : function(){
-        
+                
         this.addMapControls();
         this.addOptions();
         
         this.addMarkers(this.markers);
-        this.addKMLOverlay(this.autoLoadKML);
         
         this.fireEvent('mapready', this, this.getMap());
         
@@ -280,9 +281,9 @@ markers: [{
     setSize : function(width, height, animate){
         
         Ext.ux.GMapPanel.superclass.setSize.call(this, width, height, animate);
-        
+
         // check for the existance of the google map in case setSize is called too early
-        if (typeof this.getMap() == 'object') {
+        if (Ext.isObject(this.getMap())) {
             google.maps.event.trigger(this.getMap(), 'resize');
         }
         
@@ -321,14 +322,15 @@ markers: [{
      * @param {Array} markers an array of marker objects
      */
     addMarkers : function(markers) {
-        
         if (Ext.isArray(markers)){
             for (var i = 0; i < markers.length; i++) {
-                if (typeof markers[i].geoCodeAddr == 'string') {
-                    this.geoCodeLookup(markers[i].geoCodeAddr, markers[i].marker, false, markers[i].setCenter, markers[i].listeners);
-                }else{
-                    var mkr_point = this.fixLatLng(new google.maps.LatLng(markers[i].lat, markers[i].lng));
-                    this.addMarker(mkr_point, markers[i].marker, false, markers[i].setCenter, markers[i].listeners);
+                if (markers[i]) {
+                    if (typeof markers[i].geoCodeAddr == 'string') {
+                        this.geoCodeLookup(markers[i].geoCodeAddr, markers[i].marker, false, markers[i].setCenter, markers[i].listeners);
+                    } else {
+                        var mkr_point = this.fixLatLng(new google.maps.LatLng(markers[i].lat, markers[i].lng));
+                        this.addMarker(mkr_point, markers[i].marker, false, markers[i].setCenter, markers[i].listeners);
+                    }
                 }
             }
         }
@@ -359,12 +361,12 @@ markers: [{
             position: point,
             map: this.getMap()
         }));
+
         if (typeof listeners === 'object'){
             for (evt in listeners) {
                 GEvent.bind(mark, evt, this, listeners[evt]);
             }
         }
-        //this.getMap().addOverlay(mark);
 
     },
     // private
@@ -433,18 +435,6 @@ markers: [{
         
     },
     /**
-     * Loads a KML file into the map.
-     * @param {String} kmlfile a string URL to the KML file.
-     */
-    addKMLOverlay : function(kmlfile){
-        
-        if (typeof kmlfile === 'string' && kmlfile !== '') {
-            var geoXml = new GGeoXml(kmlfile);
-            //this.getMap().addOverlay(geoXml);
-        }
-        
-    },
-    /**
      * Looks up and address and optionally add a marker, center the map to this location, or
      * clear other markers. Sample usage:
      * <pre><code>
@@ -497,8 +487,7 @@ buttons: [
 	centerOnClientLocation : function(){
 		this.getClientLocation(function(loc){
 			var point = this.fixLatLng(new google.maps.LatLng(loc.latitude,loc.longitude));
-            this.getMap().setCenter
-(point, this.zoomLevel);
+            this.getMap().setCenter(point, this.zoomLevel);
 		});
 	},
 	// private
@@ -524,10 +513,9 @@ buttons: [
                 if (false && accuracy < this.minGeoAccuracy) {
                     this.geoErrorMsg(this.geoErrorTitle, String.format(this.geoErrorMsgAccuracy, accuracy));
                 }else{
-                    point = this.fixLatLng(new google.maps.LatLng(place.af, place.cf));
+                    point = this.fixLatLng(place);
                     if (center){
-                        this.getMap().setCenter
-(point, this.zoomLevel);
+                        this.getMap().setCenter(point, this.zoomLevel);
                     }
                     if (typeof marker === 'object') {
                         if (!marker.title){

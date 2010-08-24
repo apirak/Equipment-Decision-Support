@@ -5,5 +5,5 @@ var information = {
    margins: '0 5 5 0',		
    width: 300,			
    minSize: 200,
-   maxSize: 400,
+   maxSize: 400
 };

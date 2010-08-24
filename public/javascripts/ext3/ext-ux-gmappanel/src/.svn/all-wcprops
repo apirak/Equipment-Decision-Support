@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 26
-/svn/!svn/ver/26/trunk/src
+/svn/!svn/ver/29/trunk/src
 END
 Ext.ux.GMapPanel.js
 K 25
@@ -13,5 +13,5 @@ Ext.ux.GMapPanel3.js
 K 25
 svn:wc:ra_dav:version-url
 V 47
-/svn/!svn/ver/24/trunk/src/Ext.ux.GMapPanel3.js
+/svn/!svn/ver/29/trunk/src/Ext.ux.GMapPanel3.js
 END

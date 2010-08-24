@@ -1,6 +1,6 @@
 /*!
- * Ext JS Library 3.1.0
- * Copyright(c) 2006-2009 Ext JS, LLC
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
  * licensing@extjs.com
  * http://www.extjs.com/license
  */
@@ -196,12 +196,6 @@ Ext.Window = Ext.extend(Ext.Panel, {
      */
     hidden : true,
 
-    /**
-    * @cfg {Boolean} monitorResize @hide
-    * This is automatically managed based on the value of constrain and constrainToHeader
-    */
-    monitorResize : true,
-
     // The following configs are set to provide the basic functionality of a window.
     // Changing them would require additional code to handle correctly and should
     // usually only be done in subclasses that can provide custom behavior.  Changing them
@@ -311,7 +305,8 @@ Ext.Window = Ext.extend(Ext.Panel, {
                 minHeight:this.minHeight,
                 handles: this.resizeHandles || 'all',
                 pinned: true,
-                resizeElement : this.resizerAction
+                resizeElement : this.resizerAction,
+                handleCls: 'x-window-handle'
             });
             this.resizer.window = this;
             this.mon(this.resizer, 'beforeresize', this.beforeResize, this);
@@ -336,8 +331,12 @@ Ext.Window = Ext.extend(Ext.Panel, {
 
     initDraggable : function(){
         /**
-         * If this Window is configured {@link #draggable}, this property will contain
-         * an instance of {@link Ext.dd.DD} which handles dragging the Window's DOM Element.
+         * <p>If this Window is configured {@link #draggable}, this property will contain
+         * an instance of {@link Ext.dd.DD} which handles dragging the Window's DOM Element.</p>
+         * <p>This has implementations of <code>startDrag</code>, <code>onDrag</code> and <code>endDrag</code>
+         * which perform the dragging action. If extra logic is needed at these points, use
+         * {@link Function#createInterceptor createInterceptor} or {@link Function#createSequence createSequence} to
+         * augment the existing implementations.</p>
          * @type Ext.dd.DD
          * @property dd
          */
@@ -345,18 +344,16 @@ Ext.Window = Ext.extend(Ext.Panel, {
     },
 
    // private
-    onEsc : function(){
+    onEsc : function(k, e){
+        e.stopEvent();
         this[this.closeAction]();
     },
 
     // private
     beforeDestroy : function(){
-        if (this.rendered){
+        if(this.rendered){
             this.hide();
-          if(this.doAnchor){
-                Ext.EventManager.removeResizeListener(this.doAnchor, this);
-              Ext.EventManager.un(window, 'scroll', this.doAnchor, this);
-            }
+            this.clearAnchor();
             Ext.destroy(
                 this.focusEl,
                 this.resizer,
@@ -433,6 +430,9 @@ Ext.Window = Ext.extend(Ext.Panel, {
             this.updateBox(box);
         }else{
             this.setSize(box);
+            if (Ext.isIE6 && Ext.isStrict) {
+                this.doLayout();
+            }
         }
         this.focus();
         this.updateHandles();
@@ -444,7 +444,11 @@ Ext.Window = Ext.extend(Ext.Panel, {
      * window itself will receive focus.
      */
     focus : function(){
-        var f = this.focusEl, db = this.defaultButton, t = typeof db;
+        var f = this.focusEl,
+            db = this.defaultButton,
+            t = typeof db,
+            el,
+            ct;
         if(Ext.isDefined(db)){
             if(Ext.isNumber(db) && this.fbar){
                 f = this.fbar.items.get(db);
@@ -452,6 +456,13 @@ Ext.Window = Ext.extend(Ext.Panel, {
                 f = Ext.getCmp(db);
             }else{
                 f = db;
+            }
+            el = f.getEl();
+            ct = Ext.getDom(this.container);
+            if (el && ct) {
+                if (!Ext.lib.Region.getRegion(ct).contains(Ext.lib.Region.getRegion(el.dom))){
+                    return;
+                }
             }
         }
         f = f || this.focusEl;
@@ -527,6 +538,9 @@ Ext.Window = Ext.extend(Ext.Panel, {
 
     // private
     afterShow : function(isAnim){
+        if (this.isDestroyed){
+            return false;
+        }
         this.proxy.hide();
         this.el.setStyle('display', 'block');
         this.el.show();
@@ -700,7 +714,7 @@ Ext.Window = Ext.extend(Ext.Panel, {
         }
         if(show !== false){
             this.el.show();
-            this.focus();
+            this.focus.defer(10, this);
             if(Ext.isMac && Ext.isGecko2){ // work around stupid FF 2.0/Mac scroll bar bug
                 this.cascade(this.setAutoScroll);
             }
@@ -874,22 +888,44 @@ Ext.Window = Ext.extend(Ext.Panel, {
      * @return {Ext.Window} this
      */
     anchorTo : function(el, alignment, offsets, monitorScroll){
-      if(this.doAnchor){
-          Ext.EventManager.removeResizeListener(this.doAnchor, this);
-          Ext.EventManager.un(window, 'scroll', this.doAnchor, this);
-      }
-      this.doAnchor = function(){
-          this.alignTo(el, alignment, offsets);
-      };
-      Ext.EventManager.onWindowResize(this.doAnchor, this);
+        this.clearAnchor();
+        this.anchorTarget = {
+            el: el,
+            alignment: alignment,
+            offsets: offsets
+        };
 
-      var tm = typeof monitorScroll;
-      if(tm != 'undefined'){
-          Ext.EventManager.on(window, 'scroll', this.doAnchor, this,
-              {buffer: tm == 'number' ? monitorScroll : 50});
-      }
-      this.doAnchor();
-      return this;
+        Ext.EventManager.onWindowResize(this.doAnchor, this);
+        var tm = typeof monitorScroll;
+        if(tm != 'undefined'){
+            Ext.EventManager.on(window, 'scroll', this.doAnchor, this,
+                {buffer: tm == 'number' ? monitorScroll : 50});
+        }
+        return this.doAnchor();
+    },
+
+    /**
+     * Performs the anchor, using the saved anchorTarget property.
+     * @return {Ext.Window} this
+     * @private
+     */
+    doAnchor : function(){
+        var o = this.anchorTarget;
+        this.alignTo(o.el, o.alignment, o.offsets);
+        return this;
+    },
+
+    /**
+     * Removes any existing anchor from this window. See {@link #anchorTo}.
+     * @return {Ext.Window} this
+     */
+    clearAnchor : function(){
+        if(this.anchorTarget){
+            Ext.EventManager.removeResizeListener(this.doAnchor, this);
+            Ext.EventManager.un(window, 'scroll', this.doAnchor, this);
+            delete this.anchorTarget;
+        }
+        return this;
     },
 
     /**
@@ -1363,17 +1399,19 @@ Ext.MessageBox = function(){
             }
             msgEl.update(text || '&#160;');
 
-            var iw = iconCls != '' ? (iconEl.getWidth() + iconEl.getMargins('lr')) : 0;
-            var mw = msgEl.getWidth() + msgEl.getMargins('lr');
-            var fw = dlg.getFrameWidth('lr');
-            var bw = dlg.body.getFrameWidth('lr');
+            var iw = iconCls != '' ? (iconEl.getWidth() + iconEl.getMargins('lr')) : 0,
+                mw = msgEl.getWidth() + msgEl.getMargins('lr'),
+                fw = dlg.getFrameWidth('lr'),
+                bw = dlg.body.getFrameWidth('lr'),
+                w;
+                
             if (Ext.isIE && iw > 0){
                 //3 pixels get subtracted in the icon CSS for an IE margin issue,
                 //so we have to add it back here for the overall width to be consistent
                 iw += 3;
             }
-            var w = Math.max(Math.min(opt.width || iw+mw+fw+bw, this.maxWidth),
-                        Math.max(opt.minWidth || this.minWidth, bwidth || 0));
+            w = Math.max(Math.min(opt.width || iw+mw+fw+bw, opt.maxWidth || this.maxWidth),
+                    Math.max(opt.minWidth || this.minWidth, bwidth || 0));
 
             if(opt.prompt === true){
                 activeTextEl.setWidth(w-iw-fw-bw);
@@ -1671,7 +1709,8 @@ Ext.MessageBox.ERROR
                 msg : msg,
                 buttons: this.OK,
                 fn: fn,
-                scope : scope
+                scope : scope,
+                minWidth: this.minWidth
             });
             return this;
         },
@@ -1694,7 +1733,8 @@ Ext.MessageBox.ERROR
                 buttons: this.YESNO,
                 fn: fn,
                 scope : scope,
-                icon: this.QUESTION
+                icon: this.QUESTION,
+                minWidth: this.minWidth
             });
             return this;
         },
@@ -1719,7 +1759,7 @@ Ext.MessageBox.ERROR
                 msg : msg,
                 buttons: this.OKCANCEL,
                 fn: fn,
-                minWidth:250,
+                minWidth: this.minPromptWidth,
                 scope : scope,
                 prompt:true,
                 multiline: multiline,
@@ -1791,10 +1831,16 @@ Ext.MessageBox.ERROR
         minWidth : 100,
         /**
          * The minimum width in pixels of the message box if it is a progress-style dialog.  This is useful
-         * for setting a different minimum width than text-only dialogs may need (defaults to 250)
+         * for setting a different minimum width than text-only dialogs may need (defaults to 250).
          * @type Number
          */
         minProgressWidth : 250,
+        /**
+         * The minimum width in pixels of the message box if it is a prompt dialog.  This is useful
+         * for setting a different minimum width than text-only dialogs may need (defaults to 250).
+         * @type Number
+         */
+        minPromptWidth: 250,
         /**
          * An object containing the default button text strings that can be overriden for localized language support.
          * Supported properties are: ok, cancel, yes and no.  Generally you should include a locale-specific
@@ -1887,7 +1933,7 @@ Ext.dd.PanelProxy.prototype = {
     show : function(){
         if(!this.ghost){
             this.ghost = this.panel.createGhost(undefined, undefined, Ext.getBody());
-            this.ghost.setXY(this.panel.el.getXY())
+            this.ghost.setXY(this.panel.el.getXY());
             if(this.insertProxy){
                 this.proxy = this.panel.el.insertSibling({cls:'x-panel-dd-spacer'});
                 this.proxy.setSize(this.panel.getSize());
