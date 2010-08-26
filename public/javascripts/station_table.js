@@ -11,6 +11,9 @@ var switchToMap = new Ext.Action( {
         zoom = map.getZoom()
         current_position = new google.maps.LatLng(lat, lng, false)
         Ext.getCmp('station_map').getMap().setCenter(current_position, zoom);
+
+        trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
     },
     tooltip : 'switch to map view'
 });

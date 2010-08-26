@@ -136,10 +136,20 @@ var addMarker = function(title, lat, lng){
         icon:cone_image
     });
 
+    infowindow = new google.maps.InfoWindow({
+        content: "<h1>Bank</h1>"
+    });
+
     google.maps.event.addListener(marker, 'click', function() {
-        console.log(this)
-        this.setIcon(cone_arrow_image)
+        console.log(this);
+        console.log(marker);
+        this.setIcon(cone_arrow_image);
         this.setDraggable(true);
+        infowindow.open(map, marker);
+    });
+
+    google.maps.event.addListener(marker, 'mouseover', function() {
+        infowindow.open(map, marker);
     });
     
     map.setCenter(myLatlng);
