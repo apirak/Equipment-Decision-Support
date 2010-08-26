@@ -139,6 +139,7 @@ var addMarker = function(title, lat, lng){
     google.maps.event.addListener(marker, 'click', function() {
         console.log(this)
         this.setIcon(cone_arrow_image)
+        this.setDraggable(true);
     });
     
     map.setCenter(myLatlng);
