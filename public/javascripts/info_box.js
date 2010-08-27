@@ -80,6 +80,10 @@ InfoBox.prototype.createElement = function() {
     div.style.width = this.width_ + "px";
     div.style.height = this.height_ + "px";
     div.style.fontSize = "10px";
+    div.style.borderBottom = "1px solid #999999";
+    div.style.borderRight = "1px solid #999999";
+    //div.style.mozBorderRadius = "4px 4px 4px 4px";
+   
     var contentDiv = document.createElement("div");
     contentDiv.style.padding = "3px"
     contentDiv.innerHTML = this.content_;
