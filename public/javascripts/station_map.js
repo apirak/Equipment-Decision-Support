@@ -149,7 +149,10 @@ var addMarker = function(title, lat, lng){
     });
 
     google.maps.event.addListener(marker, 'mouseover', function() {
-        infowindow.open(map, marker);
+        //infowindow.open(map, marker);
+        var infoBox = new InfoBox({latlng: marker.getPosition(),
+            map: map,
+            content: "สถานีบางรัก"});
     });
     
     map.setCenter(myLatlng);
