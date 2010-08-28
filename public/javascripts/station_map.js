@@ -163,7 +163,7 @@ var loadingCurrentStation = function(){
     count = 0;
     for(count =0; count < positions.length; count++) {
         position = positions[count].data;
-        console.log('Center Position', "Lat:" +position.lat + " Lng:" + position.lng);
+        //console.log('Center Position', "Lat:" +position.lat + " Lng:" + position.lng);
         addMarker(position.description, position.lat,position.lng)
     }
 };
