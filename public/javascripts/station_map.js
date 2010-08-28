@@ -141,8 +141,8 @@ var addMarker = function(title, lat, lng){
     });
 
     google.maps.event.addListener(marker, 'click', function() {
-        console.log(this);
-        console.log(marker);
+        //console.log(this);
+        //console.log(marker);
         this.setIcon(cone_arrow_image);
         this.setDraggable(true);
         infowindow.open(map, marker);
