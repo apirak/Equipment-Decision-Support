@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
+  map.netzke
   map.root :controller => :equipment
 
   # See how all your routes lay out with "rake routes"

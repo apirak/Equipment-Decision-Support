@@ -9,12 +9,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100828151052) do
+ActiveRecord::Schema.define(:version => 20100829151820) do
 
   create_table "equipment", :force => true do |t|
     t.integer "position_id"
     t.string  "code"
     t.text    "status"
+  end
+
+  create_table "netzke_field_lists", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.string   "model_name"
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "netzke_preferences", :force => true do |t|
+    t.string   "name"
+    t.string   "pref_type"
+    t.text     "value"
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.string   "widget_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "positions", :force => true do |t|
