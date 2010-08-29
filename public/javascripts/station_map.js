@@ -66,6 +66,8 @@ var add_station = new Ext.Action( {
             title:"Hello World!",
             icon:cone_image
         });
+
+        marker.setDraggable(true);
 		
         google.maps.event.addListener(marker, 'click', function() {
             console.log(this)

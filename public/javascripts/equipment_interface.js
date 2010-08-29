@@ -52,12 +52,16 @@ var equipmentInterface = function(){
                     },
                     items: [
                     {
-                        html:'log list',
+                        html:'<div id="log-list">Uploading...</div>',
                         flex:1
                     },
                     {
-                        html:'log post',
-                        height:50
+                        xtype:'htmleditor',
+                        id:'bio',
+                        fieldLabel:'Biography',
+                        border: false,
+                        height:100,
+                        anchor:'98%'
                     }
                     ]
                 }, stationPanel, information]

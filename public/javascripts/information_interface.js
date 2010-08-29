@@ -43,12 +43,6 @@ var information = {
         align : 'stretch',
         pack  : 'start'
     },
-    items: [
-    {
-        html:'panel 1',
-        height:150,
-        border: false
-    }, tabs2
-    ]
+    items:[tabs2]
 };
 
