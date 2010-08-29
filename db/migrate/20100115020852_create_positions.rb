@@ -8,6 +8,14 @@ class CreatePositions < ActiveRecord::Migration
       t.decimal  :lat, :precision => 15, :scale => 10
       t.decimal  :lng, :precision => 15, :scale => 10
 
+      # Department
+      t.string :department_class
+      t.string :name
+      t.string :synonym
+      t.string :location
+      t.string :phont
+      t.text   :remark
+
       t.timestamps
     end
   end

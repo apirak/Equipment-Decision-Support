@@ -1,0 +1,3 @@
+rake db:migrate:reset
+rake edss:settings:load
+rake predata:add_department

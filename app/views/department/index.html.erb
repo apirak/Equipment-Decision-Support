@@ -1,0 +1,24 @@
+<% title "Department" %>
+
+<% content_for :head do %>
+  <%= stylesheet_link_tag "interface" %>
+  <%= javascript_include_tag "App" %>
+  <%= javascript_include_tag "department" %>
+
+  <script type="text/javascript">
+    Ext.onReady(function(){
+      department.init();
+    });
+  </script>
+<% end %>
+
+
+<div id="header">
+  <h1>Department</h1>
+  <div id="account">
+    Apirak |
+    <a href="#">account</a> |
+    <a href="#">help</a> |
+    <a href="#">logout</a>
+  </div>
+</div>

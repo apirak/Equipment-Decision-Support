@@ -22,8 +22,14 @@ ActiveRecord::Schema.define(:version => 20100828151052) do
     t.text     "description"
     t.string   "icon"
     t.string   "type"
-    t.decimal  "lat",         :precision => 15, :scale => 10
-    t.decimal  "lng",         :precision => 15, :scale => 10
+    t.decimal  "lat",              :precision => 15, :scale => 10
+    t.decimal  "lng",              :precision => 15, :scale => 10
+    t.string   "department_class"
+    t.string   "name"
+    t.string   "synonym"
+    t.string   "location"
+    t.string   "phont"
+    t.text     "remark"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

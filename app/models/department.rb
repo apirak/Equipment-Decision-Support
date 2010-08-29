@@ -11,7 +11,8 @@ class Department < Position
   def self.build(description, lat, lng)
     department = Department.find_by_description(description)
     unless department
-      department = Department.new({:description => description,
+      department = Department.new({
+          :description => description,
           :icon=> "cone_arrow_image",
           :lat => lat,
           :lng => lng})
