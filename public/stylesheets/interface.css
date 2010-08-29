@@ -1,0 +1,10 @@
+body{
+    font-family: tahoma,arial,helvetica,sans-serif;
+}
+
+#log-list {
+    font-size: 12px;
+    padding: 3px;
+    height: 100px;
+    overflow: auto;
+}

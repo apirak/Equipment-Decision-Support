@@ -1,0 +1,4 @@
+git push heroku master
+heroku rake db:migrate:reset
+heroku rake edss:settings:load
+heroku rake predata:add_department
