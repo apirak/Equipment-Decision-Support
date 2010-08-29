@@ -5,7 +5,7 @@ var switchToTable = new Ext.Action( {
     iconCls : 'table_view',
     text : 'Table view',
     handler : function() {
-        stationPanel.layout.setActiveItem('station_table');
+         positionPanel.layout.setActiveItem('position_table');
     },
     tooltip : '<b>Switch view</b><br/>switch to table view'
 });
@@ -13,26 +13,26 @@ var switchToTable = new Ext.Action( {
 var add_flag = new Ext.Action( {
     text : 'Add Dissaster',
     handler : function() {
-        Ext.getCmp('station_map').getMap().setCenter(new google.maps.LatLng(37.4419, -122.1419, false), 13);
+        Ext.getCmp('position_map').getMap().setCenter(new google.maps.LatLng(37.4419, -122.1419, false), 13);
     //Ext.Msg.alert('Its fine', 'and its art.');
     },
     iconCls : 'flag_plus',
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
 });
 
-var show_station = new Ext.Action( {
-    text : 'Show all station',
+var show_position = new Ext.Action( {
+    text : 'Show all position',
     handler : function() {
-        loadingCurrentStation();
+        loadingCurrentPosition();
     },
     iconCls : 'flag_plus',
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
 });
 
-var add_station = new Ext.Action( {
-    text : 'Add Station',
+var add_position = new Ext.Action( {
+    text : 'Add Position',
     handler : function() {
-        map = Ext.getCmp('station_map').getMap()
+        map = Ext.getCmp('position_map').getMap()
         
         var contentString = '<div id="content">'+
         '<div id="siteNotice">'+
@@ -93,7 +93,7 @@ var add_station = new Ext.Action( {
 var show_geocode = new Ext.Action( {
     text : 'Curent Lat,Lng',
     handler : function() {
-        map = Ext.getCmp('station_map').getMap();
+        map = Ext.getCmp('position_map').getMap();
         lat = map.getCenter().lat();
         lng = map.getCenter().lng();
         Ext.Msg.alert('Center Position', "Lat:" +lat + " Lng:" + lng);
@@ -102,16 +102,16 @@ var show_geocode = new Ext.Action( {
 });
 
 var map_tb = new Ext.Toolbar();
-map_tb.add('Station', '-', add_flag, '-', {
+map_tb.add('Position', '-', add_flag, '-', {
     text: 'Action Menu',
-    menu: [add_station, show_geocode, show_station]
+    menu: [add_position, show_geocode, show_position]
 },
 '->', switchToTable);
 
-var stationMap = {}
+var positionMap = {}
 if (online) {
-    stationMap = {
-        id : 'station_map',
+    positionMap = {
+        id : 'position_map',
         xtype : 'gmappanel',
         gmapType : 'map',
         tbar : map_tb,
@@ -127,7 +127,7 @@ if (online) {
 }
 
 var addMarker = function(title, lat, lng){
-    map = Ext.getCmp('station_map').getMap();
+    map = Ext.getCmp('position_map').getMap();
 
     var myLatlng = new google.maps.LatLng(lat, lng);
 
@@ -160,7 +160,7 @@ var addMarker = function(title, lat, lng){
     map.setCenter(myLatlng);
 };
 
-var loadingCurrentStation = function(){
+var loadingCurrentPosition = function(){
     positions = positionDataStore.data.items;
     count = 0;
     for(count =0; count < positions.length; count++) {

@@ -1,7 +1,7 @@
 var viewport;
 
-var stationPanel = new Ext.Panel({
-    id:'station_panel',
+var positionPanel = new Ext.Panel({
+    id:'position_panel',
     layout: 'card',
     activeItem: defaultView,
     region: 'center',
@@ -11,7 +11,7 @@ var stationPanel = new Ext.Panel({
     defaults: {
         border: false
     },
-    items:[stationMap, stationTable]
+    items:[positionMap, positionTable]
 });
 
 var equipmentInterface = function(){
@@ -64,7 +64,7 @@ var equipmentInterface = function(){
                         anchor:'98%'
                     }
                     ]
-                }, stationPanel, information]
+                }, positionPanel, information]
             });
         }
     }

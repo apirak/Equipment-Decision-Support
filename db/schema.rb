@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100116080646) do
+ActiveRecord::Schema.define(:version => 20100828151052) do
+
+  create_table "equipment", :force => true do |t|
+    t.integer "position_id"
+    t.string  "code"
+    t.text    "status"
+  end
 
   create_table "positions", :force => true do |t|
     t.string   "title"

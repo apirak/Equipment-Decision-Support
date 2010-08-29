@@ -2,15 +2,15 @@ var switchToMap = new Ext.Action( {
     iconCls : 'map_view',
     text : 'Map view',
     handler : function() {
-        stationPanel.layout.setActiveItem('station_map');
-        map = Ext.getCmp('station_map').getMap();
+        positionPanel.layout.setActiveItem('position_map');
+        map = Ext.getCmp('position_map').getMap();
 
         // Force refresh
         lat = map.getCenter().lat();
         lng = map.getCenter().lng()
         zoom = map.getZoom()
         current_position = new google.maps.LatLng(lat, lng, false)
-        Ext.getCmp('station_map').getMap().setCenter(current_position, zoom);
+        Ext.getCmp('position_map').getMap().setCenter(current_position, zoom);
 
         trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
@@ -19,7 +19,7 @@ var switchToMap = new Ext.Action( {
 });
 
 var table_tb = new Ext.Toolbar();
-table_tb.add('Station', '-', add_flag, '-', {                  
+table_tb.add('Position', '-', add_flag, '-', {
     text: 'Action Menu',
     menu: []
 }, '->', switchToMap);
@@ -30,8 +30,8 @@ var paginateToolsBar = new Ext.PagingToolbar({
     store: positionDataStore,
     pageSize: pageSize,
     displayInfo: true,
-    displayMsg: 'Station {0} - {1} of {2}',
-    emptyMsg: "No station by your search condition"
+    displayMsg: 'Position {0} - {1} of {2}',
+    emptyMsg: "No position by your search condition"
 })
 
 tableViewSelectedListeners = {
@@ -39,10 +39,10 @@ tableViewSelectedListeners = {
         if(selModel.getCount() != 0) {
             if(selModel.getCount() == 1){
                 // media_select(selModel.selections.items[0]);
-                alert("a station")
+                alert("a position")
             } else {
                 // media_selects(selModel.selections.items);
-                alert("stations")
+                alert("positions")
             }
         } else {
             // media_select_not_thing();
@@ -51,8 +51,8 @@ tableViewSelectedListeners = {
     }
 }
 
-var stationTable = new Ext.grid.GridPanel({
-    id: 'station_table',
+var positionTable = new Ext.grid.GridPanel({
+    id: 'position_table',
     store: positionDataStore,
     columns: positionColumnField,
     margins: '0 5 5 0',

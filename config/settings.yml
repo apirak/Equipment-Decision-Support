@@ -32,11 +32,11 @@
 # Default View
 #------------------------------------------------------------------------------
 # Config first screen for center panel
-#   :station_talble -- show all station in table
-#   :station_map    -- show all station in map
-:default_view: :station_table
+#   :position_table -- show all position in table
+#   :position_map    -- show all position in map
+:default_view: :position_table
 
-# Set howmany station in one table page
+# Set howmany position in one table page
 #------------------------------------------------------------------------------
 :page_size: 20
 
