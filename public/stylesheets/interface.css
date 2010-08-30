@@ -10,17 +10,18 @@ body{
 }
 
 #header {
-	color: #15428B;
+    color: #15428B;
 }
 
 #header H1 {
-	float: left;
-	font-size: 15px;
-	font-weight: bold;
-	margin-top:3px;
+    display:inline-block;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:3px;
 }
 
 #account {
-	float: right;
-	font-size: 12px;
+    display:inline-block;
+    float:right;
+    font-size:12px;
 }

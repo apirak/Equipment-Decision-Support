@@ -1,3 +1,43 @@
 <% title "Department" %>
 
-<%= netzke :departments, :class_name => "GridPanel", :model => "Department" %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'department' %>
+  <%= javascript_include_tag "department" %>
+
+  <script type="text/javascript">
+    Ext.onReady(function(){
+      department.init();
+    });
+  </script>
+<% end %>
+
+<div id="header">
+  <h1>Equipment Decision Support</h1>
+  <div id="account">
+    Apirak |
+    <a href="#">account</a> |
+    <a href="#">help</a> |
+    <a href="#">logout</a>
+  </div>
+</div>
+
+<%= netzke :departments,
+  :class_name => "GridPanel",
+  :model => "Department",
+  :columns => [:id, :description, :name, :synonym, 
+  {:name => :location, :width => 200},
+  :phone, :remark,
+  :lat, :lng,
+  {:name => :department_class, :header => "Class"}
+],
+  :ext_config => {
+  :border => false,
+  :header => false,
+  :view_config => {
+    :force_fit => true,
+    :height => 200
+  }
+}
+
+%>
+

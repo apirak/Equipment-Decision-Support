@@ -13,7 +13,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string :name
       t.string :synonym
       t.string :location
-      t.string :phont
+      t.string :phone
       t.text   :remark
 
       t.timestamps
