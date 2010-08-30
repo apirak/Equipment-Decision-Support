@@ -1,16 +1,5 @@
 <% title "Department" %>
 
-<% content_for :head do %>
-  <%= stylesheet_link_tag 'department' %>
-  <%= javascript_include_tag "department" %>
-
-  <script type="text/javascript">
-    Ext.onReady(function(){
-      department.init();
-    });
-  </script>
-<% end %>
-
 <div id="header">
   <h1>Equipment Decision Support</h1>
   <div id="account">
@@ -22,22 +11,41 @@
 </div>
 
 <%= netzke :departments,
-  :class_name => "GridPanel",
-  :model => "Department",
-  :columns => [:id, :description, :name, :synonym, 
-  {:name => :location, :width => 200},
-  :phone, :remark,
-  :lat, :lng,
-  {:name => :department_class, :header => "Class"}
-],
-  :ext_config => {
-  :border => false,
-  :header => false,
-  :view_config => {
-    :force_fit => true,
-    :height => 200
+  :class_name => "BorderLayoutPanel",
+  :ext_config => { :header => false, :border => false, :height => 550 },
+  :regions => {
+  :north => {
+    :class_name => "Panel",
+    :ext_config => {:el => :header, :header => false, :border => false},
+    :region_config => {:height => 50}
+  },
+  :center => {
+    :class_name => "TabPanel",
+    :ext_config => {
+      :title => "Two GridPanels loaded dynamically"
+    },
+    :items => [{
+        :class_name => "GridPanel",
+        :ext_config => {
+          :view_config => {
+            :force_fit => true,
+          }
+        },
+        :model => "Department",
+        :name => "all department",
+        :columns => [:id, :description, :name, :synonym,
+          {:name => :location, :width => 200},
+          :phone, :remark,
+          :lat, :lng,
+          {:name => :department_class, :header => "Class"}
+        ]
+      }, {
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "Department",
+        :name => "หน่วยงาน"
+        
+      }]
   }
 }
-
 %>
-
