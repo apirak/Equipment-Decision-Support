@@ -10,5 +10,11 @@ namespace :predata do
     puts(Department.build("Department 1", 13.890911516432162, 100.4473970800781))
     puts(Department.build("Department 2", 13.762895928509105, 100.61631187499998))
     puts(Department.build("Department 3", 13.850189124636994, 100.45553709082033))
+
+    puts(Space.build("small", "พื้นที่มีความคับแคบเหมาะกับเครื่องจักรขนาดเล็ก"))
+    puts(Space.build("medium", "จำกัดเพียงพอต่อการทำงานของเครื่องจักรขนาดกลางและขนาดเล็ก"))
+    puts(Space.build("large", "พื้นที่กว้างขวางสามารถทำงานได้อย่างสะดวก"))
+
+
   end
 end

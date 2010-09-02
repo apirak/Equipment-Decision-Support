@@ -1,4 +1,6 @@
 class Department < Position
+  has_one :space
+  has_one :department_group
   
   def self.column_models
     Position.column_models

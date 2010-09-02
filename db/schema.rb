@@ -11,10 +11,20 @@
 
 ActiveRecord::Schema.define(:version => 20100829151820) do
 
+  create_table "department_groups", :force => true do |t|
+    t.string "ability"
+    t.string "description"
+  end
+
   create_table "equipment", :force => true do |t|
     t.integer "position_id"
     t.string  "code"
     t.text    "status"
+  end
+
+  create_table "ground_strengths", :force => true do |t|
+    t.string "name"
+    t.string "description"
   end
 
   create_table "netzke_field_lists", :force => true do |t|
@@ -41,17 +51,24 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
 
   create_table "positions", :force => true do |t|
     t.string   "title"
+    t.string   "name"
     t.text     "description"
     t.string   "icon"
     t.string   "type"
-    t.decimal  "lat",              :precision => 15, :scale => 10
-    t.decimal  "lng",              :precision => 15, :scale => 10
-    t.string   "department_class"
-    t.string   "name"
-    t.string   "synonym"
-    t.string   "location"
-    t.string   "phont"
+    t.decimal  "lat",                 :precision => 15, :scale => 10
+    t.decimal  "lng",                 :precision => 15, :scale => 10
     t.text     "remark"
+    t.integer  "department_group_id"
+    t.string   "department_class"
+    t.string   "synonym"
+    t.text     "location"
+    t.string   "phone"
+    t.integer  "space_id"
+    t.integer  "ground_strength_id"
+    t.boolean  "rain"
+    t.boolean  "night_time"
+    t.boolean  "wind_hard"
+    t.boolean  "power_source"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +79,25 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.text     "default_value"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "spaces", :force => true do |t|
+    t.string "name"
+    t.string "description"
+  end
+
+  create_table "staffs", :force => true do |t|
+    t.string  "code"
+    t.string  "firstname"
+    t.string  "surname"
+    t.string  "nickname"
+    t.string  "email"
+    t.string  "password"
+    t.string  "phone"
+    t.string  "post"
+    t.string  "ability"
+    t.boolean "status"
+    t.text    "remark"
   end
 
 end
