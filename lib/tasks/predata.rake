@@ -59,6 +59,7 @@ namespace :predata do
           :remark => "dodo",
           :space_id => 1,
           :ground_strength_id => 1,
+          :dissaster_id => 1,
           :rain => false,
           :night_time => false,
           :wind_hard => true,
@@ -83,6 +84,9 @@ namespace :predata do
     
     puts(EquipmentName.build("tracter", "รถเทรกเตอร์"))
     puts(EquipmentName.build("digger", "รถขุด"))
+
+    puts(Dissaster.build("water", "อุทกภัย"))
+    puts(Dissaster.build("more water", "วาตภัย"))
 
     puts(Equipment.build({:department_id => 1,
           :equipment_name_id => 1,

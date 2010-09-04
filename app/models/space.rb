@@ -10,9 +10,9 @@ class Space < ActiveRecord::Base
     space.description = description
 
     if space.save
-      return "Save space #{name}"
+      return "Save space #{space.name}"
     else
-      return "Can't save space #{name}"
+      return "Can't save space #{space.name}"
     end
   end
 end

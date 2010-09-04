@@ -20,6 +20,7 @@ class CreatePositions < ActiveRecord::Migration
       # Site
       t.integer :space_id
       t.integer :ground_strength_id
+      t.integer :dissaster_id
       t.boolean :rain
       t.boolean :night_time
       t.boolean :wind_hard
@@ -59,6 +60,11 @@ class CreatePositions < ActiveRecord::Migration
       
       t.timestamps
     end
+    
+    create_table :dissasters do |t|
+      t.string :name
+      t.string :description
+    end
   end
 
   def self.down
@@ -67,5 +73,6 @@ class CreatePositions < ActiveRecord::Migration
     drop_table :ground_strengths
     drop_table :department_groups
     drop_table :staffs
+    drop_table :dissasters
   end
 end

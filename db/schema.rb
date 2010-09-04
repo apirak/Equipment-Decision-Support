@@ -16,6 +16,11 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.string "description"
   end
 
+  create_table "dissasters", :force => true do |t|
+    t.string "name"
+    t.string "description"
+  end
+
   create_table "equipment", :force => true do |t|
     t.integer  "department_id"
     t.integer  "equipment_name_id"
@@ -84,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.string   "phone"
     t.integer  "space_id"
     t.integer  "ground_strength_id"
+    t.integer  "dissaster_id"
     t.boolean  "rain"
     t.boolean  "night_time"
     t.boolean  "wind_hard"

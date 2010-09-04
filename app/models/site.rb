@@ -1,6 +1,7 @@
 class Site < Position
   belongs_to :ground_strength
   belongs_to :space
+  belongs_to :dissaster
 
   def self.build(values)
     site = Site.find_by_name(values[:code])

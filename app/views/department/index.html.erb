@@ -1,14 +1,5 @@
-<% title "Department" %>
+<% title "Base information" %>
 
-<div id="header">
-  <h1>Equipment Decision Support</h1>
-  <div id="account">
-    Apirak |
-    <a href="#">account</a> |
-    <a href="#">help</a> |
-    <a href="#">logout</a>
-  </div>
-</div>
 
 <%= netzke :departments,
   :class_name => "BorderLayoutPanel",
@@ -16,8 +7,8 @@
   :regions => {
   :north => {
     :class_name => "Panel",
-    :ext_config => {:el => :header, :header => false, :border => false},
-    :region_config => {:height => 50}
+    :ext_config => {:el => :header},
+    :region_config => {:height => 100}
   },
   :center => {
     :class_name => "TabPanel",
@@ -71,6 +62,11 @@
       },{
         :class_name => "GridPanel",
         :preloaded => true,
+        :model => "Dissaster",
+        :name => "site dissaster"
+      },{
+        :class_name => "GridPanel",
+        :preloaded => true,
         :model => "Equipment",
         :name => "equipment",
         :columns => [:department_id, :equipment_name_id, :size_id,
@@ -94,3 +90,4 @@
 %>
 
 
+<%= render "shared/account" %>
