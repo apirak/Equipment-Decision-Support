@@ -20,7 +20,8 @@
     :columns => [:id, :description, :name, :synonym,
       {:name => :location, :width => 200},
       :phone, :remark,
-      :lat, :lng,
+      {:name => :lat, :editor => {:xtype => :textfield}},
+      {:name => :lng, :editor => {:xtype => :textfield}},
       {:name => :department_class, :header => "Class"}
     ]
   }, {
@@ -38,7 +39,10 @@
     :model => "Site",
     :name => "site",
     :columns => [:id, :title, :name, :description, :icon,
-      :type, :lat, :lng, :remark, :space_id,
+      :type,
+      {:name => :lat, :editor => {:xtype => :textfield}},
+      {:name => :lng, :editor => {:xtype => :textfield}},
+      :remark, :space_id,
       :ground_strength_id, :rain, :night_time,
       :wind_hard, :power_source,
     ]
