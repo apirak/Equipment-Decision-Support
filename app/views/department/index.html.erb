@@ -1,93 +1,83 @@
 <% title "Base information" %>
 
+<div class="department_header">
+  <%= render "shared/account" %>
+</div>
+
 
 <%= netzke :departments,
-  :class_name => "BorderLayoutPanel",
-  :ext_config => { :header => false, :border => false, :height => 550 },
-  :regions => {
-  :north => {
-    :class_name => "Panel",
-    :ext_config => {:el => :header},
-    :region_config => {:height => 100}
-  },
-  :center => {
-    :class_name => "TabPanel",
+  :class_name => "TabPanel",
+  :ext_config => { :border => true, :height => 550},
+  :items => [{
+    :class_name => "GridPanel",
     :ext_config => {
-      :title => "Two GridPanels loaded dynamically"
+      :view_config => {
+        :force_fit => true,
+      }
     },
-    :items => [{
-        :class_name => "GridPanel",
-        :ext_config => {
-          :view_config => {
-            :force_fit => true,
-          }
-        },
-        :model => "Department",
-        :name => "department",
-        :columns => [:id, :description, :name, :synonym,
-          {:name => :location, :width => 200},
-          :phone, :remark,
-          :lat, :lng,
-          {:name => :department_class, :header => "Class"}
-        ]
-      }, {
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Staff",
-        :name => "staff",
-        :columns => [:id, :department_id,:code, :firstname, :surname,
-          :nickname, :email, :password, :phone, :post,
-          :ability, :status, :remark, :fullname
-        ]
-      }, {
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Site",
-        :name => "site",
-        :columns => [:id, :title, :name, :description, :icon,
-          :type, :lat, :lng, :remark, :space_id,
-          :ground_strength_id, :rain, :night_time,
-          :wind_hard, :power_source,
-        ]
-      }, {
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Space",
-        :name => "site space"
-      },{
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "GroundStrength",
-        :name => "site ground strength"
-      },{
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Dissaster",
-        :name => "site dissaster"
-      },{
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Equipment",
-        :name => "equipment",
-        :columns => [:department_id, :equipment_name_id, :size_id,
-          :powersource, :move_vehecle, :dig, :move_object, :develop,
-          :surface, :iron_wheel, :code, :vehicle_registration, :status,
-          :specification
-        ]
-      },{
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "Size",
-        :name => "equipment size"
-      },{
-        :class_name => "GridPanel",
-        :preloaded => true,
-        :model => "EquipmentName",
-        :name => "equipment name"
-      }]
-  }
-}
+    :model => "Department",
+    :name => "department",
+    :columns => [:id, :description, :name, :synonym,
+      {:name => :location, :width => 200},
+      :phone, :remark,
+      :lat, :lng,
+      {:name => :department_class, :header => "Class"}
+    ]
+  }, {
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Staff",
+    :name => "staff",
+    :columns => [:id, :department_id,:code, :firstname, :surname,
+      :nickname, :email, :password, :phone, :post,
+      :ability, :status, :remark, :fullname
+    ]
+  }, {
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Site",
+    :name => "site",
+    :columns => [:id, :title, :name, :description, :icon,
+      :type, :lat, :lng, :remark, :space_id,
+      :ground_strength_id, :rain, :night_time,
+      :wind_hard, :power_source,
+    ]
+  }, {
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Space",
+    :name => "site space"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "GroundStrength",
+    :name => "site ground strength"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Dissaster",
+    :name => "site dissaster"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Equipment",
+    :name => "equipment",
+    :columns => [:department_id, :equipment_name_id, :size_id,
+      :powersource, :move_vehecle, :dig, :move_object, :develop,
+      :surface, :iron_wheel, :code, :vehicle_registration, :status,
+      :specification
+    ]
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Size",
+    :name => "equipment size"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "EquipmentName",
+    :name => "equipment name"
+  }]
 %>
 
 
-<%= render "shared/account" %>
