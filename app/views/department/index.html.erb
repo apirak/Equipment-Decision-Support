@@ -62,13 +62,35 @@
         :class_name => "GridPanel",
         :preloaded => true,
         :model => "Space",
-        :name => "space"
+        :name => "site space"
       },{
         :class_name => "GridPanel",
         :preloaded => true,
         :model => "GroundStrength",
-        :name => "ground strength"
+        :name => "site ground strength"
+      },{
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "Equipment",
+        :name => "equipment",
+        :columns => [:department_id, :equipment_name_id, :size_id,
+          :powersource, :move_vehecle, :dig, :move_object, :develop,
+          :surface, :iron_wheel, :code, :vehicle_registration, :status,
+          :specification
+        ]
+      },{
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "Size",
+        :name => "equipment size"
+      },{
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "EquipmentName",
+        :name => "equipment name"
       }]
   }
 }
 %>
+
+

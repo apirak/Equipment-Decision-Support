@@ -76,8 +76,31 @@ namespace :predata do
           :ability => "ability",
           :status => true,
           :remark => "remark"}))
+
+    puts(Size.build("small", "เครื่องจักรขนาดเล็ก"))
+    puts(Size.build("medium", "เครื่องจักรขนาดกลาง"))
+    puts(Size.build("bit", "เครื่องจักรขนาดใหญ่"))
     
+    puts(EquipmentName.build("tracter", "รถเทรกเตอร์"))
+    puts(EquipmentName.build("digger", "รถขุด"))
+
+    puts(Equipment.build({:department_id => 1,
+          :equipment_name_id => 1,
+          :size_id => 1,
+          :powersource => true,
+          :move_vehecle => true,
+          :dig => true,
+          :move_object => true,
+          :develop => true,
+          :surface => true,
+          :iron_wheel => true,
+          :code => "abc",
+          :vehicle_registration => "xxy",
+          :status => true,
+          :specification => "Super mama",
+          :remark => "Super Land"}))
   end
 end
 
 
+       

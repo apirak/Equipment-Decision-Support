@@ -2,6 +2,7 @@ class Department < Position
   has_one :space
   has_one :department_group
   has_many :staffs
+  has_many :equipment
   
   def self.column_models
     Position.column_models

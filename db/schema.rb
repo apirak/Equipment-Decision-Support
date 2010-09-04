@@ -17,9 +17,28 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
   end
 
   create_table "equipment", :force => true do |t|
-    t.integer "position_id"
-    t.string  "code"
-    t.text    "status"
+    t.integer  "department_id"
+    t.integer  "equipment_name_id"
+    t.integer  "size_id"
+    t.boolean  "powersource"
+    t.boolean  "move_vehecle"
+    t.boolean  "dig"
+    t.boolean  "move_object"
+    t.boolean  "develop"
+    t.boolean  "surface"
+    t.boolean  "iron_wheel"
+    t.string   "code"
+    t.string   "vehicle_registration"
+    t.boolean  "status"
+    t.text     "specification"
+    t.text     "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "equipment_names", :force => true do |t|
+    t.string "name"
+    t.string "description"
   end
 
   create_table "ground_strengths", :force => true do |t|
@@ -81,24 +100,31 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.datetime "updated_at"
   end
 
+  create_table "sizes", :force => true do |t|
+    t.string "name"
+    t.string "description"
+  end
+
   create_table "spaces", :force => true do |t|
     t.string "name"
     t.string "description"
   end
 
   create_table "staffs", :force => true do |t|
-    t.integer "department_id"
-    t.string  "code"
-    t.string  "firstname"
-    t.string  "surname"
-    t.string  "nickname"
-    t.string  "email"
-    t.string  "password"
-    t.string  "phone"
-    t.string  "post"
-    t.string  "ability"
-    t.boolean "status"
-    t.text    "remark"
+    t.integer  "department_id"
+    t.string   "code"
+    t.string   "firstname"
+    t.string   "surname"
+    t.string   "nickname"
+    t.string   "email"
+    t.string   "password"
+    t.string   "phone"
+    t.string   "post"
+    t.string   "ability"
+    t.boolean  "status"
+    t.text     "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

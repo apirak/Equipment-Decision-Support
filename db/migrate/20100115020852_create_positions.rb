@@ -56,6 +56,8 @@ class CreatePositions < ActiveRecord::Migration
       t.string  :ability
       t.boolean :status
       t.text    :remark
+      
+      t.timestamps
     end
   end
 
