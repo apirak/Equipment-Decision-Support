@@ -63,7 +63,16 @@ namespace :predata do
           :rain => false,
           :night_time => false,
           :wind_hard => true,
-          :power_source => true}))
+          :power_source => true,
+          :electric => true,
+          :light => true,
+          :lift_more_20_ton => true,
+          :lift_limit_20_ton => true,
+          :lift_limit_5_ton => true,
+          :Demolish => true,
+          :Move_mat => true,
+          :repair_route => true,
+          :site_clear => true}))
 
     puts(Staff.build({:department_id => 1,
           :code => "abd",
@@ -88,7 +97,8 @@ namespace :predata do
     puts(Dissaster.build("water", "อุทกภัย"))
     puts(Dissaster.build("more water", "วาตภัย"))
 
-    puts(Equipment.build({:department_id => 1,
+    puts(Equipment.build({
+          :department_id => 1,
           :equipment_name_id => 1,
           :size_id => 1,
           :powersource => true,
@@ -102,7 +112,16 @@ namespace :predata do
           :vehicle_registration => "xxy",
           :status => true,
           :specification => "Super mama",
-          :remark => "Super Land"}))
+          :remark => "Super Land",
+          :electric => true,
+          :light => true,
+          :lift_more_20_ton => true,
+          :lift_limit_20_ton => true,
+          :lift_limit_5_ton => true,
+          :Demolish => true,
+          :Move_mat => true,
+          :repair_route => true,
+          :site_clear => true}))
   end
 end
 

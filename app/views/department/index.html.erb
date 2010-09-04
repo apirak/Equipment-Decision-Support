@@ -7,7 +7,7 @@
 
 <%= netzke :departments,
   :class_name => "TabPanel",
-  :ext_config => { :border => true, :height => 550},
+  :ext_config => { :border => true, :height => 500},
   :items => [{
     :class_name => "GridPanel",
     :ext_config => {
@@ -45,6 +45,9 @@
       :remark, :space_id,
       :ground_strength_id, :rain, :night_time,
       :wind_hard, :power_source,
+      :electric, :light,
+      :lift_more_20_ton, :lift_limit_20_ton, :lift_limit_5_ton,
+      :Demolish, :Move_mat, :repair_route, :site_clear,
     ]
   }, {
     :class_name => "GridPanel",
@@ -66,10 +69,13 @@
     :preloaded => true,
     :model => "Equipment",
     :name => "equipment",
-    :columns => [:department_id, :equipment_name_id, :size_id,
+    :columns => [:id, :department_id, :equipment_name_id, :size_id,
       :powersource, :move_vehecle, :dig, :move_object, :develop,
       :surface, :iron_wheel, :code, :vehicle_registration, :status,
-      :specification
+      :specification,
+      :electric, :light,
+      :lift_more_20_ton, :lift_limit_20_ton, :lift_limit_5_ton,
+      :Demolish, :Move_mat, :repair_route, :site_clear,
     ]
   },{
     :class_name => "GridPanel",

@@ -17,6 +17,16 @@ class AddEquipment < ActiveRecord::Migration
       t.text    :specification
       t.text    :remark
 
+      t.boolean :electric
+      t.boolean :light
+      t.boolean :lift_more_20_ton
+      t.boolean :lift_limit_20_ton
+      t.boolean :lift_limit_5_ton
+      t.boolean :Demolish
+      t.boolean :Move_mat
+      t.boolean :repair_route
+      t.boolean :site_clear
+
       t.timestamps
     end
 
