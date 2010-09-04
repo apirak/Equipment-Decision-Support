@@ -44,6 +44,7 @@ class CreatePositions < ActiveRecord::Migration
     end
 
     create_table :staffs do |t|
+      t.integer :department_id
       t.string  :code
       t.string  :firstname
       t.string  :surname

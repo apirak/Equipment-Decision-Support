@@ -32,7 +32,7 @@
           }
         },
         :model => "Department",
-        :name => "all department",
+        :name => "department",
         :columns => [:id, :description, :name, :synonym,
           {:name => :location, :width => 200},
           :phone, :remark,
@@ -42,9 +42,32 @@
       }, {
         :class_name => "GridPanel",
         :preloaded => true,
-        :model => "Department",
-        :name => "หน่วยงาน"
-        
+        :model => "Staff",
+        :name => "staff",
+        :columns => [:id, :department_id,:code, :firstname, :surname,
+          :nickname, :email, :password, :phone, :post,
+          :ability, :status, :remark, :fullname
+        ]
+      }, {
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "Site",
+        :name => "site",
+        :columns => [:id, :title, :name, :description, :icon,
+          :type, :lat, :lng, :remark, :space_id,
+          :ground_strength_id, :rain, :night_time,
+          :wind_hard, :power_source,
+        ]
+      }, {
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "Space",
+        :name => "space"
+      },{
+        :class_name => "GridPanel",
+        :preloaded => true,
+        :model => "GroundStrength",
+        :name => "ground strength"
       }]
   }
 }

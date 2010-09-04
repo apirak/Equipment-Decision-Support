@@ -1,17 +1,15 @@
 class Space < ActiveRecord::Base
-  belongs_to :site
+  has_many :sites
 
   def self.build(name, description)
-    department = Space.find_by_name(name)
-    unless department
-      department = Department.new({
-        :name=> name,
-        :description => description})
-    else
-      department.name = name
-      department.description = description
+    space = Space.find_by_name(name)
+    unless space
+      space = Space.new()
     end
-    if department.save
+    space.name = name
+    space.description = description
+
+    if space.save
       return "Save space #{name}"
     else
       return "Can't save space #{name}"

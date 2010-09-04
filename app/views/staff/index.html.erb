@@ -1,0 +1,18 @@
+<% title "Staff" %>
+
+<div id="header">
+  <h1>Equipment Decision Support</h1>
+  <div id="account">
+    Apirak |
+    <a href="#">account</a> |
+    <a href="#">help</a> |
+    <a href="#">logout</a>
+  </div>
+</div>
+
+<%= netzke :staffs,
+  :class_name => "GridPanel",
+  :preloaded => true,
+  :model => "Staff",
+  :name => "all Staff"
+%>
