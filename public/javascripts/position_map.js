@@ -178,31 +178,33 @@ var addMarker = function(title, lat, lng, type){
     var myLatlng = new google.maps.LatLng(lat, lng);
     
     var icon = site_icon;
-    var marker = site_markers;
+    var markers = site_markers;
     if (type == 'Department') {
-        marker = department_markers;
+        markers = department_markers;
         icon = department_icon;
     }
 
-    totalMarker = marker.length;
+    totalMarker = markers.length;
 
-    marker[totalMarker] = new google.maps.Marker({
+    markers[totalMarker] = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: title,
         icon: icon
     });
 
+    marker = markers[totalMarker]
+
     infowindow = new google.maps.InfoWindow({
         content: "<h1>Bank</h1>"
     });
 
-    google.maps.event.addListener(marker[totalMarker], 'click', function() {
+    google.maps.event.addListener(marker, 'click', function() {
         //console.log(this);
         //console.log(marker);
         this.setIcon(cone_arrow_image);
         this.setDraggable(true);
-        infowindow.open(map, marker[totalMarker]);
+        infowindow.open(map, this);
     });
 
     /*
