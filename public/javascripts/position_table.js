@@ -70,9 +70,3 @@ var positionTable = new Ext.grid.GridPanel({
         listeners: tableViewSelectedListeners
     })
 });
-
-//    enableDragDrop: true,
-//    ddGroup: 'organizer_drag_drop'
-//    listeners: {
-//       'dblclick' : media_double_click
-//    }

@@ -1,5 +1,9 @@
 var cone_image = "/images/fugue/icons/traffic-cone.png"
 var cone_arrow_image = "/images/fugue/icons/_overlay/traffic-cone--arrow.png"
+
+var site_icon = "/images/icons/exclamation.png";
+var department_icon = "/images/icons/lorry.png";
+
 var department_markers = [];
 var site_markers = [];
 
@@ -20,7 +24,7 @@ var add_site = new Ext.Action( {
         map = Ext.getCmp('position_map').getMap()
         map.setCenter(new google.maps.LatLng(lat, lng, false), 13);
     },
-    iconCls : 'flag_plus',
+    iconCls : 'add_site',
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
 });
 
@@ -171,12 +175,13 @@ if (online) {
 
 var addMarker = function(title, lat, lng, type){
     map = Ext.getCmp('position_map').getMap();
-
     var myLatlng = new google.maps.LatLng(lat, lng);
+    
+    var icon = site_icon;
+    var marker = site_markers;
     if (type == 'Department') {
         marker = department_markers;
-    } else {
-        marker = site_markers;
+        icon = department_icon;
     }
 
     totalMarker = marker.length;
@@ -185,7 +190,7 @@ var addMarker = function(title, lat, lng, type){
         position: myLatlng,
         map: map,
         title: title,
-        icon:cone_image
+        icon: icon
     });
 
     infowindow = new google.maps.InfoWindow({
