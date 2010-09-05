@@ -18,7 +18,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string :phone
 
       # Site
-      t.integer :space_id
+      t.integer :size_id
       t.integer :ground_strength_id
       t.integer :dissaster_id
       t.boolean :rain
@@ -37,11 +37,6 @@ class CreatePositions < ActiveRecord::Migration
       t.boolean :site_clear
 
       t.timestamps
-    end
-
-    create_table :spaces do |t|
-      t.string :name
-      t.string :description
     end
 
     create_table :ground_strengths do |t|

@@ -6,7 +6,7 @@ class Equipment < ActiveRecord::Base
   belongs_to :size
 
   def self.build(values)
-    equipment = Equipment.find_by_vehicle_registration(values[:vehicle_registration])
+    equipment = Equipment.find_by_vihicle_registration(values[:vehicle_registration])
     unless equipment
       equipment = Equipment.new(values)
     else
@@ -14,9 +14,9 @@ class Equipment < ActiveRecord::Base
     end
 
     if equipment.save
-      return "Save site #{equipment.vehicle_registration}"
+      return "Save site #{equipment.vihicle_registration}"
     else
-      return "Can't save site #{equipment.vehicle_registration}"
+      return "Can't save site #{equipment.vihicle_registration}"
     end
   end
 end

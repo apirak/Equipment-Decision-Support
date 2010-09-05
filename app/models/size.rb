@@ -1,5 +1,6 @@
 class Size < ActiveRecord::Base
   has_many :equipment
+  has_many :site
 
   def self.build(name, description)
     size = Size.find_by_name(name)

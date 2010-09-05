@@ -200,7 +200,7 @@ var addMarker = function(title, lat, lng, type){
     google.maps.event.addListener(markers[totalMarker], 'click', function() {
         //console.log(this);
         //console.log(marker);
-        this.setIcon(cone_arrow_image);
+        //this.setIcon(cone_arrow_image);
         this.setDraggable(true);
         infowindow.open(map, this);
     });

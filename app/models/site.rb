@@ -1,6 +1,6 @@
 class Site < Position
   belongs_to :ground_strength
-  belongs_to :space
+  belongs_to :size
   belongs_to :dissaster
 
   def self.build(values)

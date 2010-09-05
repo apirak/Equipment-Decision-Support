@@ -4,15 +4,14 @@ class AddEquipment < ActiveRecord::Migration
       t.integer :department_id
       t.integer :equipment_name_id
       t.integer :size_id
-      t.boolean :powersource
-      t.boolean :move_vehecle
-      t.boolean :dig
-      t.boolean :move_object
-      t.boolean :develop
-      t.boolean :surface
-      t.boolean :iron_wheel
+      #t.boolean :powersource
+      #t.boolean :dig
+      #t.boolean :move_object
+      #t.boolean :develop
+      #t.boolean :surface
+      
       t.string  :code
-      t.string  :vehicle_registration
+      t.string  :vihicle_registration
       t.boolean :status
       t.text    :specification
       t.text    :remark
@@ -26,6 +25,8 @@ class AddEquipment < ActiveRecord::Migration
       t.boolean :Move_mat
       t.boolean :repair_route
       t.boolean :site_clear
+      t.boolean :move_vehecle
+      t.boolean :track_line
 
       t.timestamps
     end
