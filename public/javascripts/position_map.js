@@ -1,24 +1,63 @@
 var cone_image = "/images/fugue/icons/traffic-cone.png"
 var cone_arrow_image = "/images/fugue/icons/_overlay/traffic-cone--arrow.png"
-var marker = [];
+var department_markers = [];
+var site_markers = [];
 
 var switchToTable = new Ext.Action( {
     iconCls : 'table_view',
     text : 'Table view',
     handler : function() {
-         positionPanel.layout.setActiveItem('position_table');
+        positionPanel.layout.setActiveItem('position_table');
     },
     tooltip : '<b>Switch view</b><br/>switch to table view'
 });
 
-var add_flag = new Ext.Action( {
-    text : 'Add Dissaster',
+var add_site = new Ext.Action( {
+    text : 'Add Site',
     handler : function() {
-        Ext.getCmp('position_map').getMap().setCenter(new google.maps.LatLng(37.4419, -122.1419, false), 13);
-    //Ext.Msg.alert('Its fine', 'and its art.');
+        lat = map.getCenter().lat();
+        lng = map.getCenter().lng()
+        map = Ext.getCmp('position_map').getMap()
+        map.setCenter(new google.maps.LatLng(lat, lng, false), 13);
     },
     iconCls : 'flag_plus',
     tooltip : '<b>Quick Tips</b><br/>Icon only button with tooltip'
+});
+
+var toggle_department = new Ext.Action({
+    text: 'Department',
+    iconCls : 'department',
+    enableToggle: true,
+    handler: function(){
+        //action.setDisabled(!action.isDisabled());
+        if (department_markers.length == 0) {
+            loadPosition('Department');
+        } else {
+            if (department_markers[0].getVisible()) {
+                setVisiblePositions(department_markers, false);
+            } else {
+                setVisiblePositions(department_markers, true)
+            }
+        }
+    }
+});
+
+var toggle_site = new Ext.Action({
+    text: 'Site',
+    iconCls : 'site',
+    enableToggle: true,
+    handler: function(){
+        //action.setDisabled(!action.isDisabled());
+        if (site_markers.length == 0) {
+            loadPosition('Site');
+        } else {
+            if (site_markers[0].getVisible()) {
+                setVisiblePositions(site_markers, false);
+            } else {
+                setVisiblePositions(site_markers, true)
+            }
+        }
+    }
 });
 
 var show_position = new Ext.Action( {
@@ -79,12 +118,12 @@ var add_position = new Ext.Action( {
 		google.maps.event.addListener(marker, 'click', function() {
 		  infowindow.open(map,marker);
 		});		
-		*
+             *
 		/*
 		google.maps.event.addListener(marker, 'click', function() {
 		    Ext.Msg.alert('Its fine', 'and its art.');
 		  });
-		*/
+             */
         map.setCenter(myLatlng);
     },
     iconCls : 'flag_plus'
@@ -103,11 +142,14 @@ var show_geocode = new Ext.Action( {
 });
 
 var map_tb = new Ext.Toolbar();
-map_tb.add('Position', '-', add_flag, '-', {
-    text: 'Action Menu',
-    menu: [add_position, show_geocode, show_position]
-},
-'->', switchToTable);
+map_tb.add(toggle_department,
+    toggle_site, '-',
+    add_site, '-',
+    {
+        text: 'Action Menu',
+        menu: [add_position, show_geocode, show_position]
+    },
+    '->', switchToTable);
 
 var positionMap = {}
 if (online) {
@@ -127,12 +169,19 @@ if (online) {
     };
 }
 
-var addMarker = function(title, lat, lng){
+var addMarker = function(title, lat, lng, type){
     map = Ext.getCmp('position_map').getMap();
 
     var myLatlng = new google.maps.LatLng(lat, lng);
+    if (type == 'Department') {
+        marker = department_markers;
+    } else {
+        marker = site_markers;
+    }
 
-    marker[marker.length] = new google.maps.Marker({
+    totalMarker = marker.length;
+
+    marker[totalMarker] = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: title,
@@ -143,22 +192,22 @@ var addMarker = function(title, lat, lng){
         content: "<h1>Bank</h1>"
     });
 
-    google.maps.event.addListener(marker[marker.length], 'click', function() {
+    google.maps.event.addListener(marker[totalMarker], 'click', function() {
         //console.log(this);
         //console.log(marker);
         this.setIcon(cone_arrow_image);
         this.setDraggable(true);
-        infowindow.open(map, marker[marker.length]);
+        infowindow.open(map, marker[totalMarker]);
     });
 
-		/*
+    /*
     google.maps.event.addListener(marker, 'mouseover', function() {
         //infowindow.open(map, marker);
         var infoBox = new InfoBox({latlng: marker.getPosition(),
             map: map,
-            content: "สถานีบางรัก"});
+            content: "*252#1"});
     });
-    */
+         */
 
     map.setCenter(myLatlng);
 };
@@ -172,3 +221,22 @@ var loadingCurrentPosition = function(){
         addMarker(position.description, position.lat,position.lng)
     }
 };
+
+// position is array of marker
+// visible is boolean
+var setVisiblePositions = function(positions, visible){
+    for(count=0; count < positions.length; count++) {
+        positions[count].setVisible(visible);
+    }
+}
+
+// load position to map by type of position
+// type is Department and Site
+var loadPosition = function(type){
+    positions = positionDataStore.query('type',type).items;
+    var count = 0;
+    for(count =0; count < positions.length; count++) {
+        var position = positions[count].data;
+        addMarker(position.description, position.lat,position.lng, type)
+    }
+}
