@@ -8,9 +8,11 @@ var switchToMap = new Ext.Action( {
         // Force refresh
         lat = map.getCenter().lat();
         lng = map.getCenter().lng()
-        zoom = map.getZoom()
-        current_position = new google.maps.LatLng(lat, lng, false)
+        zoom = map.getZoom();
+        current_position = new google.maps.LatLng(lat, lng, false);
         Ext.getCmp('position_map').getMap().setCenter(current_position, zoom);
+
+				//loadingCurrentPosition();
 
         trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);

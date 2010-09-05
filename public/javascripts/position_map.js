@@ -1,5 +1,6 @@
 var cone_image = "/images/fugue/icons/traffic-cone.png"
 var cone_arrow_image = "/images/fugue/icons/_overlay/traffic-cone--arrow.png"
+var marker = [];
 
 var switchToTable = new Ext.Action( {
     iconCls : 'table_view',
@@ -131,7 +132,7 @@ var addMarker = function(title, lat, lng){
 
     var myLatlng = new google.maps.LatLng(lat, lng);
 
-    var marker = new google.maps.Marker({
+    marker[marker.length] = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: title,
@@ -142,21 +143,23 @@ var addMarker = function(title, lat, lng){
         content: "<h1>Bank</h1>"
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker[marker.length], 'click', function() {
         //console.log(this);
         //console.log(marker);
         this.setIcon(cone_arrow_image);
         this.setDraggable(true);
-        infowindow.open(map, marker);
+        infowindow.open(map, marker[marker.length]);
     });
 
+		/*
     google.maps.event.addListener(marker, 'mouseover', function() {
         //infowindow.open(map, marker);
         var infoBox = new InfoBox({latlng: marker.getPosition(),
             map: map,
             content: "สถานีบางรัก"});
     });
-    
+    */
+
     map.setCenter(myLatlng);
 };
 
