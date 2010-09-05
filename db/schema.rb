@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.integer  "department_id"
     t.integer  "equipment_name_id"
     t.integer  "size_id"
+    t.integer  "weight_limit_id"
     t.string   "code"
     t.string   "vihicle_registration"
     t.boolean  "status"
@@ -32,9 +33,6 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.text     "remark"
     t.boolean  "electric"
     t.boolean  "light"
-    t.boolean  "lift_more_20_ton"
-    t.boolean  "lift_limit_20_ton"
-    t.boolean  "lift_limit_5_ton"
     t.boolean  "Demolish"
     t.boolean  "Move_mat"
     t.boolean  "repair_route"
@@ -53,6 +51,13 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
   create_table "ground_strengths", :force => true do |t|
     t.string "name"
     t.string "description"
+  end
+
+  create_table "job_descriptions", :force => true do |t|
+    t.integer "equipment_id"
+    t.integer "staff_id"
+    t.string  "name"
+    t.text    "description"
   end
 
   create_table "netzke_field_lists", :force => true do |t|
@@ -139,6 +144,11 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.text     "remark"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "weight_limits", :force => true do |t|
+    t.string "name"
+    t.string "description"
   end
 
 end

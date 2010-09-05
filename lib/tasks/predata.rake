@@ -146,6 +146,10 @@ namespace :predata do
     puts(Size.build("small", "เครื่องจักรขนาดเล็ก"))
     puts(Size.build("medium", "เครื่องจักรขนาดกลาง"))
     puts(Size.build("Large", "เครื่องจักรขนาดใหญ่"))
+    
+    puts(WeightLimit.build("more_20", "เครื่องจักรขนาดเล็ก"))
+    puts(WeightLimit.build("limit_20", "เครื่องจักรขนาดกลาง"))
+    puts(WeightLimit.build("limit_5", "เครื่องจักรขนาดใหญ่"))
 
     puts(EquipmentName.build("tracter", "รถบรรเทาสาธารณภัย"))
     puts(EquipmentName.build("digger", "รถไฟฟ้าส่องสว่าง"))
@@ -182,6 +186,7 @@ namespace :predata do
     puts(Equipment.build({
           :department_id => 1,
           :equipment_name_id => 1,
+          :weight_limit_id => 1,
           :size_id => 1,
           :code => "abc",
           :vihicle_registration => "xxy",
@@ -190,14 +195,14 @@ namespace :predata do
           :remark => "Super Land",
           :electric => true,
           :light => true,
-          :lift_more_20_ton => true,
-          :lift_limit_20_ton => true,
-          :lift_limit_5_ton => true,
           :Demolish => true,
           :Move_mat => true,
           :repair_route => true,
           :site_clear => true,
           :move_vehecle => true,
           :track_line => true,}))
+
+    puts(JobDescription.build(1,1,"คนขับ", "ภัยจากการก่อวินาศกรรม"))
+    puts(JobDescription.build(1,2,"คุมหัวฉีด", "ภัยจากการชุมนุมประท้วงและก่อการจราจล"))
   end
 end

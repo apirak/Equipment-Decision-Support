@@ -4,11 +4,7 @@ class AddEquipment < ActiveRecord::Migration
       t.integer :department_id
       t.integer :equipment_name_id
       t.integer :size_id
-      #t.boolean :powersource
-      #t.boolean :dig
-      #t.boolean :move_object
-      #t.boolean :develop
-      #t.boolean :surface
+      t.integer :weight_limit_id
       
       t.string  :code
       t.string  :vihicle_registration
@@ -18,9 +14,6 @@ class AddEquipment < ActiveRecord::Migration
 
       t.boolean :electric
       t.boolean :light
-      t.boolean :lift_more_20_ton
-      t.boolean :lift_limit_20_ton
-      t.boolean :lift_limit_5_ton
       t.boolean :Demolish
       t.boolean :Move_mat
       t.boolean :repair_route
@@ -37,6 +30,11 @@ class AddEquipment < ActiveRecord::Migration
     end
 
     create_table :equipment_names do |t|
+      t.string :name
+      t.string :description
+    end
+
+    create_table :weight_limits do |t|
       t.string :name
       t.string :description
     end

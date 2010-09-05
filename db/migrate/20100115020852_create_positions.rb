@@ -70,6 +70,13 @@ class CreatePositions < ActiveRecord::Migration
       t.string :name
       t.string :description
     end
+
+    create_table :job_descriptions do |t|
+      t.integer :equipment_id
+      t.integer :staff_id
+      t.string :name
+      t.text :description
+    end
   end
 
   def self.down
