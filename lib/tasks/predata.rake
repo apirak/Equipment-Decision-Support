@@ -73,8 +73,8 @@ namespace :predata do
           :lift_more_20_ton => false,
           :lift_limit_20_ton => true,
           :lift_limit_5_ton => true,
-          :Demolish => true,
-          :Move_mat => true,
+          :demolish => true,
+          :move_mat => true,
           :repair_route => false,
           :site_clear => true}))
 
@@ -195,14 +195,14 @@ namespace :predata do
           :remark => "Super Land",
           :electric => true,
           :light => true,
-          :Demolish => true,
-          :Move_mat => true,
+          :demolish => true,
+          :move_mat => true,
           :repair_route => true,
           :site_clear => true,
           :move_vehecle => true,
           :track_line => true,}))
 
-    puts(JobDescription.build(1,1,"คนขับ", "ภัยจากการก่อวินาศกรรม"))
-    puts(JobDescription.build(1,2,"คุมหัวฉีด", "ภัยจากการชุมนุมประท้วงและก่อการจราจล"))
+    puts(JobDescription.build(1,1, "driver", "ภัยจากการก่อวินาศกรรม"))
+    puts(JobDescription.build(2,1, "water jet", "ภัยจากการชุมนุมประท้วงและก่อการจราจล"))
   end
 end

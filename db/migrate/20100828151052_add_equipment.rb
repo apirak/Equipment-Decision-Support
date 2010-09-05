@@ -14,8 +14,8 @@ class AddEquipment < ActiveRecord::Migration
 
       t.boolean :electric
       t.boolean :light
-      t.boolean :Demolish
-      t.boolean :Move_mat
+      t.boolean :demolish
+      t.boolean :move_mat
       t.boolean :repair_route
       t.boolean :site_clear
       t.boolean :move_vehecle

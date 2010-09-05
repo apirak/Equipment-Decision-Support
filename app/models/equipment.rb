@@ -5,6 +5,8 @@ class Equipment < ActiveRecord::Base
   belongs_to :equipment_name
   belongs_to :size
   belongs_to :weight_limit
+  has_many   :job_descriptions
+  has_many   :staffs, :through => :job_descriptions
 
   def self.build(values)
     equipment = Equipment.find_by_vihicle_registration(values[:vehicle_registration])

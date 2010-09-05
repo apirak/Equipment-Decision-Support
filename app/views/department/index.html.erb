@@ -64,13 +64,13 @@
     :preloaded => true,
     :model => "Equipment",
     :name => "equipment",
-    :columns => [:id, :department_id, :equipment_name_id, :size_id,
-      :powersource, :move_vehecle, :dig, :move_object, :develop,
-      :surface, :iron_wheel, :code, :vehicle_registration, :status,
-      :specification,
-      :electric, :light,
-      :lift_more_20_ton, :lift_limit_20_ton, :lift_limit_5_ton,
-      :Demolish, :Move_mat, :repair_route, :site_clear,
+    :columns => [:id, :department_id, :equipment_name_id, 
+      :weight_limit_id, :size_id, :code,
+      :vihicle_registration, :status, :specification,
+      :remark,
+      :electric, :light, :demolish, :move_mat,
+      :repair_route, :site_clear, :move_vehecle,
+      :track_line
     ]
   },{
     :class_name => "GridPanel",
@@ -82,7 +82,19 @@
     :preloaded => true,
     :model => "EquipmentName",
     :name => "equipment name"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "WeightLimit",
+    :name => "weight limit"
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "JobDescription",
+    :name => "job description",
+    :columns => [:id, :equipment__code, :staff__firstname,
+      :name,
+      :description
+    ]
   }]
 %>
-
-

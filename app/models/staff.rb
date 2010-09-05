@@ -1,5 +1,7 @@
 class Staff < ActiveRecord::Base
   belongs_to :department
+  has_many :job_descriptions
+  has_many :equipments, :through => :job_descriptions
 
   netzke_attribute :department_name
   def department_name

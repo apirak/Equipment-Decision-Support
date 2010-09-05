@@ -1,6 +1,6 @@
 class JobDescription < ActiveRecord::Base
-  belongs_to :Staff
-  belongs_to :Equipment
+  belongs_to :staff
+  belongs_to :equipment
 
   def self.build(staff_id, equipment_id, name, description)
     job_description = JobDescription.find(:first,
