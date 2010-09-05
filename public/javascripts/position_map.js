@@ -193,13 +193,11 @@ var addMarker = function(title, lat, lng, type){
         icon: icon
     });
 
-    marker = markers[totalMarker]
-
     infowindow = new google.maps.InfoWindow({
         content: "<h1>Bank</h1>"
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(markers[totalMarker], 'click', function() {
         //console.log(this);
         //console.log(marker);
         this.setIcon(cone_arrow_image);
