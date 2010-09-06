@@ -1,4 +1,8 @@
 class Department < Position
+  has_one :space
+  has_one :department_group
+  has_many :staffs
+  has_many :equipment
   
   def self.column_models
     Position.column_models
@@ -8,22 +12,18 @@ class Department < Position
     Position.field_models
   end
 
-  def self.build(description, lat, lng)
-    department = Department.find_by_description(description)
+  def self.build(values)
+    department = Department.find_by_description(values[:description])
     unless department
-      department = Department.new({
-          :description => description,
-          :icon=> "cone_arrow_image",
-          :lat => lat,
-          :lng => lng})
+      department = Department.new(values)
     else
-      department.lat = lat
-      department.lng = lng
+      department.update_attributes(values)
     end
+
     if department.save
-      return "Save Department #{description}"
+      return "Save department #{department.description}"
     else
-      return "Can't save department #{description}"
+      return "Can't save department #{department.description}"
     end
   end
 end

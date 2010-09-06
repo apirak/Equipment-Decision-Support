@@ -1,11 +1,23 @@
 .flag_plus {
-  background-image:url(/images/fugue/icons/_overlay/flag--plus.png) !important;	
+    background-image:url(/images/fugue/icons/_overlay/flag--plus.png) !important;
 }
 
 .map_view {
-  background-image:url(/images/fugue/icons/map.png) !important;	
+    background-image:url(/images/icons/map.png) !important;
 }
 
 .table_view {
-  background-image:url(/images/fugue/icons/table.png) !important;	
+    background-image:url(/images/icons/table.png) !important;
+}
+
+.department {
+    background-image:url(/images/icons/lorry.png) !important;
+}
+
+.site {
+    background-image:url(/images/icons/exclamation.png) !important;
+}
+
+.add_site {
+    background-image:url(/images/icons/exclamation_add.png) !important;
 }

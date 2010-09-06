@@ -6,11 +6,13 @@ var switchToMap = new Ext.Action( {
         map = Ext.getCmp('position_map').getMap();
 
         // Force refresh
-        lat = map.getCenter().lat();
-        lng = map.getCenter().lng()
-        zoom = map.getZoom()
-        current_position = new google.maps.LatLng(lat, lng, false)
+        lat = 13.744829667909531 //map.getCenter().lat();
+        lng = 100.52900816015627 //map.getCenter().lng()
+        zoom = map.getZoom();
+        current_position = new google.maps.LatLng(lat, lng, false);
         Ext.getCmp('position_map').getMap().setCenter(current_position, zoom);
+
+				//loadingCurrentPosition();
 
         trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
@@ -19,7 +21,7 @@ var switchToMap = new Ext.Action( {
 });
 
 var table_tb = new Ext.Toolbar();
-table_tb.add('Position', '-', add_flag, '-', {
+table_tb.add('Position', '-', add_site, '-', {
     text: 'Action Menu',
     menu: []
 }, '->', switchToMap);
@@ -68,9 +70,3 @@ var positionTable = new Ext.grid.GridPanel({
         listeners: tableViewSelectedListeners
     })
 });
-
-//    enableDragDrop: true,
-//    ddGroup: 'organizer_drag_drop'
-//    listeners: {
-//       'dblclick' : media_double_click
-//    }

@@ -1,0 +1,20 @@
+== Priority
+* Solve the confusion about columns being stored in the persistent config
+* On grid refresh, reset the dirty fields, so that the "Apply" button doesn't do anything
+* GridPanel's read_only vs editable (doesn't work now) options
+* Inclusion of css in a stand-alone widget
+* Find a way to print the grid nicely (along with the column and rows that don't fit on the screen)
+* Auto-include the ID column into GridPanel by default
+
+== Foolproof
+* Should not be possible delete the "ID" field from grids/forms
+* Should not be possible to put the "ID" field on any place but first for grids (otherwise record ID is not correct)
+
+== Optimizations
+* Check persistent_config-related queries (aren't they too many?)
+
+== Code design
+* Replace <tt>initial_late_aggregatees</tt> method with a set of methods for each aggregatee, so that more logic would be possible at the moment of on-demand aggregatee loading.
+
+== One day
+* Replace xcheckbox with checkbox in FormPanel
