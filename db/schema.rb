@@ -24,28 +24,30 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
   create_table "equipment", :force => true do |t|
     t.integer  "department_id"
     t.integer  "equipment_name_id"
+    t.string   "code"
+    t.string   "vehicle_registration"
+    t.boolean  "status"
+    t.text     "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "equipment_names", :force => true do |t|
     t.integer  "size_id"
     t.integer  "weight_limit_id"
-    t.string   "code"
-    t.string   "vihicle_registration"
-    t.boolean  "status"
+    t.string   "name"
+    t.string   "name_th"
     t.text     "specification"
-    t.text     "remark"
     t.boolean  "electric"
     t.boolean  "light"
     t.boolean  "demolish"
     t.boolean  "move_mat"
     t.boolean  "repair_route"
     t.boolean  "site_clear"
-    t.boolean  "move_vehecle"
+    t.boolean  "move_vehicle"
     t.boolean  "track_line"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "equipment_names", :force => true do |t|
-    t.string "name"
-    t.string "description"
   end
 
   create_table "ground_strengths", :force => true do |t|
@@ -91,10 +93,10 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.decimal  "lat",                 :precision => 15, :scale => 10
     t.decimal  "lng",                 :precision => 15, :scale => 10
     t.text     "remark"
+    t.text     "location"
     t.integer  "department_group_id"
     t.string   "department_class"
     t.string   "synonym"
-    t.text     "location"
     t.string   "phone"
     t.integer  "size_id"
     t.integer  "ground_strength_id"

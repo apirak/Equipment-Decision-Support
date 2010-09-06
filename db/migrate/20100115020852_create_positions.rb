@@ -9,12 +9,12 @@ class CreatePositions < ActiveRecord::Migration
       t.decimal  :lat, :precision => 15, :scale => 10
       t.decimal  :lng, :precision => 15, :scale => 10
       t.text   :remark
+      t.text :location
 
       # Department
       t.integer :department_group_id
       t.string :department_class
       t.string :synonym
-      t.text :location
       t.string :phone
 
       # Site

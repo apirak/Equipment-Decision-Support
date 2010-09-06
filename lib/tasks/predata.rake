@@ -10,7 +10,7 @@ namespace :predata do
     puts(Department.build({:title => "ศูนย์เครื่องมือกล",
           :name => "ศูนย์เครื่องมือกล",
           :description => "หน่วยงานบริการเครื่องจักรก่อสร้างขนาดใหญ่ สำนักงานก่อสร้างและบูรณะ สำนักการโยธา",
-          :lat => 13.830266727253765, 
+          :lat => 13.830266727253765,
           :lng => 100.52416911506653,
           :remark => "remark",
           :department_group_id => 1,
@@ -51,6 +51,17 @@ namespace :predata do
           :location => "ถนนขาว แขวงวชิรพยาบาล ดุสิต",
           :phone => "022412391"}))
 
+    puts(Department.build({:title => "กองโรงงานช่างกล",
+          :name => "กองโรงงานช่างกล",
+          :description => "รับผิดชอบงานบำรุงรักษาเครื่องจักรกล และเก็บรักษาเครื่องจักร",
+          :lat => 13.768617,
+          :lng => 100.552703,
+          :remark => "-",
+          :department_group_id => 1,
+          :synonym => "สามเสน",
+          :location => "ถนนมิตรไมตรี ดินแดง",
+          :phone => "0 2245 3301"}))
+
     puts(GroundStrength.build("strong", "พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน"))
     puts(GroundStrength.build("soft", "พื้นผิวมีความอ่อนนุ่มต้องทำงานด้วยความระมัดระวัง"))
     puts(GroundStrength.build("very soft", "พื้นผิวอ่อนนุ่มเหมาะกับเครื่องจักรตีนตะขาบ"))
@@ -58,6 +69,7 @@ namespace :predata do
     puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม ที่คณะวิศวะ จุฬาฯ",
           :name => "เกิดเหตุอาคารถล่ม ที่คณะวิศวะ จุฬาฯ",
           :description => "เป็นอาคารเรียนคอนกรีต ความสูง 3 ชั้น ไม่มีผู้ประสบภัย",
+          :location => "ถนนพญาไท จุฬาลงกรณ์มหาวิทยาลัย",
           :lat => 13.736998472343346,
           :lng => 100.53305625915527,
           :remark => "เป็นงานเข้าเคลีย์พื้นที่ จัดส่งเครื่องจักรเข้าพื้นที่ได้ทันที",
@@ -77,6 +89,55 @@ namespace :predata do
           :move_mat => true,
           :repair_route => false,
           :site_clear => true}))
+
+    puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง1",
+          :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง1",
+          :description => "เป็นอาคารที่พักอาศัยคอนกรีต ความสูง 6 ชั้น มีผู้ประสบภัยติดอยู่ภายใน",
+          :location => "ประชาสงเคราะห์ซอย5 ถนนประชาสงเคราห์ ดินแดง",
+          :lat => 13.764331,
+          :lng => 100.5495,
+          :remark => "งานสนับสนุนความช่วยเหลือเจ้าหน้าที่กู้ภัย",
+          :size_id => 2,
+          :ground_strength_id => 1,
+          :dissaster_id => 4,
+          :rain => false,
+          :night_time => true,
+          :wind_hard => false,
+          :power_source => true,
+          :electric => true,
+          :light => true,
+          :lift_more_20_ton => true,
+          :lift_limit_20_ton => false,
+          :lift_limit_5_ton => false,
+          :demolish => true,
+          :move_mat => true,
+          :repair_route => false,
+          :site_clear => false}))
+
+    puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง2",
+          :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง2",
+          :description => "เป็นอาคารที่พักอาศัยคอนกรีต ความสูง 4 ชั้น มีผู้ประสบภัยติดอยู่ภายใน",
+          :location => "ประชาสงเคราะห์ซอย5 ถนนประชาสงเคราห์ ดินแดง",
+          :lat => 13.764336,
+          :lng => 100.5495,
+          :remark => "งานสนับสนุนความช่วยเหลือเจ้าหน้าที่กู้ภัย",
+          :size_id => 1,
+          :ground_strength_id => 2,
+          :dissaster_id => 4,
+          :rain => false,
+          :night_time => true,
+          :wind_hard => false,
+          :power_source => true,
+          :electric => true,
+          :light => true,
+          :lift_more_20_ton => false,
+          :lift_limit_20_ton => true,
+          :lift_limit_5_ton => true,
+          :demolish => true,
+          :move_mat => true,
+          :repair_route => false,
+          :site_clear => false}))
+
 
     puts(Staff.build({:department_id => 1,
           :code => "E-001",
@@ -146,30 +207,262 @@ namespace :predata do
     puts(Size.build("small", "เครื่องจักรขนาดเล็ก"))
     puts(Size.build("medium", "เครื่องจักรขนาดกลาง"))
     puts(Size.build("Large", "เครื่องจักรขนาดใหญ่"))
-    
+
     puts(WeightLimit.build("more_20", "เครื่องจักรขนาดเล็ก"))
     puts(WeightLimit.build("limit_20", "เครื่องจักรขนาดกลาง"))
     puts(WeightLimit.build("limit_5", "เครื่องจักรขนาดใหญ่"))
 
-    puts(EquipmentName.build("tracter", "รถบรรเทาสาธารณภัย"))
-    puts(EquipmentName.build("digger", "รถไฟฟ้าส่องสว่าง"))
-    puts(EquipmentName.build("tracter", "รถเครน 4 ล้อยาง"))
-    puts(EquipmentName.build("digger", "รถเครนล้อยางขนาดมากกว่า 4 ล้อเพลาเดียวด"))
-    puts(EquipmentName.build("tracter", "รถเครนล้อยางขนาดมากกว่า 4 ล้อหลายเพลา"))
-    puts(EquipmentName.build("digger", "รถขุดรถเครนตีนตะขาบ"))
-    puts(EquipmentName.build("tracter", "รถเครนกู้ภัย 10 ล้อ ขนาด 45 ตันเมตร"))
-    puts(EquipmentName.build("digger", "รถบรรทุกติดเครน"))
-    puts(EquipmentName.build("tracter", "รถขุดตักไฮดรอลิคพร้อมหัวงับคอนกรีต"))
-    puts(EquipmentName.build("digger", "รถขุดตักไฮดรอลิคพร้อมหัวเจาะกระแทก"))
-    puts(EquipmentName.build("tracter", "รถเครน 4 ล้อยาง"))
-    puts(EquipmentName.build("digger", "รถเครนล้อยางขนาดมากกว่า 4 ล้อเพลาเดียวด"))
-    puts(EquipmentName.build("tracter", "รถเครนล้อยางขนาดมากกว่า 4 ล้อหลายเพลา"))
-    puts(EquipmentName.build("digger", "รถขุดรถเครนตีนตะขาบ"))
-    puts(EquipmentName.build("tracter", "รถเครนกู้ภัย 10 ล้อ ขนาด 45 ตันเมตร"))
-    puts(EquipmentName.build("digger", "รถบรรทุกติดเครน"))
-    puts(EquipmentName.build("tracter", "รถขุดตักไฮดรอลิคพร้อมหัวงับคอนกรีต"))
-    puts(EquipmentName.build("digger", "รถขุดตักไฮดรอลิคพร้อมหัวเจาะกระแทก"))
+   puts(EquipmentName.build({:name => "Mitigation Truck",
+        :name_th => "รถบรรเทาสาธารณภัย",
+        :specification => "เป็นรถขนาด 10 ล้อ มีอุปกรณ์กู้ภัย ปั่นไฟ เครน และไฟส่องสว่างขนาด 1500Wx9 ดวง",
+        :size_id => 2,
+        :weight_limit_id => 2,
+        :electric => true,
+        :light => true,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false}))
 
+    puts(EquipmentName.build({:name => "Light Truck",
+        :name_th => "รถไฟฟ้าส่องสว่าง",
+        :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => true,
+        :light => true,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Rough Terrain Crane",
+        :name_th => "รถเครน 4 ล้อยาง",
+        :specification => "รถยกขนาดไม่ต่ำกว่า 50 ตันเมตร",
+        :size_id => 3,
+        :weight_limit_id => 1,
+        :electric => true,
+        :light => true,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Truck Crane",
+        :name_th => "รถเครนล้อยางขนาดมากกว่า 4 ล้อเพลาเดียว",
+        :specification => "รถยกขนาดไม่ต่ำกว่า 50 ตันเมตร",
+        :size_id => 3,
+        :weight_limit_id => 1,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "All Terrain Crane",
+        :name_th => "รถเครนล้อยางขนาดมากกว่า 4 ล้อหลายเพลา",
+        :specification => "รถยกขนาดไม่ต่ำกว่า 50 ตันเมตร",
+        :size_id => 3,
+        :weight_limit_id => 1,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Crawler Crane",
+        :name_th => "รถขุดรถเครนตีนตะขาบ",
+        :specification => "รถยกขนาดไม่ต่ำกว่า 50 ตันเมตร",
+        :size_id => 3,
+        :weight_limit_id => 1,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => true,}))
+
+    puts(EquipmentName.build({:name => "Rescue Truck Crane",
+        :name_th => "รถเครนกู้ภัย 10 ล้อ ขนาด 45 ตันเมตร",
+        :specification => "รถยกลากกู้ภัยขนาด 10 ล้อ",
+        :size_id => 2,
+        :weight_limit_id => 2,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Loader Crane",
+        :name_th => "รถบรรทุกติดเครน",
+        :specification => "รถเฮียบขนาด 6 ล้อ",
+        :size_id => 1,
+        :weight_limit_id => 3,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Excavator with Concrete Pulverizer",
+       :name_th => "รถขุดตักไฮดรอลิคพร้อมหัวงับคอนกรีต",
+       :specification => "รถขุด Komatsu PC220",
+        :size_id => 3,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => true,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => true,}))
+
+    puts(EquipmentName.build({:name => "Excavator with Hydraulic Breaker",
+        :name_th => "รถขุดตักไฮดรอลิคพร้อมหัวเจาะกระแทก",
+        :specification => "รถขุดล้อยางขนาด Komatsu PW100",
+        :size_id => 1,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => true,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Excavator",
+        :name_th => "รถขุดตักไฮดรอลิคพร้อมหัวขุด",
+        :specification => "รถขุด Komatsu PC200",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => true,
+        :repair_route => true,
+        :site_clear => true,
+        :move_vehicle => false,
+        :track_line => true,}))
+
+    puts(EquipmentName.build({:name => "Wheeled Loader",
+        :name_th => "รถตักล้อยาง",
+        :specification => "รถตักล้อยาง Volvo L90B",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => true,
+        :site_clear => true,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Grader",
+        :name_th => "รถเกรด",
+        :specification => "รถเกรดล้อยาง Komatsu",
+        :size_id => 3,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => true,
+        :site_clear => true,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Electrical Generator",
+        :name_th => "เครื่องกำเนิดไฟฟ้า",
+        :specification => "เครื่องกำเนิดไฟฟ้าและรถไฟฟ้าส่องสว่างขนาด 6 ล้อ",
+        :size_id => 1,
+        :weight_limit_id => 0,
+        :electric => true,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "dump Truck",
+        :name_th => "รถบรรทุกเทท้าย",
+        :specification => "รถบบรทุกเทท้ายขนาด 10 ล้อ",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => false,
+        :light => false,
+        :demolish => false,
+        :move_mat => true,
+        :repair_route => true,
+        :site_clear => true,
+        :move_vehicle => false,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Lowbed Semi-Trailer 22 wheel",
+        :name_th => "รถกึ่งพ่วงชานต่ำขนาด 22 ล้อ",
+        :specification => "รถเทรลเลอร์ ขนาด 45 ตัน",
+        :size_id => 3,
+        :weight_limit_id => 0,
+        :electric =>false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => true,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Lowbed Semi-Trailer 18 wheel",
+        :name_th => "รถกึ่งพ่วงชานต่ำขนาด 18 ล้อ",
+        :specification => "รถเทรลเลอร์ ขนาด 25 ตัน",
+        :size_id => 3,
+        :weight_limit_id => 0,
+        :electric =>false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => true,
+        :track_line => false,}))
+
+    puts(EquipmentName.build({:name => "Flatbed Truck",
+        :name_th => "รถบรรทุก 10 ล้อท้ายลาด",
+        :specification => "รถบรรทุก 10 ล้อ ขนาด 25 ตัน",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric =>false,
+        :light => false,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => true,
+        :track_line => false,}))
 
     puts(Dissaster.build("Fire", "อัคคีภัย"))
     puts(Dissaster.build("Flood", "อุทกภัย"))
@@ -177,32 +470,155 @@ namespace :predata do
     puts(Dissaster.build("Earthquake", "ภัยจากแผ่นดินไหวและอาคารถล่ม"))
     puts(Dissaster.build("Drought", "ภัยแล้ง"))
     puts(Dissaster.build("Chemical hazard", "ภัยจากสารเคมีและวัตถุอันตราย"))
-    puts(Dissaster.build("Transportation Hazard", "ภัยจากการคมนาคมและขนส่ง"))
+    puts(Dissaster.build("Transportation hazard", "ภัยจากการคมนาคมและขนส่ง"))
     puts(Dissaster.build("Epidemic", "ภัยจากโรคระบาดสัตว์และพืช"))
     puts(Dissaster.build("Terrorist", "ภัยจากการก่อวินาศกรรม"))
     puts(Dissaster.build("Riot", "ภัยจากการชุมนุมประท้วงและก่อการจราจล"))
 
-
     puts(Equipment.build({
           :department_id => 1,
           :equipment_name_id => 1,
-          :weight_limit_id => 1,
-          :size_id => 1,
-          :code => "abc",
-          :vihicle_registration => "xxy",
+          :code => "ฟ.1",
+          :vehicle_registration => "4ษ-4597",
           :status => true,
-          :specification => "Super mama",
-          :remark => "Super Land",
-          :electric => true,
-          :light => true,
-          :demolish => true,
-          :move_mat => true,
-          :repair_route => true,
-          :site_clear => true,
-          :move_vehecle => true,
-          :track_line => true,}))
+          :remark => "-"}))
 
-    puts(JobDescription.build(1,1, "driver", "ภัยจากการก่อวินาศกรรม"))
-    puts(JobDescription.build(2,1, "water jet", "ภัยจากการชุมนุมประท้วงและก่อการจราจล"))
+    puts(Equipment.build({
+        :department_id => 1,
+        :equipment_name_id => 2,
+        :code => "บภ.2",
+        :vehicle_registration => "3ฎ-5260",
+        :status => true,
+        :remark => "-"}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 3,
+          :code => "ย.1",
+          :vehicle_registration => "1ก-1234",
+          :status => true,
+          :remark => "-"}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 4,
+          :code => "ย.2",
+          :vehicle_registration => "2ก-1234",
+          :status => true,
+          :remark => "-"}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 5,
+          :code => "ย.3",
+          :vehicle_registration => "3ก-1234",
+          :status => true,
+          :remark => "-"}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 6,
+          :code => "ย.4",
+          :vehicle_registration => "4ก-1234",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 2,
+          :equipment_name_id => 7,
+          :code => "14-2",
+          :vehicle_registration => "99-0218",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 8,
+          :code => "ช.2",
+          :vehicle_registration => "25-1124",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 9,
+          :code => "ข.8",
+          :vehicle_registration => "4ต-6634",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 10,
+          :code => "ข.10",
+          :vehicle_registration => "ตฉ-3977",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 11,
+          :code => "ข.14",
+          :vehicle_registration => "ตฉ-3978",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 12,
+          :code => "ต.12",
+          :vehicle_registration => "4ต-8272",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 13,
+          :code => "ก.1",
+          :vehicle_registration => "4ต-4743",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 14,
+          :code => "ฟ.1",
+          :vehicle_registration => "-",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 15,
+          :code => "1ย-127",
+          :vehicle_registration => "95-1110",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 16,
+          :code => "ทล.5+ห.5",
+          :vehicle_registration => "4ต-4677",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 17,
+          :code => "ทล.9+ห.8",
+          :vehicle_registration => "4ต-6773",
+          :status => true,
+          :remark => "-",}))
+
+    puts(Equipment.build({
+          :department_id => 1,
+          :equipment_name_id => 18,
+          :code => "ทล.21",
+          :vehicle_registration => "95-4521",
+          :status => true,
+          :remark => "-",}))
+
+    puts(JobDescription.build(1, 1, "คนขับ", "พลขับ"))
   end
 end

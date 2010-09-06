@@ -39,7 +39,7 @@
     :model => "Site",
     :name => "site",
     :columns => [:id, :title, :name, :description, :icon,
-      :type,
+      :type, :location,
       {:name => :lat, :editor => {:xtype => :textfield}},
       {:name => :lng, :editor => {:xtype => :textfield}},
       :remark, :space_id,
@@ -64,13 +64,8 @@
     :preloaded => true,
     :model => "Equipment",
     :name => "equipment",
-    :columns => [:id, :department_id, :equipment_name_id, 
-      :weight_limit_id, :size_id, :code,
-      :vihicle_registration, :status, :specification,
-      :remark,
-      :electric, :light, :demolish, :move_mat,
-      :repair_route, :site_clear, :move_vehecle,
-      :track_line
+    :columns => [:id, :department_id, :equipment_name_id,
+      :code, :vihicle_registration, :status, :remark
     ]
   },{
     :class_name => "GridPanel",
@@ -81,7 +76,12 @@
     :class_name => "GridPanel",
     :preloaded => true,
     :model => "EquipmentName",
-    :name => "equipment name"
+    :name => "equipment name",
+    :columns => [:id, :size_id, :weight_limit_id, :name,
+      :name_th, :specification, :electric,
+      :light, :demolish, :move_mat,
+      :repair_route, :site_clear, :move_vehicle,
+      :track_line]
   },{
     :class_name => "GridPanel",
     :preloaded => true,
@@ -98,3 +98,4 @@
     ]
   }]
 %>
+

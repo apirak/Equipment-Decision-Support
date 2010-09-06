@@ -18,4 +18,11 @@ class Site < Position
       return "Can't save site #{site.name}"
     end
   end
+
+  def suggest_equipment
+    equipments = EquipmentName.find(:all)
+    equipments.each do |e|
+      
+    end
+  end
 end
