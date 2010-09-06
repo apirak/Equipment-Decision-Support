@@ -20,6 +20,7 @@ class CreatePositions < ActiveRecord::Migration
       # Site
       t.integer :size_id
       t.integer :ground_strength_id
+      t.integer :weight_limit_id
       t.integer :dissaster_id
       t.boolean :rain
       t.boolean :night_time
@@ -28,9 +29,6 @@ class CreatePositions < ActiveRecord::Migration
 
       t.boolean :electric
       t.boolean :light
-      t.boolean :lift_more_20_ton
-      t.boolean :lift_limit_20_ton
-      t.boolean :lift_limit_5_ton
       t.boolean :demolish
       t.boolean :move_mat
       t.boolean :repair_route

@@ -3,6 +3,8 @@ class EquipmentName < ActiveRecord::Base
   belongs_to :size
   belongs_to :weight_limit
 
+  attr_accessor :point
+
   def self.build(values)
     equipment_name = EquipmentName.find_by_name(values[:name])
     unless equipment_name

@@ -62,7 +62,7 @@ namespace :predata do
           :location => "ถนนมิตรไมตรี ดินแดง",
           :phone => "0 2245 3301"}))
 
-    puts(GroundStrength.build("strong", "พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน"))
+    puts(GroundStrength.build("hard", "พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน"))
     puts(GroundStrength.build("soft", "พื้นผิวมีความอ่อนนุ่มต้องทำงานด้วยความระมัดระวัง"))
     puts(GroundStrength.build("very soft", "พื้นผิวอ่อนนุ่มเหมาะกับเครื่องจักรตีนตะขาบ"))
 
@@ -73,7 +73,7 @@ namespace :predata do
           :lat => 13.736998472343346,
           :lng => 100.53305625915527,
           :remark => "เป็นงานเข้าเคลีย์พื้นที่ จัดส่งเครื่องจักรเข้าพื้นที่ได้ทันที",
-          :size_id => 1,
+          :size_id => 3,
           :ground_strength_id => 1,
           :dissaster_id => 4,
           :rain => false,
@@ -82,9 +82,7 @@ namespace :predata do
           :power_source => false,
           :electric => true,
           :light => true,
-          :lift_more_20_ton => false,
-          :lift_limit_20_ton => true,
-          :lift_limit_5_ton => true,
+          :weight_limit_id => 2,
           :demolish => true,
           :move_mat => true,
           :repair_route => false,
@@ -106,9 +104,7 @@ namespace :predata do
           :power_source => true,
           :electric => true,
           :light => true,
-          :lift_more_20_ton => true,
-          :lift_limit_20_ton => false,
-          :lift_limit_5_ton => false,
+          :weight_limit_id => 1,
           :demolish => true,
           :move_mat => true,
           :repair_route => false,
@@ -130,9 +126,7 @@ namespace :predata do
           :power_source => true,
           :electric => true,
           :light => true,
-          :lift_more_20_ton => false,
-          :lift_limit_20_ton => true,
-          :lift_limit_5_ton => true,
+          :weight_limit_id => 3,
           :demolish => true,
           :move_mat => true,
           :repair_route => false,
@@ -148,7 +142,7 @@ namespace :predata do
           :password => "12345",
           :phone => "029111208",
           :post => "นายช่างเครื่องกล 6",
-          :ability => "หัวหน้าศูนย์เครื่องมือกล",
+          :ability => "ผู้ควบคุมงาน",
           :status => true,
           :remark => "remark"}))
 
@@ -193,16 +187,134 @@ namespace :predata do
 
     puts(Staff.build({:department_id => 1,
           :code => "E-005",
-          :firstname => "จงรัก",
-          :surname => "ลัมภเวช",
+          :firstname => "วราพงษ์",
+          :surname => "บำเพ็ญบุญ",
           :nickname => "-",
-          :email => "jongluck@bkk.com",
-          :password => "12345",
+          :email => "-",
+          :password => "-",
           :phone => "029111208",
-          :post => "หัวหน้าศูนย์เครื่องมือกล",
-          :ability => "บังคับบัญชาและสั่งการทำงานเครื่องจักรในงานกู้ภัย",
+          :post => "พนักงานขับรถ",
+          :ability => "ขับรถเทรลเลอร์",
           :status => true,
           :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-006",
+          :firstname => "สมศักดิ์",
+          :surname => "ชัยวงษ์",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานควบคุมเครื่องจักร",
+          :ability => "พนักงานประจำรถเครน",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-007",
+          :firstname => "ปุณณะ",
+          :surname => "พรหมราช",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับเครื่องจักรเบา",
+          :ability => "ขับรถตักล้อยาง",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-008",
+          :firstname => "จรัญ",
+          :surname => "ดารารุ่ง",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับเครื่องจักรเบา",
+          :ability => "คนขัยรถเกรด",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-009",
+          :firstname => "ประยูร",
+          :surname => "บุญเจริญ",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับเครื่องจักรเบา",
+          :ability => "ขับรถ 6 ล้อ",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-010",
+          :firstname => "องอาจ",
+          :surname => "แจ้งเกษตร",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับเครื่องจักรเบา",
+          :ability => "ขับรถขุด รถงับคอนกรีต และรถเจาะกระแทก",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-011",
+          :firstname => "ปัญญา",
+          :surname => "เพ็งขาว",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานควบคุมเครื่องจักร",
+          :ability => "พนักงานประจำรถเครน",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-012",
+          :firstname => "สมชาย",
+          :surname => "สุขีวัน",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับเครื่องจักรเบา",
+          :ability => "ขับรถขุด รถงับคอนกรีต และรถเจาะกระแทก",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-013",
+          :firstname => "ถนอม",
+          :surname => "ใยบัว",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับรถ",
+          :ability => "ขับรถเทรลเลอร์",
+          :status => true,
+          :remark => "remark"}))
+
+    puts(Staff.build({:department_id => 1,
+          :code => "E-014",
+          :firstname => "เพทาย",
+          :surname => "วิบูรณ์ชาติ",
+          :nickname => "-",
+          :email => "-",
+          :password => "-",
+          :phone => "029111208",
+          :post => "พนักงานขับรถเคร",
+          :ability => "ขับรถเครนขนาดใหญ่",
+          :status => true,
+          :remark => "remark"}))
+
 
     puts(Size.build("small", "เครื่องจักรขนาดเล็ก"))
     puts(Size.build("medium", "เครื่องจักรขนาดกลาง"))
@@ -619,6 +731,29 @@ namespace :predata do
           :status => true,
           :remark => "-",}))
 
-    puts(JobDescription.build(1, 1, "คนขับ", "พลขับ"))
+    puts(JobDescription.build(2, 1, "คนขับ", "ให้ไปสนับสนุนงานด้านไฟฟ้า แสงสว่าง และอุปกรณ์ค้นหาผู้ประสบภัย"))
+    puts(JobDescription.build(13, 2, "คนขับ", "ให้ไปสนับสนุนงานด้านไฟฟ้า แสงสว่าง"))
+    puts(JobDescription.build(9, 3, "คนขับ", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(2, 3, "คนควบคุม", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(3, 4, "คนขับ", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(6, 4, "คนควบคุม", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(11, 5, "คนขับ", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(4, 5, "คนควบคุม", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(11, 6, "คนขับ", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(6, 6, "คนควบคุม", "ให้ไปยกซากคอนกรีตขนาดใหญ่ที่พังถล่ม"))
+    puts(JobDescription.build(12, 7, "คนขับ", "ให้ไปลากยกลากรถที่พังเสียหายในพื้นที่เกิดเหตุ"))
+    puts(JobDescription.build(6, 8, "คนขับ", "ให้ไปขนเครื่องอุปโภคบริโภคไปยังพื้นที่ประสบภัย"))
+    puts(JobDescription.build(4, 9, "คนขับ", "ให้ไปรื้อทำรายอาคารคอนกรีตที่ได้รับความเสียหายรุนแรง"))
+    puts(JobDescription.build(10, 10, "คนขับ", "ให้ไปรื้อทำรายอาคารคอนกรีตที่ได้รับความเสียหายรุนแรง"))
+    puts(JobDescription.build(3, 11, "คนขับ", "ให้ไปขุดปรับพื้นที่เกิดเหตุ และช่วยงานขนย้ายวัสดุ"))
+    puts(JobDescription.build(7, 12, "คนขับ", "ให้ไปขุดปรับพื้นที่เกิดเหตุ และช่วยงานขนย้ายวัสดุ"))
+    puts(JobDescription.build(8, 13, "คนขับ", "ให้เข้าไปปรับพื้นที่เตรียมจัดตั้งศูนย์อำนวยการ"))
+    puts(JobDescription.build(2, 14, "คนขับ", "ไปจ่ายไฟให้กับศูนย์อำนวยการ"))
+    puts(JobDescription.build(9, 15, "คนขับ", "ให้ไปช่วยงานขนย้ายวัสดุ และอุปกรณ์การทำงาน"))
+    puts(JobDescription.build(5, 16, "คนขับ", "ให้ไปขนย้ายเครื่องจักรขนาดใหญ่"))
+    puts(JobDescription.build(13, 17, "คนขับ", "ให้ไปขนย้ายเครื่องจักรขนาดกลาง"))
+    puts(JobDescription.build(9, 18, "คนขับ", "ให้ไปขนย้ายเครื่องจักรขนาดเล็ก"))
+
+
   end
 end

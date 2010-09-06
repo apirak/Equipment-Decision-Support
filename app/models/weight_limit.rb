@@ -1,5 +1,6 @@
 class WeightLimit < ActiveRecord::Base
   has_many :equipment_name
+  has_many :site
 
   def self.build(name, description)
     weight_limit = WeightLimit.find_by_name(name)
