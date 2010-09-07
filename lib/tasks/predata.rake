@@ -318,7 +318,7 @@ namespace :predata do
 
     puts(Size.build("small", "เครื่องจักรขนาดเล็ก"))
     puts(Size.build("medium", "เครื่องจักรขนาดกลาง"))
-    puts(Size.build("Large", "เครื่องจักรขนาดใหญ่"))
+    puts(Size.build("large", "เครื่องจักรขนาดใหญ่"))
 
     puts(WeightLimit.build("more_20", "เครื่องจักรขนาดเล็ก"))
     puts(WeightLimit.build("limit_20", "เครื่องจักรขนาดกลาง"))

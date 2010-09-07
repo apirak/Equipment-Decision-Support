@@ -1,7 +1,9 @@
 class EquipmentName < ActiveRecord::Base
   has_many :equipment
+  
   belongs_to :size
   belongs_to :weight_limit
+  belongs_to :equipment_name
 
   attr_accessor :point
 

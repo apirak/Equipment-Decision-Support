@@ -48,13 +48,13 @@ class Site < Position
   end
 
   def work_matching(equipment)
-    if (electric == equipment.electric) and
-        (weight_limit_id == equipment.weight_limit_id)
-      (light == equipment.light) and
-        (demolish == equipment.demolish) and
-        (move_mat == equipment.move_mat) and
-        (repair_route == equipment.repair_route) and
-        (site_clear == equipment.site_clear)
+    if (electric == equipment.electric) or
+        (weight_limit_id == equipment.weight_limit_id) or
+        (light == true and light == equipment.light) or
+        (demolish == true and demolish == equipment.demolish) or
+        (move_mat == true and move_mat == equipment.move_mat) or
+        (repair_route == true and repair_route == equipment.repair_route) or
+        (site_clear == true and site_clear == equipment.site_clear)
       return 67
     else
       return 0

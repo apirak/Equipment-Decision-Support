@@ -20,6 +20,7 @@ class AddEquipment < ActiveRecord::Migration
     create_table :equipment_names do |t|
       t.integer :size_id
       t.integer :weight_limit_id
+      t.integer :equipment_name_id
       t.string :name
       t.string :name_th
       t.text   :specification
@@ -32,6 +33,7 @@ class AddEquipment < ActiveRecord::Migration
       t.boolean :site_clear
       t.boolean :move_vehicle
       t.boolean :track_line
+      t.boolean :need_truck
 
       t.timestamps
     end

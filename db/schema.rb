@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
   create_table "equipment_names", :force => true do |t|
     t.integer  "size_id"
     t.integer  "weight_limit_id"
+    t.integer  "equipment_name_id"
     t.string   "name"
     t.string   "name_th"
     t.text     "specification"
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.boolean  "site_clear"
     t.boolean  "move_vehicle"
     t.boolean  "track_line"
+    t.boolean  "need_truck"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
