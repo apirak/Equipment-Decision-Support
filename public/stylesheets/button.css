@@ -21,3 +21,15 @@
 .add_site {
     background-image:url(/images/icons/exclamation_add.png) !important;
 }
+
+.save {
+    background-image:url(/images/icons/disk.png) !important;
+}
+
+.equipment_add {
+    background-image:url(/images/icons/lorry_add.png) !important;
+}
+
+.equipment_delete {
+    background-image:url(/images/icons/lorry_delete.png) !important;
+}

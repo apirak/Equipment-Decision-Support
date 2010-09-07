@@ -19,7 +19,7 @@ var equipmentInterface = function(){
     return {
         init:function(){
             viewport = new Ext.Viewport({
-                title: 'Equipment',
+                title: 'Equipment Decision Support',
                 waitMsgTarget: true,
                 loadMask: true,
                 layout: 'border',
@@ -63,7 +63,13 @@ var equipmentInterface = function(){
                         height:100,
                         anchor:'98%'
                     }
-                    ]
+                    ],
+                    bbar: {
+                        items:[{
+                            text: 'Save',
+                            iconCls: 'save'
+                        }]
+                    }
                 }, positionPanel, information]
             });
         }
