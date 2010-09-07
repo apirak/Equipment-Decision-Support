@@ -75,3 +75,5 @@ var equipmentInterface = function(){
         }
     }
 }();
+
+

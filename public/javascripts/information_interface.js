@@ -1,3 +1,101 @@
+var myData = [
+['Equipment A','department A','suggest'],
+['Equipment B','department C','suggest'],
+['Equipment C','department X','suggest']
+];
+
+/**
+     * Custom function used for column renderer
+     * @param {Object} val
+     */
+function change(val){
+    if(val > 0){
+        return '<span style="color:green;">' + val + '</span>';
+    }else if(val < 0){
+        return '<span style="color:red;">' + val + '</span>';
+    }
+    return val;
+}
+
+/**
+     * Custom function used for column renderer
+     * @param {Object} val
+     */
+function pctChange(val){
+    if(val > 0){
+        return '<span style="color:green;">' + val + '%</span>';
+    }else if(val < 0){
+        return '<span style="color:red;">' + val + '%</span>';
+    }
+    return val;
+}
+
+// create the data store
+var store = new Ext.data.ArrayStore({
+    fields: [
+    {
+        name: 'equipment'
+    },
+
+    {
+        name: 'price'
+    },
+
+    {
+        name: 'suggest'
+    }
+    ]
+});
+
+// manually load local data
+store.loadData(myData);
+
+// create the Grid
+var grid = new Ext.grid.GridPanel({
+    store: store,
+    columns: [
+    {
+        id:'equipment',
+        header: 'Equipment',
+        width: 160,
+        sortable: true,
+        dataIndex: 'equipment'
+    },
+
+    {
+        header: 'Department',
+        width: 100,
+        sortable: true,
+        dataIndex: 'price'
+    },
+
+    {
+        header: 'Suggest',
+        width: 100,
+        sortable: true,
+        dataIndex: 'suggest'
+    }
+    ],
+    stripeRows: true,
+    autoExpandColumn: 'equipment',
+    height: 350,
+    width: 600,
+    title: 'Equipment',
+    // config options for stateful behavior
+    stateful: true,
+    stateId: 'grid',
+    tbar: {
+        items:[{
+            text: 'add',
+            iconCls: 'equipment_add'
+        },{
+            text: 'delete',
+            iconCls: 'equipment_delete'
+        }]
+    }
+});
+
+
 var tab_site = new Ext.TabPanel({
     activeTab: 0,
     margins: {
@@ -14,23 +112,7 @@ var tab_site = new Ext.TabPanel({
     items:[{
         title: 'General',
         html: "My content was added during construction."
-    },{
-        title: 'Equipments',
-        tbar: {
-            items:[{
-                text: 'Add',
-                iconCls: 'equipment_add'
-            },{
-                text: 'Delete',
-                iconCls: 'equipment_delete'
-            }]
-        },
-        html: "My content was added during construction."
-    //autoLoad: {
-    //    url: 'ajax2.htm',
-    //    params: 'foo=bar&wtf=1'
-    //}
-    },{
+    },grid,{
         title: 'Suggestion',
         xtype:'htmleditor'
     //anchor:'98%',
