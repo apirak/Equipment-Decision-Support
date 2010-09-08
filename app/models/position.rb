@@ -1,4 +1,5 @@
 class Position < ActiveRecord::Base
+  has_many   :equipment_name_sites  
 #  act_as_ext_column_model
   
   column_model "id", :type => "int", :hidden => true

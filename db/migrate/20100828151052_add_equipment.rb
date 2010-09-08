@@ -42,10 +42,21 @@ class AddEquipment < ActiveRecord::Migration
       t.string :name
       t.string :description
     end
+
+    create_table :equipment_name_sites do |t|
+      t.integer :equipment_name_id
+      t.integer :position_id
+      t.integer :equipment_id
+      t.integer :score
+      t.string  :remark
+    end
   end
 
   def self.down
-    drop_table "equipment"
+    drop_table "equipments"
+    drop_table "equipment_name_position"
+    drop_table "equipment_names"
+    drop_table "weight_limits"
   end
 end
 

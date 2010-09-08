@@ -1,5 +1,6 @@
 class EquipmentName < ActiveRecord::Base
   has_many :equipment
+  has_many :equipment_name_sites
   
   belongs_to :size
   belongs_to :weight_limit

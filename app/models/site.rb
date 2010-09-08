@@ -3,6 +3,7 @@ class Site < Position
   belongs_to :size
   belongs_to :dissaster
   belongs_to :weight_limit
+  has_many   :equipment_name_sites
 
   def self.build(values)
     site = Site.find_by_name(values[:code])

@@ -3,6 +3,7 @@ class Equipment < ActiveRecord::Base
   belongs_to :equipment_name
 
   has_many   :job_descriptions
+  has_many   :equipment_name_sites
   has_many   :staffs, :through => :job_descriptions
 
   def self.build(values)

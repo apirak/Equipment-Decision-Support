@@ -101,8 +101,14 @@
     :name => "job description",
     :columns => [:id, :equipment__code, :staff__firstname,
       :name,
-      :description
-    ]
+      :description]
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "EquipmentNameSite",
+    :name => "equipment for site",
+    :columns => [:id, :score, :equipment_name_id, :position__name, 
+		:equipment__vehicle_registration, :remark]
   }]
 %>
 

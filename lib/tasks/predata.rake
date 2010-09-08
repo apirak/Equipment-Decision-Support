@@ -754,6 +754,8 @@ namespace :predata do
     puts(JobDescription.build(13, 17, "คนขับ", "ให้ไปขนย้ายเครื่องจักรขนาดกลาง"))
     puts(JobDescription.build(9, 18, "คนขับ", "ให้ไปขนย้ายเครื่องจักรขนาดเล็ก"))
 
-
+    puts(EquipmentNameSite.build(1,1,1,100, "remark 1"))
+    puts(EquipmentNameSite.build(1,2,1,80, "remark 2"))
+    puts(EquipmentNameSite.build(1,3,1,60, "remark 3"))    
   end
 end

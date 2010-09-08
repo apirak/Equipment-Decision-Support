@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.datetime "updated_at"
   end
 
+  create_table "equipment_name_sites", :force => true do |t|
+    t.integer "equipment_name_id"
+    t.integer "position_id"
+    t.integer "equipment_id"
+    t.integer "score"
+    t.string  "remark"
+  end
+
   create_table "equipment_names", :force => true do |t|
     t.integer  "size_id"
     t.integer  "weight_limit_id"
