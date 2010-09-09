@@ -1,0 +1,14 @@
+xml.instruct! :xml, :version=>"1.0", :encoding=>"UTF-8"
+
+xml.message("success" => "true") do
+  xml.contact do
+    xml.name do
+      xml.first("Jack")
+      xml.last("Slocum")
+    end
+    xml.conpany("Femtocom")
+    xml.email("sdfs@sdfl.com")
+    xml.state("OH")
+    xml.dob("04/25/2007")
+  end
+end
