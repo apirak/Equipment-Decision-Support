@@ -1,0 +1,24 @@
+<% title "Equipment for site" %>
+
+<% content_for :head do %>
+
+<style type="text/css" media="screen">
+.netzke-widget {display:block;
+	margin:10px auto;
+	width:700px;
+}
+</style>
+
+<% end %>
+
+<%= netzke :window_with_grid_panel, 
+    :persistent_config => true,
+      :class_name => "GridPanel", 
+      :scopes => [[:position_id, @site_id]],
+      :strong_default_attrs => {:position_id => @site_id},
+      :model => "EquipmentNameSite",
+      :ext_config => {
+        :border => true,
+		:height => 400
+      }
+%>

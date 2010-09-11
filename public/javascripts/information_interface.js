@@ -64,14 +64,6 @@ var myData = [
 		        ['WI', 'Wisconsin', "America's Dairyland"],
 		        ['WY', 'Wyoming', 'Like No Place on Earth']
 		    ];
-function change(val){
-    if(val > 0){
-        return '<span style="color:green;">' + val + '</span>';
-    }else if(val < 0){
-        return '<span style="color:red;">' + val + '</span>';
-    }
-    return val;
-}
 
 /**
      * Custom function used for column renderer
@@ -90,74 +82,8 @@ Ext.form.XmlErrorReader = function(){
 };
 Ext.extend(Ext.form.XmlErrorReader, Ext.data.XmlReader);
 		
-		
-function pctChange(val){
-    if(val > 0){
-        return '<span style="color:green;">' + val + '%</span>';
-    }else if(val < 0){
-        return '<span style="color:red;">' + val + '%</span>';
-    }
-    return val;
-}
 
-// create the data store
-var store = new Ext.data.ArrayStore({
-    fields: [{
-        name: 'equipment'
-    },{
-        name: 'price'
-    },{
-        name: 'suggest'
-    }]
-});
 
-// manually load local data
-store.loadData(myData);
-
-// create the Grid
-var grid = new Ext.grid.GridPanel({
-    store: store,
-    columns: [
-    {
-        id:'equipment',
-        header: 'Equipment',
-        width: 160,
-        sortable: true,
-        dataIndex: 'equipment'
-    },
-
-    {
-        header: 'Department',
-        width: 100,
-        sortable: true,
-        dataIndex: 'price'
-    },
-
-    {
-        header: 'Suggest',
-        width: 100,
-        sortable: true,
-        dataIndex: 'suggest'
-    }
-    ],
-    stripeRows: true,
-    autoExpandColumn: 'equipment',
-    height: 350,
-    width: 600,
-    title: 'Equipment',
-    // config options for stateful behavior
-    stateful: true,
-    stateId: 'grid',
-    tbar: {
-        items:[{
-            text: 'add',
-            iconCls: 'equipment_add'
-        },{
-            text: 'delete',
-            iconCls: 'equipment_delete'
-        }]
-    }
-});
 
 /********************/
 /* FORM             */
@@ -266,7 +192,28 @@ fs.on({
     }
 });
 
-// form
+// End Form
+
+
+// Equipment
+
+var grid = {
+		title:"equipment",
+		html: "I am tab 4's content. I also have an event listener attached.",		
+		tbar:{
+			items:[{
+			  text:'suggestion'
+		  },{
+			  text:'edit',
+  			handler: function(){
+					//Netzke.page.windowWithGridPanel.show();
+					url = "equipment/show/" + current_site_id;
+					window.open(url);
+				}
+		  }]
+		}
+}
+
 
 var tab_site = new Ext.TabPanel({
     activeTab: 0,
@@ -278,12 +225,10 @@ var tab_site = new Ext.TabPanel({
     },
     border:false,
     enableTabScroll:true,
-    defaults:{
-        autoScroll: true
-    },
+		deferredRender:true,
     items:[fs,grid,{
-        title: 'Suggestion',
-        xtype:'htmleditor'
+          title: 'Suggestion',
+          xtype:'htmleditor'
     //anchor:'98%',
     //listeners: {
     //    activate: handleActivate

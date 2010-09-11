@@ -1,7 +1,7 @@
 class SiteController < ApplicationController
   def show
     @site = Site.find(params[:id])
-
+    
     respond_to do |format|
       format.html
       format.xml  #{ render :xml => @site }

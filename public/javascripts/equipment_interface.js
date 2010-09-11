@@ -1,4 +1,5 @@
 var viewport;
+var current_site_id = 6;
 
 var positionPanel = new Ext.Panel({
     id:'position_panel',

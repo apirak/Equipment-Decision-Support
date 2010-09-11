@@ -10,4 +10,9 @@ class EquipmentController < ApplicationController
           :total_count => @total_count)}
     end
   end
+  
+  def show
+    @site_id = params[:id]
+  end
+  
 end

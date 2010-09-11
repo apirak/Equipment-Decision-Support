@@ -173,7 +173,7 @@ if (online) {
     };
 }
 
-var addMarker = function(title, lat, lng, type){
+var addMarker = function(position, title, lat, lng, type){
     map = Ext.getCmp('position_map').getMap();
     var myLatlng = new google.maps.LatLng(lat, lng);
     
@@ -194,15 +194,20 @@ var addMarker = function(title, lat, lng, type){
     });
 
     infowindow = new google.maps.InfoWindow({
-        content: "<h1>Bank</h1>"
+        content: position.description
     });
-
+		
     google.maps.event.addListener(markers[totalMarker], 'click', function() {
         //console.log(this);
-        //console.log(marker);
+        console.log(position);
         //this.setIcon(cone_arrow_image);
         this.setDraggable(true);
         infowindow.open(map, this);
+				url = '/site/'+position.id+'.xml'
+				current_site_id = position.id;
+				if (position.type == "Site"){
+				  fs.getForm().load({url:url, waitMsg:'Loading', method:'get'});
+			  }
     });
 
     /*
@@ -223,7 +228,7 @@ var loadingCurrentPosition = function(){
     for(count =0; count < positions.length; count++) {
         position = positions[count].data;
         //console.log('Center Position', "Lat:" +position.lat + " Lng:" + position.lng);
-        addMarker(position.description, position.lat,position.lng)
+        addMarker(position, position.description, position.lat,position.lng)
     }
 };
 
@@ -242,6 +247,7 @@ var loadPosition = function(type){
     var count = 0;
     for(count =0; count < positions.length; count++) {
         var position = positions[count].data;
-        addMarker(position.description, position.lat,position.lng, type)
+				console.log(position);
+        addMarker(position, position.description, position.lat,position.lng, type)
     }
 }

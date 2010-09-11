@@ -3,9 +3,10 @@
 <html>
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag '/javascripts/ext3/resources/css/ext-all' %>
-    <%= javascript_include_tag 'ext3/adapter/ext/ext-base' %>
-    <%= javascript_include_tag 'ext3/ext-all' %>
+    <%#= stylesheet_link_tag '/javascripts/ext3/resources/css/ext-all' %>
+    <%#= javascript_include_tag 'ext3/adapter/ext/ext-base' %>
+    <%#= javascript_include_tag 'ext3/ext-all' %>
+    <%= netzke_init %>
     <%= stylesheet_link_tag 'interface' %>
     <%= yield(:head) %>
   </head>
