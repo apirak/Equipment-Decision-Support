@@ -1,0 +1,3 @@
+rake db:migrate:reset RAILS_ENV=production
+rake edss:settings:load RAILS_ENV=production
+rake predata:add_department RAILS_ENV=production

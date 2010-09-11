@@ -1,0 +1,45 @@
+
+
+Processing DepartmentController#index (for 127.0.0.1 at 2010-09-11 22:49:48) [GET]
+Rendering template within layouts/department
+Rendering department/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #8 of app/views/department/index.html.erb:
+5: </div>
+6: 
+7: 
+8: <%= netzke :departments,
+9:   :class_name => "TabPanel",
+10:   :ext_config => { :border => true, :height => 500},
+11:   :items => [{
+
+    app/views/department/index.html.erb:8
+    app/controllers/department_controller.rb:5:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#equipment (for 127.0.0.1 at 2010-09-11 22:50:33) [POST]
+  Parameters: {"authenticity_token"=>"5t7UysutdCcDoSl2zJSLF73O2Vbd2Yu+aqCUB04rVNE=", "id"=>"6"}
+Rendering template within layouts/site
+Rendering site/equipment
+Completed in 16ms (View: 12, DB: 8) | 200 OK [http://localhost/site/equipment/6]
+
+
+Processing EquipmentController#show (for 127.0.0.1 at 2010-09-11 22:50:35) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/application
+Rendering equipment/show
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #20 of app/views/equipment/show.html.erb:
+17: 
+18: <H1><%= @site.name %></H1>
+19: 
+20: <%= netzke :equipment_name_site, 
+21:       :class_name => "GridPanel", 
+22:       :scopes => [[:position_id, @site_id]],
+23:       :strong_default_attrs => {:position_id => @site_id},
+
+    app/views/equipment/show.html.erb:20
+
+Rendering rescues/layout (internal_server_error)

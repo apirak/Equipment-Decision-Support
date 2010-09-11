@@ -9,13 +9,13 @@ test:
     database: db/test.sqlite3
 
 staging: &mysql
-    adapter: mysql
-    encoding: utf8
-    socket: /tmp/mysql.sock
-    username: root
-    password:
-    database: staging
+    adapter: sqlite3
+    database: db/development.sqlite3
+    pool: 5
+    timeout: 5000
 
 production:
-    <<: *mysql
-    database: production
+    adapter: sqlite3
+    database: db/production.sqlite3
+    pool: 5
+    timeout: 5000

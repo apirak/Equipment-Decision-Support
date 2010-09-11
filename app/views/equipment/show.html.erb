@@ -23,9 +23,9 @@ H1 {
       :strong_default_attrs => {:position_id => @site_id},
       :model => "EquipmentNameSite",
       :columns => [:id, 
-		{:name => :equipment_name__name, :width => 200}, 
-		{:name => :equipment__name_department, :width => 200}, 
-		:score, 
+	    :score,
+		{:name => :equipment_name__name, :width => 200, :header => "Equipment Name"}, 
+		{:name => :equipment__name_department, :width => 200, :header => "Department"},  
 		:remark],
       :ext_config => {
         :border => true,

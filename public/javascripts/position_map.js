@@ -114,7 +114,7 @@ var add_position = new Ext.Action( {
         marker.setDraggable(true);
 		
         google.maps.event.addListener(marker, 'click', function() {
-            console.log(this)
+            //console.log(this)
             this.setIcon(cone_arrow_image)
         });
 		
@@ -199,7 +199,7 @@ var addMarker = function(position, title, lat, lng, type){
 		
     google.maps.event.addListener(markers[totalMarker], 'click', function() {
         //console.log(this);
-        console.log(position);
+        //console.log(position);
         //this.setIcon(cone_arrow_image);
         this.setDraggable(true);
         
@@ -250,7 +250,7 @@ var loadPosition = function(type){
     var count = 0;
     for(count =0; count < positions.length; count++) {
         var position = positions[count].data;
-				console.log(position);
+				//console.log(position);
         addMarker(position, position.description, position.lat,position.lng, type)
     }
 }

@@ -65,7 +65,7 @@
     :class_name => "GridPanel",
     :preloaded => true,
     :model => "Dissaster",
-    :name => "site dissaster"
+    :name => "site disaster"
   },{
     :class_name => "GridPanel",
     :preloaded => true,
@@ -78,7 +78,10 @@
     :class_name => "GridPanel",
     :preloaded => true,
     :model => "Size",
-    :name => "equipment size"
+    :name => "equipment size",
+	:columns => [:id, 
+		{:name =>:name, :width => 200}, 
+		{:name => :description, :width => 200}]
   },{
     :class_name => "GridPanel",
     :preloaded => true,
