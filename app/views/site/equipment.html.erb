@@ -1,0 +1,22 @@
+<div id="site-equipment">
+<table>
+  <tr>
+	<th>Score</th>
+	<th width="90px">Equipment</th>
+	<th>Department</th>	
+  </tr>
+<% @equipments.each do |e| %>
+  <tr class="<%= "gray" if e.score < 70 %>">
+	<td>
+		<%= e.score %>
+	</td>
+	<td width="90px">
+		<%= e.equipment_name.name %>
+	</td>
+	<td>
+		<%= e.equipment.department.description if e.equipment%>
+	</td>	
+  </tr>	
+<% end %>
+</table>
+</div>

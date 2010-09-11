@@ -31,12 +31,14 @@ class Site < Position
   end
 
   def suggest_equipment
+    EquipmentNameSite.delete_all("position_id = #{id}")
     equipment_names = EquipmentName.find(:all)
     equipment_names.each do |e|
       e.point = work_matching(e)
       e.point = e.point + size_matching(e)
       e.point = e.point + ground_strength_matching(e)
       puts "equipment name #{e.name} score is #{e.point}"
+      EquipmentNameSite.build(nil, e.id, id, e.point, "")
     end
 
     rain_remark = "พื้นที่ทำงานขณะนี้มีลมแรงโประระมัดระวังการทำงานในที่สูง"
@@ -46,6 +48,8 @@ class Site < Position
     remark = "#{remark} #{rain_remark}" if rain
     remark = "#{remark} #{night_remark}" if night_time
     remark = "#{remark} #{power_ramark}" if power_source
+    
+    save
   end
 
   def work_matching(equipment)

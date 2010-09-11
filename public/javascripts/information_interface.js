@@ -9,62 +9,37 @@ var myData = [
      * @param {Object} val
      */
 
-		Ext.namespace('Ext.exampledata');
+		Ext.namespace('Ext.site');
+		Ext.site.weight_limit = [
+        [1, 'more_20', 'เครื่องจักรขนาดเล็ก'],
+        [2, 'limit_20', 'เครื่องจักรขนาดกลาง'],
+        [3, 'limit_5', 'เครื่องจักรขนาดใหญ่']
+    ];
 
-		Ext.exampledata.states = [
-		        ['AL', 'Alabama', 'The Heart of Dixie'],
-		        ['AK', 'Alaska', 'The Land of the Midnight Sun'],
-		        ['AZ', 'Arizona', 'The Grand Canyon State'],
-		        ['AR', 'Arkansas', 'The Natural State'],
-		        ['CA', 'California', 'The Golden State'],
-		        ['CO', 'Colorado', 'The Mountain State'],
-		        ['CT', 'Connecticut', 'The Constitution State'],
-		        ['DE', 'Delaware', 'The First State'],
-		        ['DC', 'District of Columbia', "The Nation's Capital"],
-		        ['FL', 'Florida', 'The Sunshine State'],
-		        ['GA', 'Georgia', 'The Peach State'],
-		        ['HI', 'Hawaii', 'The Aloha State'],
-		        ['ID', 'Idaho', 'Famous Potatoes'],
-		        ['IL', 'Illinois', 'The Prairie State'],
-		        ['IN', 'Indiana', 'The Hospitality State'],
-		        ['IA', 'Iowa', 'The Corn State'],
-		        ['KS', 'Kansas', 'The Sunflower State'],
-		        ['KY', 'Kentucky', 'The Bluegrass State'],
-		        ['LA', 'Louisiana', 'The Bayou State'],
-		        ['ME', 'Maine', 'The Pine Tree State'],
-		        ['MD', 'Maryland', 'Chesapeake State'],
-		        ['MA', 'Massachusetts', 'The Spirit of America'],
-		        ['MI', 'Michigan', 'Great Lakes State'],
-		        ['MN', 'Minnesota', 'North Star State'],
-		        ['MS', 'Mississippi', 'Magnolia State'],
-		        ['MO', 'Missouri', 'Show Me State'],
-		        ['MT', 'Montana', 'Big Sky Country'],
-		        ['NE', 'Nebraska', 'Beef State'],
-		        ['NV', 'Nevada', 'Silver State'],
-		        ['NH', 'New Hampshire', 'Granite State'],
-		        ['NJ', 'New Jersey', 'Garden State'],
-		        ['NM', 'New Mexico', 'Land of Enchantment'],
-		        ['NY', 'New York', 'Empire State'],
-		        ['NC', 'North Carolina', 'First in Freedom'],
-		        ['ND', 'North Dakota', 'Peace Garden State'],
-		        ['OH', 'Ohio', 'The Heart of it All'],
-		        ['OK', 'Oklahoma', 'Oklahoma is OK'],
-		        ['OR', 'Oregon', 'Pacific Wonderland'],
-		        ['PA', 'Pennsylvania', 'Keystone State'],
-		        ['RI', 'Rhode Island', 'Ocean State'],
-		        ['SC', 'South Carolina', 'Nothing Could be Finer'],
-		        ['SD', 'South Dakota', 'Great Faces, Great Places'],
-		        ['TN', 'Tennessee', 'Volunteer State'],
-		        ['TX', 'Texas', 'Lone Star State'],
-		        ['UT', 'Utah', 'Salt Lake State'],
-		        ['VT', 'Vermont', 'Green Mountain State'],
-		        ['VA', 'Virginia', 'Mother of States'],
-		        ['WA', 'Washington', 'Green Tree State'],
-		        ['WV', 'West Virginia', 'Mountain State'],
-		        ['WI', 'Wisconsin', "America's Dairyland"],
-		        ['WY', 'Wyoming', 'Like No Place on Earth']
-		    ];
+		Ext.site.ground_strength = [
+				[1, 'hard', 'พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน'],
+				[2, 'soft', 'พื้นผิวมีความอ่อนนุ่มต้องทำงานด้วยความระมัดระวัง'],
+				[3, 'very soft', 'พื้นผิวอ่อนนุ่มเหมาะกับเครื่องจักรตีนตะขาบ']
+		];
 
+		Ext.site.dissaster = [
+				[1, 'Fire', 'อัคคีภัย'],
+				[2, 'Flood', 'อุทกภัย'],
+				[3, 'Strom', 'วาตภัย'],
+				[4, 'Earthquake','ภัยจากแผ่นดินไหวและอาคารถล่ม'],
+				[5,'Drought','ภัยแล้ง',],
+				[6,'Chemical hazard','ภัยจากสารเคมีและวัตถุอันตราย',],
+				[7,'Transportation hazard','ภัยจากการคมนาคมและขนส่ง',],
+				[8,'Epidemic','ภัยจากโรคระบาดสัตว์และพืช',],
+				[9,'Terrorist','ภัยจากการก่อวินาศกรรม',],
+				[10,'Riot','ภัยจากการชุมนุมประท้วงและก่อการจราจล',]
+			];
+			
+		Ext.site.equipment_size = [
+		    [1, 'small', 'เครื่องจักรขนาดเล็ก'],
+		    [2, 'medium', 'เครื่องจักรขนาดกลาง'],
+		    [3, 'large', 'เครื่องจักรขนาดใหญ่']
+		]
 /**
      * Custom function used for column renderer
      * @param {Object} val
@@ -96,77 +71,196 @@ Ext.QuickTips.init();
 
  var fs = new Ext.FormPanel({
      frame: true,
+		 bodyBorder: false,
+		 border: false,
+		 border: false,
      title:'General',
      labelAlign: 'right',
-     labelWidth: 85,
-     width:340,
+     labelWidth: 80,
+		 autoScroll: true,		
+     //width:350,
      waitMsgTarget: true,
 
      // configure how to read the XML Data
      reader : new Ext.data.XmlReader({
-         record : 'contact',
+         record : 'site',
          success: '@success'
      }, [
-         {name: 'first', mapping:'name/first'}, // custom mapping
-         {name: 'last', mapping:'name/last'},
-         'company', 'email', 'state',
-         {name: 'dob', type:'date', dateFormat:'m/d/Y'} // custom data types
+         'id','title', 'name', 'description', 'type', 'lat', 'lng', 
+				 'remark', 'location',
+				 'size_id', 'ground_strength_id', 
+				 'weight_limit_id', 'dissaster_id',
+			   {name: 'rain', type:'boolean'},
+			   {name: 'night_time', type:'boolean'},
+			   {name: 'wind_hard', type:'boolean'},
+			   {name: 'power_source', type:'boolean'},
+			   {name: 'electric', type:'boolean'},
+			   {name: 'light', type:'boolean'},
+			   {name: 'demolish', type:'boolean'},
+			   {name: 'move_mat', type:'boolean'},
+			   {name: 'repair_route', type:'boolean'},
+			   {name: 'site_clear', type:'boolean'},						
      ]),
 
      // reusable eror reader class defined at the end of this file
      errorReader: new Ext.form.XmlErrorReader(),
+     defaultType: 'textfield',
+		 defaults:{
+				width:180,
+				enableColors: false,
+	      enableAlignments: false,
+				enableFont: false,
+				enableLinks: false,
+				enableFontSize: false,
+				enableSourceEdit: false
+		 },
+     items: [{
+					xtype: 'hidden',
+          name: 'id'
+      },{
+          fieldLabel: 'Title', 
+					emptyText: 'First Name',
+          name: 'title'
+      }, {
+          fieldLabel: 'Name',
+          emptyText: 'Name',
+          name: 'name'
+      }, {
+					xtype:'htmleditor',
+          fieldLabel: 'Description',
+					emptyText: 'Description',
+          name: 'description'
+      },	{
+          fieldLabel: 'Lat',
+          emptyText: 'Ex. 123.1222343243',
+          name: 'lat'
+      }, {
+          fieldLabel: 'Lng',
+          emptyText: 'Ex. 123.1222343243',
+          name: 'lng'
+      },{
+					xtype:'htmleditor',
+          fieldLabel: 'Location',
+					emptyText: 'Location',
+          name: 'location'
+      }, new Ext.form.ComboBox({
+	        fieldLabel: 'Size',
+	        hiddenName:'size_id',
+	        store: new Ext.data.ArrayStore({
+	            fields: ['id', 'name', 'description'],
+	            data : Ext.site.equipment_size
+	        }),
+	        valueField:'id',
+	        displayField:'description',
+	        typeAhead: true,
+	        mode: 'local',
+	        triggerAction: 'all',
+	        emptyText:'Select a size',
+	        selectOnFocus:true,
+			}), new Ext.form.ComboBox({
+	        fieldLabel: 'Ground',
+	        hiddenName:'ground_strength_id',
+	        store: new Ext.data.ArrayStore({
+	            fields: ['id', 'name', 'description'],
+	            data : Ext.site.ground_strength
+	        }),
+	        valueField:'id',
+	        displayField:'description',
+	        typeAhead: true,
+	        mode: 'local',
+	        triggerAction: 'all',
+	        emptyText:'Select a ground_strength',
+	        selectOnFocus:true,
+			}), new Ext.form.ComboBox({
+	        fieldLabel: 'Weight limit',
+	        hiddenName:'weight_limit_id',
+	        store: new Ext.data.ArrayStore({
+	            fields: ['id', 'name', 'description'],
+	            data : Ext.site.weight_limit
+	        }),
+	        valueField:'id',
+	        displayField:'description',
+	        typeAhead: true,
+	        mode: 'local',
+	        triggerAction: 'all',
+	        emptyText:'Select a weight limit',
+	        selectOnFocus:true,
+			}), new Ext.form.ComboBox({
+	        fieldLabel: 'Dissaster',
+	        hiddenName:'dissaster_id',
+	        store: new Ext.data.ArrayStore({
+	            fields: ['id', 'name', 'description'],
+	            data : Ext.site.dissaster
+	        }),
+	        valueField:'id',
+	        displayField:'description',
+	        typeAhead: true,
+	        mode: 'local',
+	        triggerAction: 'all',
+	        emptyText:'Select a dissaster',
+	        selectOnFocus:true,
+			}), {
+			xtype:'checkbox',
+        fieldLabel: 'Rain',
+        name: 'rain'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Night time',
+          name: 'night_time'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Wind hard',
+          name: 'wind_hard'
+      }, {
+				xtype:'checkbox',
+         fieldLabel: 'Power source',
+         name: 'power_source'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Electric',
+          name: 'electric'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Light',
+          name: 'light'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Demolish',
+          name: 'demolish'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Move mat',
+          name: 'move_mat'
+      }, {
+					xtype:'htmleditor',
+          fieldLabel: 'Remark',
+					emptyText: 'Remark',
+          name: 'remark'
+      }
+/*
+, new Ext.form.ComboBox({
+          fieldLabel: 'State',
+          hiddenName:'state',
+          store: new Ext.data.ArrayStore({
+              fields: ['abbr', 'state'],
+              data : Ext.exampledata.states // from states.js
+          }),
+          valueField:'abbr',
+          displayField:'state',
+          typeAhead: true,
+          mode: 'local',
+          triggerAction: 'all',
+          emptyText:'Select a state...',
+          selectOnFocus:true,
+          width:190
+      }),
 
-     items: [
-         new Ext.form.FieldSet({
-             title: 'Contact Information',
-             autoHeight: true,
-             defaultType: 'textfield',
-             items: [{
-                     fieldLabel: 'First Name',
-                     emptyText: 'First Name',
-                     name: 'first',
-                     width:190
-                 }, {
-                     fieldLabel: 'Last Name',
-                     emptyText: 'Last Name',
-                     name: 'last',
-                     width:190
-                 }, {
-                     fieldLabel: 'Company',
-                     name: 'company',
-                     width:190
-                 }, {
-                     fieldLabel: 'Email',
-                     name: 'email',
-                     vtype:'email',
-                     width:190
-                 },
-
-                 new Ext.form.ComboBox({
-                     fieldLabel: 'State',
-                     hiddenName:'state',
-                     store: new Ext.data.ArrayStore({
-                         fields: ['abbr', 'state'],
-                         data : Ext.exampledata.states // from states.js
-                     }),
-                     valueField:'abbr',
-                     displayField:'state',
-                     typeAhead: true,
-                     mode: 'local',
-                     triggerAction: 'all',
-                     emptyText:'Select a state...',
-                     selectOnFocus:true,
-                     width:190
-                 }),
-
-                 new Ext.form.DateField({
-                     fieldLabel: 'Date of Birth',
-                     name: 'dob',
-                     width:190,
-                     allowBlank:false
-                 })
-             ]
-         })
+      new Ext.form.DateField({
+          fieldLabel: 'Date of Birth',
+          name: 'dob',
+          width:190,
+          allowBlank:false
+      } ) */
      ]
  });
 
@@ -180,7 +274,11 @@ Ext.QuickTips.init();
      text: 'Submit',
      disabled:true,
      handler: function(){
-         fs.getForm().submit({url:'xml-errors.xml', waitMsg:'Saving Data...', submitEmptyText: false});
+				 url = '/site/' + current_site_id + '.xml'
+         fs.getForm().submit({
+						method:'put',
+						url:url, 
+						waitMsg:'Saving Data...'});
      }
  });
 
@@ -198,11 +296,43 @@ fs.on({
 // Equipment
 
 var grid = {
+		id:"element_tab",
 		title:"equipment",
-		html: "I am tab 4's content. I also have an event listener attached.",		
+		listeners: {activate: function(){
+			url = 'site/equipment/' + current_site_id
+			this.load({
+			    url: url,
+			    //params: {param1: 'foo', param2: 'bar'}, // or a URL encoded string
+			    //callback: yourFunction,
+			    //scope: yourObject, // optional scope for the callback
+			    discardUrl: false,
+			    nocache: false,
+			    text: 'Loading...',
+			    timeout: 30,
+			    scripts: false
+			});
+		}},
+		//autoLoad: { url: 'site/equipment/6' , params: 'foo=bar'},
+		autoScroll: true,
+		el:'equipment_tab',
 		tbar:{
 			items:[{
-			  text:'suggestion'
+			  text:'suggestion',
+				handler: function(){
+					element_tab = Ext.getCmp('element_tab');
+					url = 'site/equipment/' + current_site_id;
+					element_tab.load({
+					    url: url,
+					    params: {suggestion: true}, // or a URL encoded string
+					    //callback: yourFunction,
+					    //scope: yourObject, // optional scope for the callback
+					    discardUrl: false,
+					    nocache: false,
+					    text: 'Loading...',
+					    timeout: 30,
+					    scripts: false
+					});
+				}
 		  },{
 			  text:'edit',
   			handler: function(){
@@ -226,17 +356,7 @@ var tab_site = new Ext.TabPanel({
     border:false,
     enableTabScroll:true,
 		deferredRender:true,
-    items:[fs,grid,{
-          title: 'Suggestion',
-          xtype:'htmleditor'
-    //anchor:'98%',
-    //listeners: {
-    //    activate: handleActivate
-    //},
-    //html: "I am tab 4's content. I also have an event listener attached.",
-
-    }
-    ]
+    items:[fs,grid]
 });
 
 var information = {

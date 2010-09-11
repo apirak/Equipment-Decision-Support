@@ -757,5 +757,6 @@ namespace :predata do
     puts(EquipmentNameSite.build(1,1,8,100, "remark 1"))
     puts(EquipmentNameSite.build(1,2,8,80, "remark 2"))
     puts(EquipmentNameSite.build(1,3,6,60, "remark 3"))    
+    puts(EquipmentNameSite.build(1,3,8,60, "remark 4")) 
   end
 end

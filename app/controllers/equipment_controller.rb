@@ -13,6 +13,7 @@ class EquipmentController < ApplicationController
   
   def show
     @site_id = params[:id]
+    @site = Site.find(@site_id)
   end
   
 end

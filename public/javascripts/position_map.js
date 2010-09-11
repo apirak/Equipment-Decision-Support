@@ -202,11 +202,14 @@ var addMarker = function(position, title, lat, lng, type){
         console.log(position);
         //this.setIcon(cone_arrow_image);
         this.setDraggable(true);
-        infowindow.open(map, this);
+        
 				url = '/site/'+position.id+'.xml'
 				current_site_id = position.id;
 				if (position.type == "Site"){
+					tab_site.setActiveTab(0);
 				  fs.getForm().load({url:url, waitMsg:'Loading', method:'get'});
+			  } else {
+				  infowindow.open(map, this);
 			  }
     });
 
