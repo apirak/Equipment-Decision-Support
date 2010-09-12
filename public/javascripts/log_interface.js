@@ -7,9 +7,16 @@ var dateTimeToText = function(dt){
 		return ("" + hour + ":" + min + " " + month + "/" + day + "/" + year)
 }
 
-var currentTiem = function(){
+var currentTime = function(){
 		var currentTime = new Date()
 		return dateTimeToText(currentTime)
+}
+
+var messagePacking = function(message){
+	var message
+	message = "<div class='message'>" + message + "</div>"
+	message = "<div class='date'>" + currentTime + "</div>" + message
+	message = "<div class='log'>" + message + "</div>"
 }
 
 var logPanel = new Ext.Panel({
@@ -30,7 +37,7 @@ var logPanel = new Ext.Panel({
   },
   items: [
   {
-      html:"<div id='log-list'><div id='message_1'>"+ currentTiem()+ "</div></div>",
+      html:"<div id='log-list'><div id='message_1'>"+ currentTime()+ "</div></div>",
       flex:1
   },
   {
@@ -57,7 +64,7 @@ var logPanel = new Ext.Panel({
 							var message = Ext.getCmp('messageLog').getValue();
 							//logList = Ext.getDom('log-list')
 							var logListHTML = Ext.getDom('log-list').innerHTML
-							loglistHTML = logListHTML + message + "<br/>"
+							loglistHTML = logListHTML + messagePacking(message)
 							Ext.getDom('log-list').innerHTML = loglistHTML
 			    }
       }]
