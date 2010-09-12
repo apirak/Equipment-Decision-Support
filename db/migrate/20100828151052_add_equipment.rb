@@ -50,6 +50,13 @@ class AddEquipment < ActiveRecord::Migration
       t.integer :score
       t.string  :remark
     end
+    
+    create_table :logs do |t|
+      t.integer :creater
+      t.integer :message
+      
+      t.timestamps
+    end    
   end
 
   def self.down

@@ -72,6 +72,13 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.text    "description"
   end
 
+  create_table "logs", :force => true do |t|
+    t.integer  "creater"
+    t.integer  "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "netzke_field_lists", :force => true do |t|
     t.string   "name"
     t.text     "value"

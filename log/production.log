@@ -43,3 +43,22 @@ ActionView::TemplateError (uninitialized constant String::JSMin) on line #20 of 
     app/views/equipment/show.html.erb:20
 
 Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 19:41:53) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #47 of app/views/equipment/index.html.erb:
+44: 
+45: <% end %>
+46: 
+47: <%= netzke :window_with_grid_panel, 
+48:     :class_name => "Window", 
+49:     :persistent_config => true, 
+50:     :ext_config => {
+
+    app/views/equipment/index.html.erb:47
+    app/controllers/equipment_controller.rb:9:in `index'
+
+Rendering rescues/layout (internal_server_error)
