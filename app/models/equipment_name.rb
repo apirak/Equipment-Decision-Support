@@ -1,12 +1,21 @@
 class EquipmentName < ActiveRecord::Base
   has_many :equipment
   has_many :equipment_name_sites
+  has_many :departments, :through => :equipment
   
   belongs_to :size
   belongs_to :weight_limit
   belongs_to :equipment_name
 
   attr_accessor :point
+  
+  def department_ids
+    ids = []
+    departments.each do |d|
+      ids << d.id
+    end
+    ids.join(",")
+  end
 
   def self.build(values)
     equipment_name = EquipmentName.find_by_name(values[:name])

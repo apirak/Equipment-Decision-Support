@@ -18,7 +18,6 @@ var switchToTable = new Ext.Action( {
 
 var add_site = new Ext.Action( {
     text : 'Add Site',
-		disabled: true,
     handler : function() {
 	      map = Ext.getCmp('position_map').getMap();
         lat = map.getCenter().lat();
@@ -49,19 +48,21 @@ var toggle_department = new Ext.Action({
     text: 'Department',
     iconCls : 'department',
     enableToggle: true,
-    handler: function(){
-        //action.setDisabled(!action.isDisabled());
+    toggleHandler: function(button, pressed){
         if (department_markers.length == 0) {
             loadPosition('Department');
         } else {
-            if (department_markers[0].getVisible()) {
-                setVisiblePositions(department_markers, false);
+            if (pressed) {
+								setVisiblePositions(department_markers, true);     
             } else {
-                setVisiblePositions(department_markers, true)
+                setVisiblePositions(department_markers, false);
             }
         }
-				add_site.setDisabled(false);
-    }
+				return true;
+    },
+		handler: function(){
+			
+		}
 });
 
 var toggle_site = new Ext.Action({
@@ -69,7 +70,6 @@ var toggle_site = new Ext.Action({
     iconCls : 'site',
     enableToggle: true,
     handler: function(){
-        //action.setDisabled(!action.isDisabled());
         if (site_markers.length == 0) {
             loadPosition('Site');
         } else {
@@ -79,7 +79,6 @@ var toggle_site = new Ext.Action({
                 setVisiblePositions(site_markers, true)
             }
         }
-				add_site.setDisabled(false);
     }
 });
 
@@ -115,12 +114,10 @@ var show_geocode = new Ext.Action( {
 var map_tb = new Ext.Toolbar();
 map_tb.add(toggle_department,
     toggle_site, '-',
-    add_site, '-',
-    {
-        text: 'Action Menu',
-        menu: [add_position, show_geocode, show_position]
-    },
-    '->', switchToTable);
+    add_site, '-', {
+				text: 'Department by Equipment',
+				menu: equipment_names
+    }, '->', switchToTable);
 
 var positionMap = {}
 if (online) {
@@ -161,9 +158,9 @@ var addMarker = function(position, title, lat, lng, type){
 				draggable: draggable,
 				position_id: position.id
     });
-
-    infowindow = new google.maps.InfoWindow({
-        content: position.description
+		info = "<div class='info'>"+ position.name + "</div>"
+    var infowindow = new google.maps.InfoWindow({
+        content: info
     });
 		
     google.maps.event.addListener(markers[totalMarker], 'click', function() {
@@ -229,6 +226,13 @@ var setVisiblePositions = function(positions, visible){
     }
 }
 
+
+var loadAllPosition = function(){
+	loadPosition("Site");
+	loadPosition("Department");
+	setVisiblePositions(department_markers, false);
+	setVisiblePositions(site_markers, false);
+}
 // load position to map by type of position
 // type is Department and Site
 var loadPosition = function(type){
@@ -236,6 +240,26 @@ var loadPosition = function(type){
     var count = 0;
     for(count =0; count < positions.length; count++) {
         var position = positions[count].data;
+				console.log
         addMarker(position, position.description, position.lat,position.lng, type)
     }
+}
+
+var showOnlyDepartmentById = function(ids){
+	for(count=0; count < department_markers.length; count++){
+			if (numberInArray(department_markers[count].position_id, ids)){
+				department_markers[count].setVisible(true);
+			} else {
+				department_markers[count].setVisible(false);
+			}
+  }
+}
+
+var numberInArray = function(number, array){
+	for(i=0; i < array.length; i++){
+		if (array[i] == number) {
+			return true;
+		}
+	}
+	return false;
 }

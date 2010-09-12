@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+var equipment_departments = [
+<% @equipments.each do |e| %>
+ {id: <%= e.id %>,
+  name: "<%= e.equipment_name.name %>",
+  name_id: <%= e.equipment_name_id %>,
+  department: "<%= e.department.name %>",
+  department_id: <%= e.department_id %>,	
+  lat: <%= e.department.lat %>,
+  lng: <%= e.department.lng %>
+ },
+<% end %>
+];
+  
+var equipment_names = [
+<% @equipment_names.each do |e| %>
+  new Ext.Action({
+	text: "<%= e.name %>",
+	handler: function() {
+		showOnlyDepartmentById([<%= e.department_ids %>]);
+	}
+  }),
+<% end %>
+];
+</script>

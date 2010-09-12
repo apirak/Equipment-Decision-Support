@@ -4,6 +4,7 @@ class Position < ActiveRecord::Base
   
   column_model "id", :type => "int", :hidden => true
   column_model "description", :type => "string", :width => 400
+  column_model "name", :type => "string", :width => 300
   column_model "icon", :type => "string", :width => 70, :hidden => true
   column_model "type", :type => "string", :width => 70
   column_model "lat", :type => "float", :width => 90

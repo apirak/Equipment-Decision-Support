@@ -75,22 +75,24 @@ class Site < Position
   end
 
   def size_matching(equipment)
-    if (size.name == "small" and equipment.size.name == "small") or
-        (size.name == "medium" and equipment.size.name != "large") or
-        (size.name == "large")
-      return 25
-    else
-      return 5
+    if size
+      if (size.name == "small" and equipment.size.name == "small") or
+          (size.name == "medium" and equipment.size.name != "large") or
+          (size.name == "large")
+        return 25
+      end
     end
+    return 5
   end
 
   def ground_strength_matching(equipment)
-    if (ground_strength.name == "very soft" and equipment.track_line == true) or
-        (ground_strength.name != "very soft")
-      return 8
-    else
-      return 5
+    if ground_strength
+      if (ground_strength.name == "very soft" and equipment.track_line == true) or
+          (ground_strength.name != "very soft")
+        return 8
+      end
     end
+    return 5
   end
 
 end

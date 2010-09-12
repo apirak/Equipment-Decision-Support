@@ -20,6 +20,7 @@
 
   <%= render :partial => "settings" %>
   <%= render :partial => "position_store" %>
+  <%= render :partial => "equipment_site" %>
 
   <%= javascript_include_tag "info_box" %>
   <%= javascript_include_tag "position_data_store" %>
@@ -33,6 +34,7 @@
     Ext.onReady(function(){
       loadingIndicator.init();
       equipmentInterface.init();
+	  loadAllPosition();
     });
   </script>
 
