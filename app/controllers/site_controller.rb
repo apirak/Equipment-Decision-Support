@@ -8,6 +8,18 @@ class SiteController < ApplicationController
     end
   end
   
+  def create
+    @site = Site.new()
+    @site.title = "About"
+    @site.name = "Position"
+    @site.lng = params[:lng]
+    @site.lat = params[:lat]
+    if @site.save
+      logger.debug("save success #{params[:format]} id #{@site.id}")
+    end
+    render :action => 'show'
+  end
+  
   def update
     @site = Site.find(params[:id])
     param_site = {}
@@ -28,7 +40,6 @@ class SiteController < ApplicationController
     end
     
     @site.attributes = param_site
-    logger.debug(@site.inspect)
     if @site.save
       logger.debug("save success #{params[:format]} x")
     end
@@ -36,6 +47,17 @@ class SiteController < ApplicationController
     #       format.html
     #       format.xml  { render_to :action => 'show' }
     #     end
+    render :action => 'show'
+  end
+  
+  def site_position
+    @site = Site.find(params[:id])
+    @site.lng = params[:lng]
+    @site.lat = params[:lat]
+    if @site.save
+      logger.debug("save success #{params[:format]} id #{@site.id}")
+    end
+    
     render :action => 'show'
   end
   

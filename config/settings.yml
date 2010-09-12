@@ -34,7 +34,7 @@
 # Config first screen for center panel
 #   :position_table -- show all position in table
 #   :position_map    -- show all position in map
-:default_view: :position_table
+:default_view: :position_map
 
 # Set howmany position in one table page
 #------------------------------------------------------------------------------

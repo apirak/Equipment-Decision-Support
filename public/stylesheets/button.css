@@ -11,15 +11,15 @@
 }
 
 .department {
-    background-image:url(/images/icons/lorry.png) !important;
+    background-image:url(/images/department_mini.png) !important;
 }
 
 .site {
-    background-image:url(/images/icons/exclamation.png) !important;
+    background-image:url(/images/sit_disaster_mini.png) !important;
 }
 
 .add_site {
-    background-image:url(/images/icons/exclamation_add.png) !important;
+    background-image:url(/images/sit_disaster_mini_add.png) !important;
 }
 
 .save {

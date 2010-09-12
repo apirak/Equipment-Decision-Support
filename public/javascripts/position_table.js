@@ -21,10 +21,7 @@ var switchToMap = new Ext.Action( {
 });
 
 var table_tb = new Ext.Toolbar();
-table_tb.add('Position', '-', add_site, '-', {
-    text: 'Action Menu',
-    menu: []
-}, '->', switchToMap);
+table_tb.add('All Positions', '->', switchToMap);
 
 var paginateToolsBar = new Ext.PagingToolbar({
     id:'paginate_tools_bar',
@@ -40,15 +37,21 @@ tableViewSelectedListeners = {
     selectionchange: function(selModel){
         if(selModel.getCount() != 0) {
             if(selModel.getCount() == 1){
-                // media_select(selModel.selections.items[0]);
-                alert("a position")
+							position_id = selModel.getSelected().data.id
+							position_type = selModel.getSelected().data.type
+							url = '/site/'+position_id+'.xml'
+							current_site_id = position_id;
+							if (position_type == "Site"){
+								tab_site.setActiveTab(0);
+							  fs.getForm().load({url:url, waitMsg:'Loading', method:'get'});
+						  }
             } else {
                 // media_selects(selModel.selections.items);
-                alert("positions")
+                //alert("positions")
             }
         } else {
             // media_select_not_thing();
-            alert("select notthing")
+            //alert("select notthing")
         }
     }
 }
@@ -57,6 +60,9 @@ var positionTable = new Ext.grid.GridPanel({
     id: 'position_table',
     store: positionDataStore,
     columns: positionColumnField,
+		viewConfig: {
+		  forceFit:true
+    },
     margins: '0 5 5 0',
     padding: '0 0 0 0',
     tbar: table_tb,

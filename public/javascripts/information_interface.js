@@ -319,18 +319,22 @@ var grid = {
 			items:[{
 			  text:'suggestion',
 				handler: function(){
-					element_tab = Ext.getCmp('element_tab');
-					url = 'site/equipment/' + current_site_id;
-					element_tab.load({
-					    url: url,
-					    params: {suggestion: true}, // or a URL encoded string
-					    //callback: yourFunction,
-					    //scope: yourObject, // optional scope for the callback
-					    discardUrl: false,
-					    nocache: false,
-					    text: 'Loading...',
-					    timeout: 30,
-					    scripts: false
+					Ext.MessageBox.confirm('Generate Suggestion', 'Your current equipment will be remove. Do you want to continue?', function(btn){
+						if (btn == 'yes') {
+							element_tab = Ext.getCmp('element_tab');
+							url = 'site/equipment/' + current_site_id;
+							element_tab.load({
+							    url: url,
+							    params: {suggestion: true}, // or a URL encoded string
+							    //callback: yourFunction,
+							    //scope: yourObject, // optional scope for the callback
+							    discardUrl: false,
+							    nocache: false,
+							    text: 'Loading...',
+							    timeout: 30,
+							    scripts: false
+							});
+						}
 					});
 				}
 		  },{
