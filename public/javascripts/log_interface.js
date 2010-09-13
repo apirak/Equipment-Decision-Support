@@ -13,10 +13,12 @@ var currentTime = function(){
 }
 
 var messagePacking = function(message){
-	var message
-	message = "<div class='message'>" + message + "</div>"
-	message = "<div class='date'>" + currentTime + "</div>" + message
-	message = "<div class='log'>" + message + "</div>"
+	console.log(message)
+	var m = "<div class='message'> Apirak: " + message + "</div>"
+	m = "<div class='date'>" + currentTime() + "</div>" + m
+	m = "<div class='log'>" +  m + "</div>"
+	console.log(m)
+	return m
 }
 
 var logPanel = new Ext.Panel({
@@ -37,8 +39,8 @@ var logPanel = new Ext.Panel({
   },
   items: [
   {
-      html:"<div id='log-list'><div id='message_1'>"+ currentTime()+ "</div></div>",
-      flex:1
+      html:"<div id='log-list'><div id='message_1'></div></div>",
+      flex:5
   },
   {
       xtype:'htmleditor',
@@ -61,11 +63,13 @@ var logPanel = new Ext.Panel({
           iconCls: 'save',
 			    handler: function(){
 				      var dh = Ext.DomHelper;
-							var message = Ext.getCmp('messageLog').getValue();
-							//logList = Ext.getDom('log-list')
-							var logListHTML = Ext.getDom('log-list').innerHTML
-							loglistHTML = logListHTML + messagePacking(message)
-							Ext.getDom('log-list').innerHTML = loglistHTML
+							temp_message = Ext.getCmp('messageLog').getValue();
+
+							logListHTML = Ext.getDom('log-list').innerHTML;
+							loglistHTML = logListHTML + messagePacking(temp_message);
+							Ext.getDom('log-list').innerHTML = loglistHTML;
+							
+							Ext.getCmp('messageLog').setValue("");
 			    }
       }]
   }

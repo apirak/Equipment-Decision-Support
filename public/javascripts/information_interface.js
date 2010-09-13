@@ -344,7 +344,19 @@ var grid = {
 					url = "equipment/show/" + current_site_id;
 					window.open(url);
 				}
-		  }]
+		  },{
+			  text:'send',
+				handler: function(){
+					message_text = Ext.getDom('site-equipment').innerHTML;
+					message_text = "<div class='site-equipment'>"+message_text+"</div>";
+					loglistHTML = Ext.getDom('log-list').innerHTML;
+					loglistHTML = loglistHTML + messagePacking(message_text);
+					Ext.getDom('log-list').innerHTML = loglistHTML;
+					
+					Ext.getCmp('messageLog').setValue("");
+					console.log(Ext.getCmp('element_tab'));
+				}
+		}]
 		}
 }
 
