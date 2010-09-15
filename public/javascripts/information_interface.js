@@ -1,4 +1,4 @@
-var myData = [
+﻿var myData = [
 ['Equipment A','department A','suggest'],
 ['Equipment B','department C','suggest'],
 ['Equipment C','department X','suggest']
@@ -11,7 +11,7 @@ var myData = [
 
 		Ext.namespace('Ext.site');
 		Ext.site.weight_limit = [
-        [1, 'more_20', 'เครื่องจักรขนาดเล็ก'],
+        [1, 'more_20', 'น้ำหนักมากกว่า 20 ตัน'],
         [2, 'limit_20', 'เครื่องจักรขนาดกลาง'],
         [3, 'limit_5', 'เครื่องจักรขนาดใหญ่']
     ];
@@ -129,7 +129,8 @@ Ext.QuickTips.init();
 					xtype:'htmleditor',
           fieldLabel: 'Description',
 					emptyText: 'Description',
-          name: 'description'
+          name: 'description',
+	height: 80
       },	{
           fieldLabel: 'Lat',
           emptyText: 'Ex. 123.1222343243',
@@ -154,6 +155,7 @@ Ext.QuickTips.init();
 	        displayField:'description',
 	        typeAhead: true,
 	        mode: 'local',
+	        height: 150,
 	        triggerAction: 'all',
 	        emptyText:'Select a size',
 	        selectOnFocus:true,
