@@ -8,20 +8,7 @@
      * Custom function used for column renderer
      * @param {Object} val
      */
-
-		Ext.namespace('Ext.site');
-		Ext.site.weight_limit = [
-        [1, 'more_20', 'น้ำหนักมากกว่า 20 ตัน'],
-        [2, 'limit_20', 'เครื่องจักรขนาดกลาง'],
-        [3, 'limit_5', 'เครื่องจักรขนาดใหญ่']
-    ];
-
-		Ext.site.ground_strength = [
-				[1, 'hard', 'พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน'],
-				[2, 'soft', 'พื้นผิวมีความอ่อนนุ่มต้องทำงานด้วยความระมัดระวัง'],
-				[3, 'very soft', 'พื้นผิวอ่อนนุ่มเหมาะกับเครื่องจักรตีนตะขาบ']
-		];
-
+	Ext.namespace('Ext.site');
 		Ext.site.dissaster = [
 				[1, 'Fire', 'อัคคีภัย'],
 				[2, 'Flood', 'อุทกภัย'],
@@ -33,12 +20,24 @@
 				[8,'Epidemic','ภัยจากโรคระบาดสัตว์และพืช',],
 				[9,'Terrorist','ภัยจากการก่อวินาศกรรม',],
 				[10,'Riot','ภัยจากการชุมนุมประท้วงและก่อการจราจล',]
-			];
-			
+			];	
+     
+		Ext.site.weight_limit = [
+        [1, 'more_20', 'งานยกน้ำหนักมากกว่า 20 ตัน'],
+        [2, 'limit_20', 'งานยกน้ำหนักไม่เกิน 20 ตัน'],
+        [3, 'limit_5', 'งานยกน้ำหนักไม่เกิน 5 ตัน']
+    ];
+
+		Ext.site.ground_strength = [
+				[1, 'hard', 'พื้นผิวมีความแข็งแรง'],
+				[2, 'soft', 'พื้นผิวอ่อนนุ่มสามารถทำงานได้'],
+				[3, 'very soft', 'พื้นผิวอ่อนนุ่มมากควรใช้เครื่องจักรตีนตะขาบ']
+		];
+		
 		Ext.site.equipment_size = [
-		    [1, 'small', 'เครื่องจักรขนาดเล็ก'],
-		    [2, 'medium', 'เครื่องจักรขนาดกลาง'],
-		    [3, 'large', 'เครื่องจักรขนาดใหญ่']
+		    [1, 'small', 'ขับแคบต้องใช้เครื่องจักรขนาดเล็ก'],
+		    [2, 'medium', 'กว้างพอต่อเครื่องจักรขนาดกลาง'],
+		    [3, 'large', 'กว้างขวางทำงานได้สะดวก']
 		]
 /**
      * Custom function used for column renderer
@@ -90,16 +89,16 @@ Ext.QuickTips.init();
 				 'remark', 'location',
 				 'size_id', 'ground_strength_id', 
 				 'weight_limit_id', 'dissaster_id',
-			   {name: 'rain', type:'boolean'},
-			   {name: 'night_time', type:'boolean'},
-			   {name: 'wind_hard', type:'boolean'},
-			   {name: 'power_source', type:'boolean'},
 			   {name: 'electric', type:'boolean'},
 			   {name: 'light', type:'boolean'},
 			   {name: 'demolish', type:'boolean'},
 			   {name: 'move_mat', type:'boolean'},
 			   {name: 'repair_route', type:'boolean'},
-			   {name: 'site_clear', type:'boolean'},						
+			   {name: 'site_clear', type:'boolean'},
+			   {name: 'rain', type:'boolean'},
+			   {name: 'night_time', type:'boolean'},
+			   {name: 'wind_hard', type:'boolean'},
+			   {name: 'power_source', type:'boolean'},						
      ]),
 
      // reusable eror reader class defined at the end of this file
@@ -143,9 +142,26 @@ Ext.QuickTips.init();
 					xtype:'htmleditor',
           fieldLabel: 'Location',
 					emptyText: 'Location',
-          name: 'location'
+          name: 'location',
+          height: 80,
+          
       }, new Ext.form.ComboBox({
-	        fieldLabel: 'Size',
+	        fieldLabel: 'Disaster',
+	        hiddenName:'dissaster_id',
+	        store: new Ext.data.ArrayStore({
+	            fields: ['id', 'name', 'description'],
+	            data : Ext.site.dissaster
+	        }),
+	        valueField:'id',
+	        displayField:'description',
+	        typeAhead: true,
+	        mode: 'local',
+	        triggerAction: 'all',
+	        emptyText:'Select a dissaster',
+	        selectOnFocus:true,
+			}),
+      new Ext.form.ComboBox({
+	        fieldLabel: 'Size area',
 	        hiddenName:'size_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
@@ -160,7 +176,7 @@ Ext.QuickTips.init();
 	        emptyText:'Select a size',
 	        selectOnFocus:true,
 			}), new Ext.form.ComboBox({
-	        fieldLabel: 'Ground',
+	        fieldLabel: 'GroundStrength',
 	        hiddenName:'ground_strength_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
@@ -174,7 +190,7 @@ Ext.QuickTips.init();
 	        emptyText:'Select a ground_strength',
 	        selectOnFocus:true,
 			}), new Ext.form.ComboBox({
-	        fieldLabel: 'Weight limit',
+	        fieldLabel: 'Weightlifting',
 	        hiddenName:'weight_limit_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
@@ -187,23 +203,33 @@ Ext.QuickTips.init();
 	        triggerAction: 'all',
 	        emptyText:'Select a weight limit',
 	        selectOnFocus:true,
-			}), new Ext.form.ComboBox({
-	        fieldLabel: 'Dissaster',
-	        hiddenName:'dissaster_id',
-	        store: new Ext.data.ArrayStore({
-	            fields: ['id', 'name', 'description'],
-	            data : Ext.site.dissaster
-	        }),
-	        valueField:'id',
-	        displayField:'description',
-	        typeAhead: true,
-	        mode: 'local',
-	        triggerAction: 'all',
-	        emptyText:'Select a dissaster',
-	        selectOnFocus:true,
-			}), {
+			}),  {
+					xtype:'checkbox',
+          fieldLabel: 'Electrical',
+          name: 'electric'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Need Light',
+          name: 'light'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Demolish',
+          name: 'demolish'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Move material',
+          name: 'move_mat'
+      },{
+					xtype:'checkbox',
+          fieldLabel: 'Site Clearing',
+          name: 'site_clear'
+      }, {
+					xtype:'checkbox',
+          fieldLabel: 'Repair route',
+          name: 'repair_route'
+      },{
 			xtype:'checkbox',
-        fieldLabel: 'Rain',
+        fieldLabel: 'Raining now',
         name: 'rain'
       }, {
 					xtype:'checkbox',
@@ -215,29 +241,14 @@ Ext.QuickTips.init();
           name: 'wind_hard'
       }, {
 				xtype:'checkbox',
-         fieldLabel: 'Power source',
+         fieldLabel: 'Fruel',
          name: 'power_source'
-      }, {
-					xtype:'checkbox',
-          fieldLabel: 'Electric',
-          name: 'electric'
-      }, {
-					xtype:'checkbox',
-          fieldLabel: 'Light',
-          name: 'light'
-      }, {
-					xtype:'checkbox',
-          fieldLabel: 'Demolish',
-          name: 'demolish'
-      }, {
-					xtype:'checkbox',
-          fieldLabel: 'Move mat',
-          name: 'move_mat'
-      }, {
+      },{
 					xtype:'htmleditor',
           fieldLabel: 'Remark',
 					emptyText: 'Remark',
-          name: 'remark'
+          name: 'remark',
+          height: 80
       }
 /*
 , new Ext.form.ComboBox({
