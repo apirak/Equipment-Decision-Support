@@ -813,7 +813,7 @@ namespace :predata do
     
     puts(DepartmentJob.build(:name => "Public Work Department", :description => "สำนักการโยธา กทม.", :icon => "EquipmentCenter"))
     puts(DepartmentJob.build(:name => "Bangkok Fire&Rescue", :description => "สปภ. กทม.และ สถานีดับเพลิง", :icon => "BkkFireRescue"))
-    puts(DepartmentJob.build(:name => "Other Department of Bangkok Administration", :description => "หน่วยงานรัฐของ กทม.", :icon => "xx"))
+    puts(DepartmentJob.build(:name => "Other Department of Bangkok Administration", :description => "หน่วยงานรัฐของ กทม.", :icon => "BKKDept"))
     puts(DepartmentJob.build(:name => "Department of Disaster Prevention & Mitigation", :description => "กรมป้องกันและบรรเทาสาธารณภัย", :icon => "DisasterPrevention"))
     puts(DepartmentJob.build(:name => "Emergency Medical Sevice", :description => "ศูนย์ช่วยชีวิตฉุกเฉิน", :icon => "Hospital"))
     puts(DepartmentJob.build(:name => "Other Department", :description => "หน่วยงานอื่นๆ", :icon => "OtherDept"))
