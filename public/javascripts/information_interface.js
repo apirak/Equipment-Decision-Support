@@ -176,7 +176,7 @@ Ext.QuickTips.init();
 	        emptyText:'Select a size',
 	        selectOnFocus:true,
 			}), new Ext.form.ComboBox({
-	        fieldLabel: 'GroundStrength',
+	        fieldLabel: 'GroundS  trength',
 	        hiddenName:'ground_strength_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
