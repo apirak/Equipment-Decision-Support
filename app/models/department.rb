@@ -4,6 +4,8 @@ class Department < Position
   has_many :staffs
   has_many :equipments
   
+  belongs_to :department_job
+  
   def self.column_models
     Position.column_models
   end

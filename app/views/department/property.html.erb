@@ -1,0 +1,94 @@
+<% title "Base information" %>
+
+<div class="department_header">
+  <%= render "shared/account" %>
+</div>
+
+
+<%= netzke :departments,
+  :class_name => "TabPanel",
+  :ext_config => { :border => true, :height => 500, :enableTabScroll=>true,},
+  :items => [{
+	:class_name => "GridPanel",
+	:ext_config => {
+	  :view_config => {
+		:force_fit => true,
+	  }
+	},
+	:model => "Department",
+	:name => "department",
+	:columns => [:id, :department_job_id, :description, :name, :synonym,
+	  {:name => :location, :width => 200},
+	  :phone, :remark,
+	  {:name => :lat, :editor => {:xtype => :textfield}},
+	  {:name => :lng, :editor => {:xtype => :textfield}},
+	  {:name => :department_class, :header => "Class"}
+	]
+  }, {
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "Staff",
+	:name => "staff",
+	:columns => [:id, :department_id,:code, :firstname, :surname,
+	  :nickname, :email, :password, :phone, :post,
+	  :ability, :status, :remark, :fullname
+	]
+  }, {
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "Site",
+	:name => "site",
+	:columns => [:id, :title,
+	  :name, :description,
+	  :icon,
+	  {:name => :lat, :editor => {:xtype => :textfield}},
+	  {:name => :lng, :editor => {:xtype => :textfield}},
+	  :remark, :location, :size_id,
+	  :ground_strength_id, :weight_limit_id,
+	  :dissaster_id,
+	  {:name =>:rain, :width=>100},
+	  :night_time,
+	  :wind_hard,
+	  :power_source,
+	  :electric,
+	  :light,
+	  :demolish,
+	  :move_mat,
+	  :repair_route,
+	  :site_clear]
+  },{
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "Equipment",
+	:name => "equipment",
+	:columns => [:id, :department_id, :equipment_name_id,
+	  :code, :vihicle_registration, :status, :remark
+	]
+  },{
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "EquipmentName",
+	:name => "equipment name",
+	:columns => [:id, :size_id, :weight_limit_id, :name,
+	  :name_th, :specification, :electric,
+	  :light, :demolish, :move_mat,
+	  :repair_route, :site_clear, :move_vehicle,
+	  :track_line, :need_truck, :equipment_name_id]
+  },{
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "JobDescription",
+	:name => "job description",
+	:columns => [:id, :equipment__code, :staff__firstname,
+	  :name,
+	  :description]
+  },{
+	:class_name => "GridPanel",
+	:preloaded => true,
+	:model => "EquipmentNameSite",
+	:name => "equipment for site",
+	:columns => [:id, :score, :equipment_name_id, :position__name, 
+		:equipment__vehicle_registration, :remark]
+  }]
+%>
+

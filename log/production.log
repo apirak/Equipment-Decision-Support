@@ -207,3 +207,32 @@ ActionView::TemplateError (uninitialized constant String::JSMin) on line #48 of 
     c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (internal_server_error)
+
+
+Processing DepartmentController#index (for 127.0.0.1 at 2010-09-18 14:19:55) [GET]
+Rendering template within layouts/department
+Rendering department/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #8 of app/views/department/index.html.erb:
+5: </div>
+6: 
+7: 
+8: <%= netzke :departments,
+9:   :class_name => "TabPanel",
+10:   :ext_config => { :border => true, :height => 500, :enableTabScroll=>true,},
+11:   :items => [{
+
+    app/views/department/index.html.erb:8
+    app/controllers/department_controller.rb:5:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)

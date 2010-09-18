@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample of regular route:
   map.connect 'site_position/:id(.:format)', :controller => 'site', :action => 'site_position'
+  map.connect 'property', :controller => 'department', :action => 'property'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

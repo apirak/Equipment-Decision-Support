@@ -53,7 +53,7 @@ var toggle_department = new Ext.Action({
             loadPosition('Department');
         } else {
             if (pressed) {
-								setVisiblePositions(department_markers, true);     
+                setVisiblePositions(department_markers, true);     
             } else {
                 setVisiblePositions(department_markers, false);
             }
@@ -111,13 +111,23 @@ var show_geocode = new Ext.Action( {
     iconCls : 'flag_plus'
 });
 
+var load_traffic = new Ext.Action( {
+    text : 'Load traffic',
+    handler : function() {
+        map = Ext.getCmp('position_map').getMap();
+        trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+    },
+    iconCls : 'chart_line'
+});
+
 var map_tb = new Ext.Toolbar();
 map_tb.add(toggle_department,
     toggle_site, '-',
     add_site, '-', {
 				text: 'Department by Equipment',
 				menu: equipment_names
-    }, '->', switchToTable);
+    }, '->', load_traffic, switchToTable);
 
 var positionMap = {}
 if (online) {
