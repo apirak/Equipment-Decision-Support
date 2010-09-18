@@ -33,3 +33,7 @@
 .equipment_delete {
     background-image:url(/images/icons/lorry_delete.png) !important;
 }
+
+.chart_line {
+    background-image:url(/images/icons/chart_line.png) !important;
+}

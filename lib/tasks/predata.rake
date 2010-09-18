@@ -8,7 +8,8 @@ namespace :predata do
   desc "Add default department to database"
   task(:add_department => :environment) do
     puts(Department.build({:title => "ศูนย์เครื่องมือกล",
-          :name => "ศูนย์เครื่องมือกล",
+          :department_job_id => 1,
+    	  :name => "ศูนย์เครื่องมือกล",
           :description => "หน่วยงานบริการเครื่องจักรก่อสร้างขนาดใหญ่ สำนักงานก่อสร้างและบูรณะ สำนักการโยธา",
           :lat => 13.830266727253765,
           :lng => 100.52416911506653,
@@ -19,6 +20,7 @@ namespace :predata do
           :phone => "02911209"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงดาวคะนอง",
+          :department_job_id => 2,
           :name => "สถานีดับเพลิงดาวคะนอง",
           :description => "หน่วยงานสถานีดับเพลิงและกู้ภัยขนาดกลาง มีเครื่องมือและอุปกรณ์ค้นหาผู้ประสบภัย",
           :lat => 13.698981336063915,
@@ -30,7 +32,8 @@ namespace :predata do
           :phone => "024681671"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงธนบุรี",
-          :name => "สถานีดับเพลิงธนบุรี",
+          :department_job_id => 2,
+    	  :name => "สถานีดับเพลิงธนบุรี",
           :description => "หน่วยงานสถานีดับเพลิงและกู้ภัยขนาดใหญ่",
           :lat => 13.727243325849328,
           :lng => 100.48668086528778,
@@ -41,7 +44,8 @@ namespace :predata do
           :phone => "024653016"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงสามเสน",
-          :name => "สถานีดับเพลิงสามเสน",
+          :department_job_id => 2,
+    	  :name => "สถานีดับเพลิงสามเสน",
           :description => "หน่วยงานสถานีดับเพลิงและกู้ภัยขนาดกลาง",
           :lat => 13.751501172239544,
           :lng => 100.50627900829315,
@@ -52,7 +56,8 @@ namespace :predata do
           :phone => "022412391"}))
 
     puts(Department.build({:title => "กองโรงงานช่างกล",
-          :name => "กองโรงงานช่างกล",
+          :department_job_id => 1,
+    	  :name => "กองโรงงานช่างกล",
           :description => "รับผิดชอบงานบำรุงรักษาเครื่องจักรกล และเก็บรักษาเครื่องจักร",
           :lat => 13.768617,
           :lng => 100.552703,
@@ -67,7 +72,8 @@ namespace :predata do
     puts(GroundStrength.build("very soft", "พื้นผิวอ่อนนุ่มเหมาะกับเครื่องจักรตีนตะขาบ"))
 
     puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม ที่คณะวิศวะ จุฬาฯ",
-          :name => "เกิดเหตุอาคารถล่ม ที่คณะวิศวะ จุฬาฯ",
+    	  :department_job_id => 7,      
+    	  :name => "เกิดเหตุอาคารถล่ม ที่คณะวิศวะ จุฬาฯ",
           :description => "เป็นอาคารเรียนคอนกรีต ความสูง 3 ชั้น ไม่มีผู้ประสบภัย",
           :location => "ถนนพญาไท จุฬาลงกรณ์มหาวิทยาลัย",
           :lat => 13.736998472343346,
@@ -89,7 +95,8 @@ namespace :predata do
           :site_clear => true}))
 
     puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง1",
-          :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง1",
+          :department_job_id => 7,
+    	  :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง1",
           :description => "เป็นอาคารที่พักอาศัยคอนกรีต ความสูง 6 ชั้น มีผู้ประสบภัยติดอยู่ภายใน",
           :location => "ประชาสงเคราะห์ซอย5 ถนนประชาสงเคราห์ ดินแดง",
           :lat => 13.764331,
@@ -111,7 +118,8 @@ namespace :predata do
           :site_clear => false}))
 
     puts(Site.build({ :title => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง2",
-          :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง2",
+          :department_job_id => 7,
+    	  :name => "เกิดเหตุอาคารถล่ม เคหะชุมชนดินแดง2",
           :description => "เป็นอาคารที่พักอาศัยคอนกรีต ความสูง 4 ชั้น มีผู้ประสบภัยติดอยู่ภายใน",
           :location => "ประชาสงเคราะห์ซอย5 ถนนประชาสงเคราห์ ดินแดง",
           :lat => 13.764336,
@@ -340,6 +348,34 @@ namespace :predata do
 
     puts(EquipmentName.build({:name => "Light Truck",
         :name_th => "รถไฟฟ้าส่องสว่าง",
+        :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => true,
+        :light => true,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+        
+	puts(EquipmentName.build({:name => "Light Truck-2",
+        :name_th => "รถไฟฟ้าส่องสว่าง-2",
+        :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
+        :size_id => 2,
+        :weight_limit_id => 0,
+        :electric => true,
+        :light => true,
+        :demolish => false,
+        :move_mat => false,
+        :repair_route => false,
+        :site_clear => false,
+        :move_vehicle => false,
+        :track_line => false,}))
+        
+   	puts(EquipmentName.build({:name => "Light Truck-3",
+        :name_th => "รถไฟฟ้าส่องสว่าง-3",
         :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
         :size_id => 2,
         :weight_limit_id => 0,
@@ -602,10 +638,26 @@ namespace :predata do
         :vehicle_registration => "3ฎ-5260",
         :status => true,
         :remark => "-"}))
+        
+	puts(Equipment.build({
+        :department_id => 4,
+        :equipment_name_id => 3,
+        :code => "-",
+        :vehicle_registration => "xx-1111",
+        :status => true,
+        :remark => "-"}))
+        
+	puts(Equipment.build({
+        :department_id => 3,
+        :equipment_name_id => 4,
+        :code => "-",
+        :vehicle_registration => "xx-2222",
+        :status => true,
+        :remark => "-"}))
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 3,
+          :equipment_name_id => 5,
           :code => "ย.1",
           :vehicle_registration => "1ก-1234",
           :status => true,
@@ -613,7 +665,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 4,
+          :equipment_name_id => 6,
           :code => "ย.2",
           :vehicle_registration => "2ก-1234",
           :status => true,
@@ -621,7 +673,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 5,
+          :equipment_name_id => 7,
           :code => "ย.3",
           :vehicle_registration => "3ก-1234",
           :status => true,
@@ -629,7 +681,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 6,
+          :equipment_name_id => 8,
           :code => "ย.4",
           :vehicle_registration => "4ก-1234",
           :status => true,
@@ -637,7 +689,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 2,
-          :equipment_name_id => 7,
+          :equipment_name_id => 9,
           :code => "14-2",
           :vehicle_registration => "99-0218",
           :status => true,
@@ -645,7 +697,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 8,
+          :equipment_name_id => 10,
           :code => "ช.2",
           :vehicle_registration => "25-1124",
           :status => true,
@@ -653,7 +705,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 9,
+          :equipment_name_id => 11,
           :code => "ข.8",
           :vehicle_registration => "4ต-6634",
           :status => true,
@@ -661,7 +713,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 10,
+          :equipment_name_id => 12,
           :code => "ข.10",
           :vehicle_registration => "ตฉ-3977",
           :status => true,
@@ -669,7 +721,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 11,
+          :equipment_name_id => 13,
           :code => "ข.14",
           :vehicle_registration => "ตฉ-3978",
           :status => true,
@@ -677,7 +729,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 12,
+          :equipment_name_id => 14,
           :code => "ต.12",
           :vehicle_registration => "4ต-8272",
           :status => true,
@@ -685,7 +737,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 13,
+          :equipment_name_id => 15,
           :code => "ก.1",
           :vehicle_registration => "4ต-4743",
           :status => true,
@@ -693,7 +745,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 14,
+          :equipment_name_id => 16,
           :code => "ฟ.1",
           :vehicle_registration => "-",
           :status => true,
@@ -701,7 +753,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 15,
+          :equipment_name_id => 17,
           :code => "1ย-127",
           :vehicle_registration => "95-1110",
           :status => true,
@@ -709,7 +761,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 16,
+          :equipment_name_id => 18,
           :code => "ทล.5+ห.5",
           :vehicle_registration => "4ต-4677",
           :status => true,
@@ -717,7 +769,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 17,
+          :equipment_name_id => 19,
           :code => "ทล.9+ห.8",
           :vehicle_registration => "4ต-6773",
           :status => true,
@@ -725,7 +777,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 18,
+          :equipment_name_id => 20,
           :code => "ทล.21",
           :vehicle_registration => "95-4521",
           :status => true,
@@ -758,5 +810,13 @@ namespace :predata do
     puts(EquipmentNameSite.build(1,2,8,80, "remark 2"))
     puts(EquipmentNameSite.build(1,3,6,60, "remark 3"))    
     puts(EquipmentNameSite.build(1,3,8,60, "remark 4")) 
+    
+    puts(DepartmentJob.build(:name => "Public Work Department", :description => "สำนักการโยธา กทม.", :icon => "EquipmentCenter"))
+    puts(DepartmentJob.build(:name => "Bangkok Fire&Rescue", :description => "สปภ. กทม.และ สถานีดับเพลิง", :icon => "BkkFireRescue"))
+    puts(DepartmentJob.build(:name => "Other Department of Bangkok Administration", :description => "หน่วยงานรัฐของ กทม.", :icon => "xx"))
+    puts(DepartmentJob.build(:name => "Department of Disaster Prevention & Mitigation", :description => "กรมป้องกันและบรรเทาสาธารณภัย", :icon => "DisasterPrevention"))
+    puts(DepartmentJob.build(:name => "Emergency Medical Sevice", :description => "ศูนย์ช่วยชีวิตฉุกเฉิน", :icon => "Hospital"))
+    puts(DepartmentJob.build(:name => "Other Department", :description => "หน่วยงานอื่นๆ", :icon => "OtherDept"))
+    puts(DepartmentJob.build(:name => "Devasted Area", :description => "พื้นที่เกิดเหตุ", :icon => "DevastedArea"))
   end
 end

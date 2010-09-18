@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.string "description"
   end
 
+  create_table "department_jobs", :force => true do |t|
+    t.string "name"
+    t.text   "description"
+    t.string "icon"
+  end
+
   create_table "dissasters", :force => true do |t|
     t.string "name"
     t.string "description"
@@ -112,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20100829151820) do
     t.text     "remark"
     t.text     "location"
     t.integer  "department_group_id"
+    t.integer  "department_job_id"
     t.string   "department_class"
     t.string   "synonym"
     t.string   "phone"

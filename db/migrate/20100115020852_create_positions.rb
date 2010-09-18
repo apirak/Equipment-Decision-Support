@@ -13,6 +13,7 @@ class CreatePositions < ActiveRecord::Migration
 
       # Department
       t.integer :department_group_id
+      t.integer :department_job_id
       t.string :department_class
       t.string :synonym
       t.string :phone
@@ -74,6 +75,12 @@ class CreatePositions < ActiveRecord::Migration
       t.integer :staff_id
       t.string :name
       t.text :description
+    end
+    
+    create_table :department_jobs do |t|
+      t.string :name
+      t.text :description
+      t.string :icon
     end
   end
 
