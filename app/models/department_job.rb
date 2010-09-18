@@ -2,9 +2,9 @@ class DepartmentJob < ActiveRecord::Base
   has_many :departments
 
   def self.build(values)
-	model = this.find_by_name(values[:name])
+	model = self.find_by_name(values[:name])
 	unless model
-	  model = this.new(values)
+	  model = self.new(values)
 	else
 	  model.update_attributes(values)
 	end
