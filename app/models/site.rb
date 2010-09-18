@@ -45,8 +45,8 @@ class Site < Position
       e.point = work_matching(e)
       e.point = e.point + size_matching(e)
       e.point = e.point + ground_strength_matching(e)
-      puts "equipment name #{e.name} score is #{e.point}"
-      EquipmentNameSite.build(nil, e.id, id, e.point, "")
+      suggest_equipement, best_length = e.suggestEquipment(lat,lng)
+      EquipmentNameSite.build(suggest_equipement.id, e.id, id, e.point, "")
     end
 
     rain_remark = "พื้นที่ทำงานขณะนี้มีลมแรงโประระมัดระวังการทำงานในที่สูง"

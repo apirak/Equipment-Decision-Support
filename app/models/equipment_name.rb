@@ -1,7 +1,7 @@
 class EquipmentName < ActiveRecord::Base
-  has_many :equipment
+  has_many :equipments
   has_many :equipment_name_sites
-  has_many :departments, :through => :equipment
+  has_many :departments, :through => :equipments
   
   belongs_to :size
   belongs_to :weight_limit
@@ -30,5 +30,22 @@ class EquipmentName < ActiveRecord::Base
     else
       return "Can't save site #{equipment_name.name}"
     end
+  end
+  
+  def suggestEquipment(lat, lng)
+    best_length = 0
+    best_equipment = nil
+    equipments.each do |e|
+      if e.department
+        aa = (e.department.lat - lat)*(e.department.lat - lat)
+        bb = (e.department.lng - lng)*(e.department.lng - lng)
+        length = Math.sqrt(aa + bb)
+        if (best_length ==0) || (length < best_length)
+          best_length = length
+          best_equipment = e
+        end
+      end
+    end
+    return best_equipment, best_length  
   end
 end
