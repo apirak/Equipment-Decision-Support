@@ -40,6 +40,7 @@ class EquipmentName < ActiveRecord::Base
         aa = (e.department.lat - lat)*(e.department.lat - lat)
         bb = (e.department.lng - lng)*(e.department.lng - lng)
         length = Math.sqrt(aa + bb)
+        logger.debug("\n\n\n\n\n Best length #{length} \n\n\n\n\n")
         if (best_length ==0) || (length < best_length)
           best_length = length
           best_equipment = e

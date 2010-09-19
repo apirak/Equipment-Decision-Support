@@ -46,7 +46,7 @@ class Site < Position
       e.point = e.point + size_matching(e)
       e.point = e.point + ground_strength_matching(e)
       suggest_equipement, best_length = e.suggestEquipment(lat,lng)
-      EquipmentNameSite.build(suggest_equipement.id, e.id, id, e.point, "")
+      EquipmentNameSite.build(suggest_equipement.id, e.id, id, e.point, "ฺBest length #{best_length}")
     end
 
     rain_remark = "พื้นที่ทำงานขณะนี้มีลมแรงโประระมัดระวังการทำงานในที่สูง"
@@ -56,6 +56,7 @@ class Site < Position
     remark = "#{remark} #{rain_remark}" if rain
     remark = "#{remark} #{night_remark}" if night_time
     remark = "#{remark} #{power_ramark}" if power_source
+    logger.debug("\n\n\n #{remark} \n\n\n\n" )
     
     save
   end

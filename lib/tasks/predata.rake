@@ -1,4 +1,4 @@
-﻿require 'active_record'
+require 'active_record'
 require 'application_helper'
 
 namespace :predata do
@@ -360,34 +360,6 @@ namespace :predata do
         :move_vehicle => false,
         :track_line => false,}))
         
-	puts(EquipmentName.build({:name => "Light Truck-2",
-        :name_th => "รถไฟฟ้าส่องสว่าง-2",
-        :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
-        :size_id => 2,
-        :weight_limit_id => 0,
-        :electric => true,
-        :light => true,
-        :demolish => false,
-        :move_mat => false,
-        :repair_route => false,
-        :site_clear => false,
-        :move_vehicle => false,
-        :track_line => false,}))
-        
-   	puts(EquipmentName.build({:name => "Light Truck-3",
-        :name_th => "รถไฟฟ้าส่องสว่าง-3",
-        :specification => "รถไฟฟ้าส่องสว่างขนาด 6 ล้อ ติดไฟ 1500Wx6 ดวง",
-        :size_id => 2,
-        :weight_limit_id => 0,
-        :electric => true,
-        :light => true,
-        :demolish => false,
-        :move_mat => false,
-        :repair_route => false,
-        :site_clear => false,
-        :move_vehicle => false,
-        :track_line => false,}))
-
     puts(EquipmentName.build({:name => "Rough Terrain Crane",
         :name_th => "รถเครน 4 ล้อยาง",
         :specification => "รถยกขนาดไม่ต่ำกว่า 50 ตันเมตร",
@@ -639,25 +611,33 @@ namespace :predata do
         :status => true,
         :remark => "-"}))
         
-	puts(Equipment.build({
-        :department_id => 4,
-        :equipment_name_id => 3,
-        :code => "-",
+ 		puts(Equipment.build({
+        :department_id => 2,
+        :equipment_name_id => 2,
+        :code => "บภ.2-1",
         :vehicle_registration => "xx-1111",
         :status => true,
         :remark => "-"}))
-        
-	puts(Equipment.build({
+ 
+		puts(Equipment.build({
         :department_id => 3,
-        :equipment_name_id => 4,
-        :code => "-",
+        :equipment_name_id => 2,
+        :code => "บภ.2-2",
         :vehicle_registration => "xx-2222",
         :status => true,
         :remark => "-"}))
-
+    	
+   puts(Equipment.build({
+        :department_id => 4,
+        :equipment_name_id => 2,
+        :code => "บภ.2-3",
+        :vehicle_registration => "xx-3333",
+        :status => true,
+        :remark => "-"}))
+        
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 5,
+          :equipment_name_id => 3,
           :code => "ย.1",
           :vehicle_registration => "1ก-1234",
           :status => true,
@@ -665,7 +645,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 6,
+          :equipment_name_id => 4,
           :code => "ย.2",
           :vehicle_registration => "2ก-1234",
           :status => true,
@@ -673,7 +653,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 7,
+          :equipment_name_id => 5,
           :code => "ย.3",
           :vehicle_registration => "3ก-1234",
           :status => true,
@@ -681,7 +661,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 8,
+          :equipment_name_id => 6,
           :code => "ย.4",
           :vehicle_registration => "4ก-1234",
           :status => true,
@@ -689,7 +669,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 2,
-          :equipment_name_id => 9,
+          :equipment_name_id => 7,
           :code => "14-2",
           :vehicle_registration => "99-0218",
           :status => true,
@@ -697,7 +677,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 10,
+          :equipment_name_id => 8,
           :code => "ช.2",
           :vehicle_registration => "25-1124",
           :status => true,
@@ -705,7 +685,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 11,
+          :equipment_name_id => 9,
           :code => "ข.8",
           :vehicle_registration => "4ต-6634",
           :status => true,
@@ -713,7 +693,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 12,
+          :equipment_name_id => 10,
           :code => "ข.10",
           :vehicle_registration => "ตฉ-3977",
           :status => true,
@@ -721,7 +701,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 13,
+          :equipment_name_id => 11,
           :code => "ข.14",
           :vehicle_registration => "ตฉ-3978",
           :status => true,
@@ -729,7 +709,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 14,
+          :equipment_name_id => 12,
           :code => "ต.12",
           :vehicle_registration => "4ต-8272",
           :status => true,
@@ -737,7 +717,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 15,
+          :equipment_name_id => 13,
           :code => "ก.1",
           :vehicle_registration => "4ต-4743",
           :status => true,
@@ -745,7 +725,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 16,
+          :equipment_name_id => 14,
           :code => "ฟ.1",
           :vehicle_registration => "-",
           :status => true,
@@ -753,7 +733,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 17,
+          :equipment_name_id => 15,
           :code => "1ย-127",
           :vehicle_registration => "95-1110",
           :status => true,
@@ -761,7 +741,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 18,
+          :equipment_name_id => 16,
           :code => "ทล.5+ห.5",
           :vehicle_registration => "4ต-4677",
           :status => true,
@@ -769,7 +749,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 19,
+          :equipment_name_id => 17,
           :code => "ทล.9+ห.8",
           :vehicle_registration => "4ต-6773",
           :status => true,
@@ -777,7 +757,7 @@ namespace :predata do
 
     puts(Equipment.build({
           :department_id => 1,
-          :equipment_name_id => 20,
+          :equipment_name_id => 18,
           :code => "ทล.21",
           :vehicle_registration => "95-4521",
           :status => true,

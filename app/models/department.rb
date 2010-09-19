@@ -21,8 +21,10 @@ class Department < Position
   end
   
   def create_temp_icon
-    self.icon = self.department_job.icon
-    self.save
+    if self.department_job
+      self.icon = self.department_job.icon
+      self.save
+    end
   end
 
   def self.build(values)
