@@ -155,7 +155,7 @@ var addMarker = function(position, title, lat, lng, type){
     var markers = site_markers;
     if (type == 'Department') {
         markers = department_markers;
-        icon = department_icon;
+        icon = "/images/" + position.icon + ".png";
 				draggable = false
     }
 
@@ -224,7 +224,7 @@ var loadingCurrentPosition = function(){
     count = 0;
     for(count =0; count < positions.length; count++) {
         position = positions[count].data;
-        addMarker(position, position.description, position.lat,position.lng)
+        addMarker(position, position.description, position.lat, position.lng)
     }
 };
 

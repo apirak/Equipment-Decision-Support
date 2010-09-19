@@ -13,6 +13,17 @@ class Department < Position
   def self.field_models
     Position.field_models
   end
+  
+  def self.create_all_temp_icon
+    self.find(:all).each do |d|
+      d.create_temp_icon
+    end
+  end
+  
+  def create_temp_icon
+    self.icon = self.department_job.icon
+    self.save
+  end
 
   def self.build(values)
     department = Department.find_by_description(values[:description])
