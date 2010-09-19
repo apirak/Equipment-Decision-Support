@@ -1,4 +1,4 @@
-require 'active_record'
+﻿require 'active_record'
 require 'application_helper'
 
 namespace :predata do
@@ -811,12 +811,12 @@ namespace :predata do
     puts(EquipmentNameSite.build(1,3,6,60, "remark 3"))    
     puts(EquipmentNameSite.build(1,3,8,60, "remark 4")) 
     
-    puts(DepartmentJob.build(:name => "Public Work Department", :description => "สำนักการโยธา กทม.", :icon => "EquipmentCenter"))
-    puts(DepartmentJob.build(:name => "Bangkok Fire&Rescue", :description => "สปภ. กทม.และ สถานีดับเพลิง", :icon => "BkkFireRescue"))
-    puts(DepartmentJob.build(:name => "Other Department of Bangkok Administration", :description => "หน่วยงานรัฐของ กทม.", :icon => "BKKDept"))
-    puts(DepartmentJob.build(:name => "Department of Disaster Prevention & Mitigation", :description => "กรมป้องกันและบรรเทาสาธารณภัย", :icon => "DisasterPrevention"))
-    puts(DepartmentJob.build(:name => "Emergency Medical Sevice", :description => "ศูนย์ช่วยชีวิตฉุกเฉิน", :icon => "Hospital"))
-    puts(DepartmentJob.build(:name => "Other Department", :description => "หน่วยงานอื่นๆ", :icon => "OtherDept"))
-    puts(DepartmentJob.build(:name => "Devasted Area", :description => "พื้นที่เกิดเหตุ", :icon => "DevastedArea"))
+    puts(DepartmentJob.build(:name => "Public Work Department", :description => "สำนักการโยธา กทม.", :icon => "equipment_center"))
+    puts(DepartmentJob.build(:name => "Bangkok Fire&Rescue", :description => "สปภ. กทม.และ สถานีดับเพลิง", :icon => "bkk_fire_rescue"))
+    puts(DepartmentJob.build(:name => "Other Department of Bangkok Administration", :description => "หน่วยงานรัฐของ กทม.", :icon => "bkk_dept"))
+    puts(DepartmentJob.build(:name => "Department of Disaster Prevention & Mitigation", :description => "กรมป้องกันและบรรเทาสาธารณภัย", :icon => "disaster_prevention"))
+    puts(DepartmentJob.build(:name => "Emergency Medical Sevice", :description => "ศูนย์ช่วยชีวิตฉุกเฉิน", :icon => "hospital"))
+    puts(DepartmentJob.build(:name => "Other Department", :description => "หน่วยงานอื่นๆ", :icon => "other_dept"))
+    puts(DepartmentJob.build(:name => "Devasted Area", :description => "พื้นที่เกิดเหตุ", :icon => "devasted_area"))
   end
 end
