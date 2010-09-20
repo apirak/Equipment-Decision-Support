@@ -157,11 +157,11 @@ Ext.QuickTips.init();
 	        typeAhead: true,
 	        mode: 'local',
 	        triggerAction: 'all',
-	        emptyText:'Select a dissaster',
+	        emptyText:'Select type of disaster',
 	        selectOnFocus:true,
 			}),
       new Ext.form.ComboBox({
-	        fieldLabel: 'Size area',
+	        fieldLabel: 'Devastated area',
 	        hiddenName:'size_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
@@ -173,10 +173,10 @@ Ext.QuickTips.init();
 	        mode: 'local',
 	        height: 150,
 	        triggerAction: 'all',
-	        emptyText:'Select a size',
+	        emptyText:'Select size of devastated aread',
 	        selectOnFocus:true,
 			}), new Ext.form.ComboBox({
-	        fieldLabel: 'GroundS  trength',
+	        fieldLabel: 'Ground strength',
 	        hiddenName:'ground_strength_id',
 	        store: new Ext.data.ArrayStore({
 	            fields: ['id', 'name', 'description'],
@@ -187,7 +187,7 @@ Ext.QuickTips.init();
 	        typeAhead: true,
 	        mode: 'local',
 	        triggerAction: 'all',
-	        emptyText:'Select a ground_strength',
+	        emptyText:'Select ground strength',
 	        selectOnFocus:true,
 			}), new Ext.form.ComboBox({
 	        fieldLabel: 'Weightlifting',
@@ -201,7 +201,7 @@ Ext.QuickTips.init();
 	        typeAhead: true,
 	        mode: 'local',
 	        triggerAction: 'all',
-	        emptyText:'Select a weight limit',
+	        emptyText:'Select weightlifting work',
 	        selectOnFocus:true,
 			}),  {
 					xtype:'checkbox',
@@ -248,7 +248,7 @@ Ext.QuickTips.init();
           fieldLabel: 'Remark',
 					emptyText: 'Remark',
           name: 'remark',
-          height: 80
+          height: 120
       }
 /*
 , new Ext.form.ComboBox({

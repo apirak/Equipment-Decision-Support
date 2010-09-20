@@ -17,7 +17,7 @@ namespace :predata do
           :department_group_id => 1,
           :synonym => "ศูนย์เครื่องมือกล",
           :location => "ถนนรัชดา แขวงประชานุกูล",
-          :phone => "02911209"}))
+          :phone => "02-911209"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงดาวคะนอง",
           :department_job_id => 2,
@@ -29,7 +29,7 @@ namespace :predata do
           :department_group_id => 1,
           :synonym => "ดาวคะนอง",
           :location => "ถนนเอกชัย เขตจอมทอง",
-          :phone => "024681671"}))
+          :phone => "02-4681671"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงธนบุรี",
           :department_job_id => 2,
@@ -41,7 +41,7 @@ namespace :predata do
           :department_group_id => 1,
           :synonym => "ธนบุรี",
           :location => "ถนนเทอดไท แขวงบางยี่เรือ เขตธนบุรี",
-          :phone => "024653016"}))
+          :phone => "02-4653016"}))
 
     puts(Department.build({:title => "สถานีดับเพลิงสามเสน",
           :department_job_id => 2,
@@ -53,7 +53,7 @@ namespace :predata do
           :department_group_id => 1,
           :synonym => "สามเสน",
           :location => "ถนนขาว แขวงวชิรพยาบาล ดุสิต",
-          :phone => "022412391"}))
+          :phone => "02-2412391"}))
 
     puts(Department.build({:title => "กองโรงงานช่างกล",
           :department_job_id => 1,
@@ -65,7 +65,43 @@ namespace :predata do
           :department_group_id => 1,
           :synonym => "สามเสน",
           :location => "ถนนมิตรไมตรี ดินแดง",
-          :phone => "0 2245 3301"}))
+          :phone => "02-2453301"}))
+
+    puts(Department.build({:title => "กองเครื่องจักรกล สำนักการระบายน้ำ",
+          :department_job_id => 3,
+          :name => "กองเครื่องจักรกล สำนักการระบายน้ำ",
+          :description => "ปฏิบัติการป้องกันและแก้ไขเหตุน้ำท่วม และเก็บรักษาเครื่องจักรกล",
+          :lat => 13.768846,
+          :lng => 100.553387,
+          :remark => "-",
+          :department_group_id => 1,
+          :synonym => "กองเครื่องจักรกล สำนักระบายน้ำ",
+          :location => "ถนนมิตรไมตรี ดินแดง",
+          :phone => "02-2485115"}))
+
+    puts(Department.build({:title => "กรมป้องกันและบรรเทาสาธารณภัย",
+          :department_job_id => 4,
+          :name => "กรมป้องกันและบรรเทาสาธารณภัย",
+          :description => "หน่วยงานป้องกันและบรรเทาสาธารณภัยระดับชาติ กระทรวงมหาดไทย",
+          :lat => 13.772034,
+          :lng => 100.513251,
+          :remark => "-",
+          :department_group_id => 2,
+          :synonym => "กรมป้องกันและบรรเทาสาธารณภัย",
+          :location => "ถนนนครราชสีมา ดุสิต",
+          :phone => "1784"}))
+
+    puts(Department.build({:title => "ศูนย์นเรนทร โรงพยาบาลราชวิถี",
+          :department_job_id => 5,
+          :name => "ศูนย์นเรนทร โรงพยาบาลราชวิถี",
+          :description => "ศูนย์การแพทย์ และช่วยเหลือชีวิตฉุกเฉิน",
+          :lat => 13.767251,
+          :lng => 100.536704,
+          :remark => "-",
+          :department_group_id => 2,
+          :synonym => "ศูนย์นเรนทร",
+          :location => "ราชวิถี ทุ่งพญาไท ราชเทวี",
+          :phone => "1669"}))
 
     puts(GroundStrength.build("hard", "พื้นผิวมีความแข็งแรงเพียงพอต่อการทำงาน"))
     puts(GroundStrength.build("soft", "พื้นผิวมีความอ่อนนุ่มต้องทำงานด้วยความระมัดระวัง"))

@@ -49,15 +49,16 @@ class Site < Position
       EquipmentNameSite.build(suggest_equipement.id, e.id, id, e.point, "ฺBest length #{best_length}")
     end
 
-    rain_remark = "พื้นที่ทำงานขณะนี้มีลมแรงโประระมัดระวังการทำงานในที่สูง"
-    night_remark = "เป็นการทำงานต่อเนื่องที่ยาวไปถึงช่วงกลางคืน หรือเป็นการทำงานตอนกลางคืน"
-    power_ramark = "ในพื้นที่ทำงานไม่มีเชื้อเพลิงหรือมีไม่เพียงพอ ให้จัดเตรียมเชื้อเพลิงสำหรับเครื่องจักร์เข้าไปยังพื้นที่ปฏิบัติงาน"
+    rain_remark = "ขณะนี้มีฝนตกในพื้นที่เกิดเหตุโปรทำงานด้วยความระมัดระวัง"
+    wind_hard_remark = "ขณะนี้มีลมแรงในพื้นที่เกิดเหตุโปรดระมัดระวังการทำงานในที่สูง"
+    night_remark = "ให้เตรียมความพร้อมและทำงานด้วยความระมัดระวังเนื่องจากเป็นเป็นการทำงานในช่วงกลางคืน"
+    power_ramark = "ให้เตรียมเชื้อเพลิงสำหรับเครื่องจักร์เข้าไปยังพื้นที่ปฏิบัติงานด้วย"
 
     remark = "#{remark} #{rain_remark}" if rain
+    remark = "#{remark} #{wind_hard_remark}" if wind_hard
     remark = "#{remark} #{night_remark}" if night_time
     remark = "#{remark} #{power_ramark}" if power_source
     logger.debug("\n\n\n #{remark} \n\n\n\n" )
-    
     save
   end
 

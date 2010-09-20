@@ -1,3 +1,8 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+#
+# Be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development: &sqlite
     adapter: sqlite3
     database: db/development.sqlite3
@@ -5,17 +10,31 @@ development: &sqlite
     timeout: 5000
 
 test:
+
     <<: *sqlite
+
     database: db/test.sqlite3
 
+
+
 staging: &mysql
+
     adapter: sqlite3
+
     database: db/development.sqlite3
+
     pool: 5
+
     timeout: 5000
 
+
+
 production:
+
     adapter: sqlite3
+
     database: db/production.sqlite3
+
     pool: 5
+
     timeout: 5000
