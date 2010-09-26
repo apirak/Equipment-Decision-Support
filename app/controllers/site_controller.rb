@@ -63,24 +63,10 @@ class SiteController < ApplicationController
   
   def equipment
     if params[:suggestion]
-      site = Site.find(params[:id])
-      site.suggest_equipment
+      @site = Site.find(params[:id])
+      @site.suggest_equipment
     end
     @equipments = EquipmentNameSite.find(:all, :conditions => ['position_id = ?', params[:id]], :order => "score DESC")
   end
 
 end
-
-
-# <message success="true"> 
-# <contact> 
-#     <name> 
-#         <first>Jack</first> 
-#         <last>Slocum</last> 
-#     </name> 
-#     <company>Ext JS</company> 
-#     <email>support@extjs.com</email> 
-#     <state>OH</state> 
-#     <dob>04/15/2007</dob> 
-# </contact> 
-# </message>

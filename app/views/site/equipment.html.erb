@@ -1,29 +1,37 @@
 <div id="site-equipment" class="site-equipment">
-<table>
-  <tr>
-	<th>Score</th>
-	<th width="90px">Equipment</th>
-	<th>Department</th>	
-  </tr>
-<% @equipments.each do |e| %>
-  <tr class="<%= "gray" if e.score < 80 %>">
-	<td>
-		<%= e.score %>
-	</td>
-	<td width="90px">
-		<%= e.equipment_name.name %>
-	</td>
-	<td>
-		<%= e.equipment.department.name if e.equipment%>
-	</td>	
-  </tr>	
- 
-  <tr>
-  	<td colspan="3" style="color:#aaa;">
-  	    <i>comment: <%= e.remark %></i>
-  	</td>
-  </tr>
+  <table>
+    <tr>
+      <th>Score</th>
+      <th width="90px">Equipment</th>
+      <th>Department</th>
+    </tr>
+    <% @equipments.each do |e| %>
+      <tr class="<%= "gray" if e.score < 80 %>">
+        <td>
+          <%= e.score %>
+        </td>
+        <td width="90px">
+          <%= e.equipment_name.name %>
+        </td>
+        <td>
+          <%= e.equipment.department.name if e.equipment%>
+        </td>
+      </tr>
 
-<% end %>
-</table>
+      <tr>
+        <td colspan="3" style="color:#aaa;">
+          <i>comment: <%= e.remark %></i>
+        </td>
+      </tr>
+
+    <% end %>
+  </table>
+  <table>
+    <tr>
+      <th>Remark</th>
+    </tr>
+    <tr>
+      <td><%= @site.remark %></td>
+    </tr>
+  </table>
 </div>

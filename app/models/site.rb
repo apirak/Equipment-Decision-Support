@@ -54,12 +54,12 @@ class Site < Position
     night_remark = "ให้เตรียมความพร้อมและทำงานด้วยความระมัดระวังเนื่องจากเป็นเป็นการทำงานในช่วงกลางคืน"
     power_ramark = "ให้เตรียมเชื้อเพลิงสำหรับเครื่องจักร์เข้าไปยังพื้นที่ปฏิบัติงานด้วย"
 
-    remark = "#{remark} #{rain_remark}" if rain
-    remark = "#{remark} #{wind_hard_remark}" if wind_hard
-    remark = "#{remark} #{night_remark}" if night_time
-    remark = "#{remark} #{power_ramark}" if power_source
-    logger.debug("\n\n\n #{remark} \n\n\n\n" )
-    save
+    remark = "#{remark} <li>#{rain_remark}</li>" if rain
+    remark = "#{remark} <li>#{wind_hard_remark}</li>" if wind_hard
+    remark = "#{remark} <li>#{night_remark}</li>" if night_time
+    remark = "#{remark} <li>#{power_ramark}</li>" if power_source
+    self.remark = "<ul>#{remark}</ul>"
+    self.save
   end
 
   def work_matching(equipment)
