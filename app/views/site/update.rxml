@@ -1,0 +1,30 @@
+xml.instruct! :xml, :version=>"1.0", :encoding=>"UTF-8"
+xml.message("success" => "true") do
+  xml.site do
+    xml.id(@site.id)
+    xml.title(@site.title)
+    xml.name(@site.name)
+    xml.description(@site.description)
+    xml.icon(@site.icon)
+    xml.type(@site.type)
+    xml.lat(@site.lat)
+    xml.lng(@site.lng)
+    xml.remark(@site.remark)
+    xml.location(@site.location)
+    # Site
+    xml.size_id(@site.size_id)
+    xml.ground_strength_id(@site.ground_strength_id)
+    xml.weight_limit_id(@site.weight_limit_id)
+    xml.dissaster_id(@site.dissaster_id)
+    xml.rain(@site.rain)
+    xml.night_time(@site.night_time)
+    xml.wind_hard(@site.wind_hard)
+    xml.power_source(@site.power_source)
+    xml.electric(@site.electric)
+    xml.light(@site.light)
+    xml.demolish(@site.demolish)
+    xml.move_mat(@site.move_mat)
+    xml.repair_route(@site.repair_route)
+    xml.site_clear(@site.site_clear)
+  end
+end

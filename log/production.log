@@ -1,0 +1,238 @@
+
+
+Processing DepartmentController#index (for 127.0.0.1 at 2010-09-11 22:49:48) [GET]
+Rendering template within layouts/department
+Rendering department/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #8 of app/views/department/index.html.erb:
+5: </div>
+6: 
+7: 
+8: <%= netzke :departments,
+9:   :class_name => "TabPanel",
+10:   :ext_config => { :border => true, :height => 500},
+11:   :items => [{
+
+    app/views/department/index.html.erb:8
+    app/controllers/department_controller.rb:5:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#equipment (for 127.0.0.1 at 2010-09-11 22:50:33) [POST]
+  Parameters: {"authenticity_token"=>"5t7UysutdCcDoSl2zJSLF73O2Vbd2Yu+aqCUB04rVNE=", "id"=>"6"}
+Rendering template within layouts/site
+Rendering site/equipment
+Completed in 16ms (View: 12, DB: 8) | 200 OK [http://localhost/site/equipment/6]
+
+
+Processing EquipmentController#show (for 127.0.0.1 at 2010-09-11 22:50:35) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/application
+Rendering equipment/show
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #20 of app/views/equipment/show.html.erb:
+17: 
+18: <H1><%= @site.name %></H1>
+19: 
+20: <%= netzke :equipment_name_site, 
+21:       :class_name => "GridPanel", 
+22:       :scopes => [[:position_id, @site_id]],
+23:       :strong_default_attrs => {:position_id => @site_id},
+
+    app/views/equipment/show.html.erb:20
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 19:41:53) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #47 of app/views/equipment/index.html.erb:
+44: 
+45: <% end %>
+46: 
+47: <%= netzke :window_with_grid_panel, 
+48:     :class_name => "Window", 
+49:     :persistent_config => true, 
+50:     :ext_config => {
+
+    app/views/equipment/index.html.erb:47
+    app/controllers/equipment_controller.rb:9:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 22:17:11) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #48 of app/views/equipment/index.html.erb:
+45: 
+46: <% end %>
+47: 
+48: <%= netzke :window_with_grid_panel, 
+49:     :class_name => "Window", 
+50:     :persistent_config => true, 
+51:     :ext_config => {
+
+    app/views/equipment/index.html.erb:48
+    app/controllers/equipment_controller.rb:9:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DepartmentController#index (for 127.0.0.1 at 2010-09-12 22:17:42) [GET]
+Rendering template within layouts/department
+Rendering department/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #8 of app/views/department/index.html.erb:
+5: </div>
+6: 
+7: 
+8: <%= netzke :departments,
+9:   :class_name => "TabPanel",
+10:   :ext_config => { :border => true, :height => 500},
+11:   :items => [{
+
+    app/views/department/index.html.erb:8
+    app/controllers/department_controller.rb:5:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 22:17:55) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #48 of app/views/equipment/index.html.erb:
+45: 
+46: <% end %>
+47: 
+48: <%= netzke :window_with_grid_panel, 
+49:     :class_name => "Window", 
+50:     :persistent_config => true, 
+51:     :ext_config => {
+
+    app/views/equipment/index.html.erb:48
+    app/controllers/equipment_controller.rb:9:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 22:19:17) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #48 of app/views/equipment/index.html.erb:
+45: 
+46: <% end %>
+47: 
+48: <%= netzke :window_with_grid_panel, 
+49:     :class_name => "Window", 
+50:     :persistent_config => true, 
+51:     :ext_config => {
+
+    app/views/equipment/index.html.erb:48
+    app/controllers/equipment_controller.rb:9:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipmentController#index (for 127.0.0.1 at 2010-09-12 22:19:50) [GET]
+Rendering template within layouts/application
+Rendering equipment/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #48 of app/views/equipment/index.html.erb:
+45: 
+46: <% end %>
+47: 
+48: <%= netzke :window_with_grid_panel, 
+49:     :class_name => "Window", 
+50:     :persistent_config => true, 
+51:     :ext_config => {
+
+    app/views/equipment/index.html.erb:48
+    app/controllers/equipment_controller.rb:9:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DepartmentController#index (for 127.0.0.1 at 2010-09-18 14:19:55) [GET]
+Rendering template within layouts/department
+Rendering department/index
+
+ActionView::TemplateError (uninitialized constant String::JSMin) on line #8 of app/views/department/index.html.erb:
+5: </div>
+6: 
+7: 
+8: <%= netzke :departments,
+9:   :class_name => "TabPanel",
+10:   :ext_config => { :border => true, :height => 500, :enableTabScroll=>true,},
+11:   :items => [{
+
+    app/views/department/index.html.erb:8
+    app/controllers/department_controller.rb:5:in `index'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)

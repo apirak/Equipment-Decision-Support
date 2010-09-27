@@ -1,3 +1,3 @@
 class DepartmentGroup < ActiveRecord::Base
-  belong_to :department
+  belongs_to :department
 end

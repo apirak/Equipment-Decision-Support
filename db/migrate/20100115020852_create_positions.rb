@@ -9,17 +9,19 @@ class CreatePositions < ActiveRecord::Migration
       t.decimal  :lat, :precision => 15, :scale => 10
       t.decimal  :lng, :precision => 15, :scale => 10
       t.text   :remark
+      t.text :location
 
       # Department
       t.integer :department_group_id
+      t.integer :department_job_id
       t.string :department_class
       t.string :synonym
-      t.text :location
       t.string :phone
 
       # Site
       t.integer :size_id
       t.integer :ground_strength_id
+      t.integer :weight_limit_id
       t.integer :dissaster_id
       t.boolean :rain
       t.boolean :night_time
@@ -28,9 +30,6 @@ class CreatePositions < ActiveRecord::Migration
 
       t.boolean :electric
       t.boolean :light
-      t.boolean :lift_more_20_ton
-      t.boolean :lift_limit_20_ton
-      t.boolean :lift_limit_5_ton
       t.boolean :demolish
       t.boolean :move_mat
       t.boolean :repair_route
@@ -76,6 +75,12 @@ class CreatePositions < ActiveRecord::Migration
       t.integer :staff_id
       t.string :name
       t.text :description
+    end
+    
+    create_table :department_jobs do |t|
+      t.string :name
+      t.text :description
+      t.string :icon
     end
   end
 

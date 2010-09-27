@@ -1,4 +1,5 @@
 var viewport;
+var current_site_id = 6;
 
 var positionPanel = new Ext.Panel({
     id:'position_panel',
@@ -14,12 +15,14 @@ var positionPanel = new Ext.Panel({
     items:[positionMap, positionTable]
 });
 
+
+
 var equipmentInterface = function(){
     var viewport;
     return {
         init:function(){
             viewport = new Ext.Viewport({
-                title: 'Equipment',
+                title: 'Equipment Decision Support',
                 waitMsgTarget: true,
                 loadMask: true,
                 layout: 'border',
@@ -33,39 +36,10 @@ var equipmentInterface = function(){
                     height: 30,
                     margins: '5 5 0 5',
                     el: 'header'
-                }),
-                {
-                    title: 'Log',
-                    collapsible: true,
-                    region:'west',
-                    layout:'vbox',
-                    width: 200,
-                    margins: '0 0 5 5',
-                    minSize: 150,
-                    maxSize: 250,
-                    layoutConfig: {
-                        align : 'stretch',
-                        pack  : 'start'
-                    },
-                    defaults: {
-                        border: false
-                    },
-                    items: [
-                    {
-                        html:'<div id="log-list">Uploading...</div>',
-                        flex:1
-                    },
-                    {
-                        xtype:'htmleditor',
-                        id:'bio',
-                        fieldLabel:'Biography',
-                        border: false,
-                        height:100,
-                        anchor:'98%'
-                    }
-                    ]
-                }, positionPanel, information]
+                }), logPanel, positionPanel, information]
             });
         }
     }
 }();
+
+

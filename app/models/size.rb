@@ -1,5 +1,5 @@
 class Size < ActiveRecord::Base
-  has_many :equipment
+  has_many :equipment_name
   has_many :site
 
   def self.build(name, description)

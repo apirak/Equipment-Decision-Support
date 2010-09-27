@@ -1,0 +1,53 @@
+<% title "Equipment for site" %>
+
+<% content_for :head do %>
+
+<style type="text/css" media="screen">
+.netzke-widget {display:block;
+	margin:10px auto;
+	width:900px;
+}
+H1 {
+	width:900px;
+	margin: 20px auto;
+}
+</style>
+
+<% end %>
+
+<H1><%= @site.name %></H1>
+
+<%= netzke :equipment_name_site, 
+      :class_name => "GridPanel", 
+      :scopes => [[:position_id, @site_id]],
+      :strong_default_attrs => {:position_id => @site_id},
+      :model => "EquipmentNameSite",
+      :columns => [:id, 
+	    :score,
+		{:name => :equipment_name__name, :width => 200, :header => "Equipment Name"}, 
+		{:name => :equipment__name_department, :width => 200, :header => "Department"},  
+		:remark],
+      :ext_config => {
+        :border => true,
+		:height => 400,
+		:view_config => {:force_fit => true}
+      }
+%>
+
+<%#= netzke :equipment_name_site, 
+	:class_name => "GridPanel",
+	:model => "EquipmentNameSite",
+	:name => "equipment for site",
+	:columns => [:id, :score, :equipment_name_id, :equipment__vehicle_registration, :remark],
+	:ext_config => {
+      :border => true,
+		:height => 400
+    }
+%>
+<!--
+{:name => :location, :width => 200},
+:phone, :remark,
+{:name => :lat, :editor => {:xtype => :textfield}},
+{:name => :lng, :editor => {:xtype => :textfield}},
+{:name => :department_class, :header => "Class"}
+-->

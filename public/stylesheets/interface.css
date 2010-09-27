@@ -5,9 +5,25 @@ body{
 
 #log-list {
     font-size: 12px;
-    padding: 3px;
-    height: 100px;
+    height: 100%;
     overflow: auto;
+}
+
+#log-list .log {
+	border:1px solid #DDDDDD;
+	margin:3px;
+}
+
+#log-list .date {
+	background-color:#DDDDDD;
+	color:#888888;
+	font-size:9px;
+	padding:1px 5px;
+	text-align:right;
+}
+
+#log-list .message {
+	padding: 5px;
 }
 
 .department_header {
@@ -33,3 +49,25 @@ body{
 }
 
 .netzke-widget { margin: 0px 5px; height:500px; }
+
+.site-equipment {
+	font-size:11px;
+	padding: 5px;
+}
+
+.site-equipment td {
+	padding: 0 3px;
+	vertical-align: top;
+}
+
+.site-equipment tr.gray td {
+  color:#AAAAAA;
+}
+
+.site-equipment th {
+	font-weight: bold;
+}
+
+.site-equipment h1 {
+	font-site: 13px;
+}

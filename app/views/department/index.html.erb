@@ -7,49 +7,8 @@
 
 <%= netzke :departments,
   :class_name => "TabPanel",
-  :ext_config => { :border => true, :height => 500},
+  :ext_config => { :border => true, :height => 500, :enableTabScroll=>true,},
   :items => [{
-    :class_name => "GridPanel",
-    :ext_config => {
-      :view_config => {
-        :force_fit => true,
-      }
-    },
-    :model => "Department",
-    :name => "department",
-    :columns => [:id, :description, :name, :synonym,
-      {:name => :location, :width => 200},
-      :phone, :remark,
-      {:name => :lat, :editor => {:xtype => :textfield}},
-      {:name => :lng, :editor => {:xtype => :textfield}},
-      {:name => :department_class, :header => "Class"}
-    ]
-  }, {
-    :class_name => "GridPanel",
-    :preloaded => true,
-    :model => "Staff",
-    :name => "staff",
-    :columns => [:id, :department_id,:code, :firstname, :surname,
-      :nickname, :email, :password, :phone, :post,
-      :ability, :status, :remark, :fullname
-    ]
-  }, {
-    :class_name => "GridPanel",
-    :preloaded => true,
-    :model => "Site",
-    :name => "site",
-    :columns => [:id, :title, :name, :description, :icon,
-      :type,
-      {:name => :lat, :editor => {:xtype => :textfield}},
-      {:name => :lng, :editor => {:xtype => :textfield}},
-      :remark, :space_id,
-      :ground_strength_id, :rain, :night_time,
-      :wind_hard, :power_source,
-      :electric, :light,
-      :lift_more_20_ton, :lift_limit_20_ton, :lift_limit_5_ton,
-      :Demolish, :Move_mat, :repair_route, :site_clear,
-    ]
-  },{
     :class_name => "GridPanel",
     :preloaded => true,
     :model => "GroundStrength",
@@ -58,30 +17,7 @@
     :class_name => "GridPanel",
     :preloaded => true,
     :model => "Dissaster",
-    :name => "site dissaster"
-  },{
-    :class_name => "GridPanel",
-    :preloaded => true,
-    :model => "Equipment",
-    :name => "equipment",
-    :columns => [:id, :department_id, :equipment_name_id, 
-      :weight_limit_id, :size_id, :code,
-      :vihicle_registration, :status, :specification,
-      :remark,
-      :electric, :light, :demolish, :move_mat,
-      :repair_route, :site_clear, :move_vehecle,
-      :track_line
-    ]
-  },{
-    :class_name => "GridPanel",
-    :preloaded => true,
-    :model => "Size",
-    :name => "equipment size"
-  },{
-    :class_name => "GridPanel",
-    :preloaded => true,
-    :model => "EquipmentName",
-    :name => "equipment name"
+    :name => "site disaster"
   },{
     :class_name => "GridPanel",
     :preloaded => true,
@@ -90,11 +26,16 @@
   },{
     :class_name => "GridPanel",
     :preloaded => true,
-    :model => "JobDescription",
-    :name => "job description",
-    :columns => [:id, :equipment__code, :staff__firstname,
-      :name,
-      :description
-    ]
+    :model => "DepartmentJob",
+    :name => "department job",
+  },{
+    :class_name => "GridPanel",
+    :preloaded => true,
+    :model => "Size",
+    :name => "equipment size",
+    :columns => [:id, 
+        {:name =>:name, :width => 200}, 
+        {:name => :description, :width => 200}]
   }]
 %>
+

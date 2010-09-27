@@ -2,7 +2,9 @@ class Department < Position
   has_one :space
   has_one :department_group
   has_many :staffs
-  has_many :equipment
+  has_many :equipments
+  
+  belongs_to :department_job
   
   def self.column_models
     Position.column_models
@@ -10,6 +12,19 @@ class Department < Position
 
   def self.field_models
     Position.field_models
+  end
+  
+  def self.create_all_temp_icon
+    self.find(:all).each do |d|
+      d.create_temp_icon
+    end
+  end
+  
+  def create_temp_icon
+    if self.department_job
+      self.icon = self.department_job.icon
+      self.save
+    end
   end
 
   def self.build(values)

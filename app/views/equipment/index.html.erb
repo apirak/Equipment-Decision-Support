@@ -20,22 +20,48 @@
 
   <%= render :partial => "settings" %>
   <%= render :partial => "position_store" %>
+  <%= render :partial => "equipment_site" %>
 
   <%= javascript_include_tag "info_box" %>
   <%= javascript_include_tag "position_data_store" %>
   <%= javascript_include_tag "position_map" %>
   <%= javascript_include_tag "position_table" %>
   <%= javascript_include_tag "information_interface" %>
+  <%= javascript_include_tag "log_interface" %>
   <%= javascript_include_tag "equipment_interface" %>
+
 
   <script type="text/javascript">
     Ext.onReady(function(){
       loadingIndicator.init();
       equipmentInterface.init();
+	  loadAllPosition();
     });
   </script>
+
+<style type="text/css" media="screen">
+  .netzke-widget {display: none;}
+</style>
+
 <% end %>
 
+<%= netzke :window_with_grid_panel, 
+    :class_name => "Window", 
+    :persistent_config => true, 
+    :ext_config => {
+  	  :close_action => "hide", 
+      :width => 700, :height => 400
+    },
+    :item => {
+      :class_name => "GridPanel", 
+      	:scopes => [[:position_id, 1]],
+		:strong_default_attrs => {:position_id => 1},
+      :model => "EquipmentNameSite", 
+      :ext_config => {
+        :header => false, :border => true
+      }
+    }
+%>
 
 <!-- Loading mask and image -->
 <div id="loading-mask" class="loading-mask"> </div>
@@ -48,5 +74,8 @@
     Loading...
   </div>
 </div>
+
+<div id="equipment_tab"></div>
+
 
 <%= render "shared/account" %>

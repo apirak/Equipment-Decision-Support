@@ -1,0 +1,3 @@
+class LogController < ApplicationController
+
+end
