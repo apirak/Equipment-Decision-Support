@@ -26,12 +26,14 @@
 
     <% end %>
   </table>
+  <% if @site and @site.remark %>
   <table>
     <tr>
       <th>Remark</th>
     </tr>
     <tr>
-      <td><%= @site.remark %></td>
+      <td><%= @site.remark if @site %></td>
     </tr>
   </table>
+  <% end %>
 </div>

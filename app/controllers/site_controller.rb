@@ -62,8 +62,8 @@ class SiteController < ApplicationController
   end
   
   def equipment
+    @site = Site.find(params[:id])
     if params[:suggestion]
-      @site = Site.find(params[:id])
       @site.suggest_equipment
     end
     @equipments = EquipmentNameSite.find(:all, :conditions => ['position_id = ?', params[:id]], :order => "score DESC")
