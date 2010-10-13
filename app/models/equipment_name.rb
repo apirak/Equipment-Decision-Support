@@ -42,7 +42,7 @@ class EquipmentName < ActiveRecord::Base
         length = Math.sqrt(aa + bb)
         logger.debug("\n\n\n\n\n Best length #{length} \n\n\n\n\n")
         if (best_length ==0) || (length < best_length)
-          best_length = length
+          best_length = length.round(2)
           best_equipment = e
         end
       end
